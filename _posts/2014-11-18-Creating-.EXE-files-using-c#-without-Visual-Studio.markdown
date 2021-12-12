@@ -1,0 +1,132 @@
+---
+layout: post
+title: Creating .EXE-files using C# without Visual Studio
+date: 2014-11-18 13:37:00 +0100
+description: Creating .EXE-files using C# without Visual Studio
+img: header/creating-exe-files-using-c-without-visual-studio.markdown.png
+tags: [Windows, Visual Studio, c#]
+---
+While needing a method to time the response time of the Microsoft Active Directory services I came the conclusion that it is possible to create an .EXE using the Microsoft .NET framework software. Microsoft included a command line compiler which is able to create an .EXE from a .CS file. Below you may find the source (borrowed from [PinVoke.NET](https://www.pinvoke.net/default.aspx/advapi32.lookupaccountname) which I used to include the timing measuring.
+
+More info [here on MSDN](http://msdn.microsoft.com/en-us/library/78f4aasd.aspx)
+
+### Contents of ```C:\GetUsername.cmd```
+
+	@echo off
+	C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe /out:C:\GetUsername.exe C:\GetUsername.cs
+	If not %errorlevel%==0 goto :EOF
+	Echo 1st Try
+	C:\GetUsername.exe
+	Echo.
+	Echo 2nd Try
+	C:\GetUsername.exe
+	Echo.
+	Echo 3rd Try
+	C:\GetUsername.exe
+
+
+### Contents of ```C:\GetUsername.cs```
+
+	using System;
+	using System.Runtime.InteropServices;
+	using System.Text;
+
+	namespace test
+		{
+
+			class clsLookupAccountName
+			{
+
+				const int NO_ERROR = 0;
+				const int ERROR_INSUFFICIENT_BUFFER = 122;
+				const int ERROR_INVALID_FLAGS = 1004; // On Windows Server 2003 this error is/can be returned, but processing can still continue
+
+				enum SID_NAME_USE
+				{
+					SidTypeUser = 1,
+					SidTypeGroup,
+					SidTypeDomain,
+					SidTypeAlias,
+					SidTypeWellKnownGroup,
+					SidTypeDeletedAccount,
+					SidTypeInvalid,
+					SidTypeUnknown,
+					SidTypeComputer
+					}
+
+				[DllImport("advapi32.dll", CharSet=CharSet.Auto, SetLastError = true)]
+				static extern bool LookupAccountName ( 
+				string lpSystemName,
+				string lpAccountName,
+				[MarshalAs(UnmanagedType.LPArray)] byte[] Sid,
+				ref uint cbSid,
+				StringBuilder ReferencedDomainName,
+				ref uint cchReferencedDomainName,
+				out SID_NAME_USE peUse);
+
+				[DllImport("advapi32", CharSet=CharSet.Auto, SetLastError=true)]
+				static extern bool ConvertSidToStringSid(
+				[MarshalAs(UnmanagedType.LPArray)] byte [] pSID,
+				out IntPtr ptrSid);
+
+				[DllImport("kernel32.dll")]
+				static extern IntPtr LocalFree(IntPtr hMem);
+
+				[STAThread]
+				static void Main(string[] args)
+				{
+
+					DateTime now1 = DateTime.Now;
+					Console.WriteLine(now1);
+
+					string accountName = "DOMAIN\\username";
+
+					byte [] Sid = null;
+					uint cbSid = 0;
+					StringBuilder referencedDomainName = new StringBuilder();
+					uint cchReferencedDomainName = (uint)referencedDomainName.Capacity;
+					SID_NAME_USE sidUse;
+
+					int err = NO_ERROR;
+					if (!LookupAccountName(null,accountName,Sid,ref cbSid,referencedDomainName,ref cchReferencedDomainName,out sidUse))
+					{
+						err = Marshal.GetLastWin32Error();
+						if (err == ERROR_INSUFFICIENT_BUFFER || err == ERROR_INVALID_FLAGS)
+						{
+							Sid = new byte[cbSid];
+							referencedDomainName.EnsureCapacity((int)cchReferencedDomainName);
+							err = NO_ERROR;
+							if (!LookupAccountName(null,accountName,Sid,ref cbSid,referencedDomainName,ref cchReferencedDomainName,out sidUse))
+							err = Marshal.GetLastWin32Error();
+						}
+					}
+					else
+					{
+						// Consider throwing an exception since no result was found
+						}
+					if (err == 0)
+					{
+						IntPtr ptrSid;
+						if (!ConvertSidToStringSid(Sid,out ptrSid))
+						{
+							err = Marshal.GetLastWin32Error();
+							Console.WriteLine(@"Could not convert sid to string. Error : {0}",err);
+						}
+						else
+						{
+							string sidString = Marshal.PtrToStringAuto(ptrSid);
+							LocalFree(ptrSid);
+							Console.WriteLine(@"Found sid {0} : {1}",sidUse,sidString);
+						}
+					}
+					else
+					Console.WriteLine(@"Error : {0}",err);
+
+					DateTime now2 = DateTime.Now;
+					Console.WriteLine(now2);
+					Console.WriteLine(accountName);
+					Console.WriteLine(@" ");
+					Console.WriteLine(now2-now1);
+				}
+			}
+		}

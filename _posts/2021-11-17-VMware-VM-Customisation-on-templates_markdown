@@ -1,0 +1,10 @@
+---
+layout: post
+title: VMware VM customisation on templates
+date: 2021-06-17 13:37:00 +0100
+description: VMware VM customisation on templates
+img: header/vmware-templates-customisation.png
+tags: [VMware, vCenter, VM, Template]
+---
+# VM changed name when machine already deployed
+

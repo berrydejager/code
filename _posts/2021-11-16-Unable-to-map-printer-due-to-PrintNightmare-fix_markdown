@@ -1,0 +1,33 @@
+---
+layout: post
+title: Unable to map printer due to PrintNightmare fix
+date: 2021-06-17 13:37:00 +0100
+description: Unable to map printer due to PrintNightmare fix
+img: header/printnightmare.png
+tags: [Windows, Windows 11, W11]
+---
+# PrintNightmare
+
+PrintNightmare, a.k.a [CVE-2021-34527](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-34527), showed it that the Windows print spooler was vurnerable for remote code execution. 
+
+Microsoft mitigated this by disallowing the non-admins to install printer drivers.
+
+At a customer I experienced that the updated Windows 10 (2009/20H2) image
+
+--- 
+
+f you cannot add a network or a shared printer with error 0x0000007c "Windows Cannot Connect to the Printer", or if the installed printer is not responding when you try to print in Windows 10, continue reading below to fix the problem.
+
+In the last few months, September and October 2021, Microsoft has been continuously releasing security updates that cause problems installing or printing to shared printers. Microsoft says it is working to resolve these issues, but once again many users are experiencing a lot of network printing problems after installing the Windows 10 Cumulative Update 2021-10 (KB5006670).
+
+
+
+--- 
+
+## Domain joined machines
+
+GPO
+
+## Workgroup / Standalone machines
+
+reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides /v 713073804 /t REG_DWORD /d 0 /f

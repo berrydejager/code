@@ -1,0 +1,33 @@
+title: code.berrydejager.com
+description: Enthralled by code since the arrival of the 8-bit cpu.
+permalink: ':title/'
+baseurl: "https://code.berrydejager.com"
+url: https://code.berrydejager.com
+site-twitter: berrydejager.com
+
+# Author Settings
+author: Berry de Jager
+author-img: favicon/code_berrydejager_com.png
+about-author: Enthralled by code since the arrival of the 8-bit cpu.
+#social-twitter: 6510-nl
+#social-facebook: 6510-nl
+social-github: berrydejager
+#social-linkedin: 6510-nl
+social-email: code@berrydejager.com
+
+# discus-identifier:
+
+# Tracker
+analytics: UA-190232947-1  # Google Analytics
+
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 8
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]

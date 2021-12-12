@@ -1,0 +1,55 @@
+---
+layout: post
+title: 
+date: 2020-05-26 13:37:00 +0100
+description:  
+img: header/pi-hole-stopped-synology-surveillance.png
+tags: [Raspberry Pi, PiHole, DNS, Synology, Surveillance Station]
+---
+__Effectively the Synology Surveillance Station retried too many times to connect to an offline camera resulting in an overloaded Pi-hole. Removing the overloaded files and restarting the DNS daemon fixes it again. Here are my investigation and fix to the problem.__
+
+Suddenly my internet browsing became sluggish. Luckily i have a redundant Pi-hole infrastructure setup for resolving internal and external DNS records. The reason for this redundancy is that the primary Pi-hole DNS server is residing on my HCI-server (Hyper-converged infrastructure). This means that rebooting the HCI results in an offline DNS server at the time that the hypervisor is booting. In hindsight this is not the best solution as the hypervisor is also reliant on the DNS resolving done by the PiHole software. 
+
+Effectively not being able to resolve the data stores that also reside on my HCI. To overcome this a Raspberry Pi Zero is acting as the secondary DNS server, sporting its Pi-hole instance. The internal DNS entries in the custom.list are synced by using a SCP script.
+
+Edit: I re-evaluated the setup and reverted to two physical Raspberry Pi devices, each running its PiHole instance.
+
+In my case, when the primary DNS server fails, the resolving becomes a little sluggish. When you have only a single Pi-hole instance you will run into a non-resolving situation that restricts network access based on hostnames.
+
+While examining the issue I noticed that the ```pihole-FTL.db``` has grown substantially to a 1.3GB size;
+
+```berry@pihole01:~$ ls -h -l /etc/pihole/pihole-FTL.db
+-rw-r--r-- 1 pihole pihole 1.3G May 26 21:18 /etc/pihole/pihole-FTL.db```
+
+This shouldn’t be a problem but it seems kinda odd to me. I wonder what the log files can tell me. Whoah! The Pi-hole log file is also a whopping 1.3GB in size;
+
+```berry@pihole01:~$ ls -l -h /var/log/pihole.log
+-rw-r--r-- 1 pihole pihole 1.3G May 26 23:15 /var/log/pihole.log```
+
+Something fishy is going on for sure! Let's dive into the log file;
+
+```berry@pihole01:~$ tail -n 10000 /var/log/pihole.log```
+
+Thousands of similar entries showed up in the log file;
+
+```May 26 21:12:02 dnsmasq[1197]: query[A] cam01.testlab.home from 10.00.00.25
+May 26 21:12:02 dnsmasq[1197]: /etc/pihole/custom.list cam01.testlab.home is 10.0.0.86```
+
+The output of this command showed me that my surveillance camera, which I disconnected temporarily from the network, is being polled every second for multiple times. This is obviously a bug/undocumented feature of the Synology Surveillance Station software.
+
+Looking closer at the ```pihole-FTL.log``` I noticed that it was resizing the ```/FTL-queries``` multiple times per second. This process was eating up the CPU and RAM resources of the VM.
+
+So I need to make sure that the offline devices are not being polled anymore. This means setting the individual cameras to disabled or enabling ‘home mode’ in the Synology Surveillance Station software. The next thing up was to remove the overloaded database and the massive logfile from clogging the Pi-hole system.
+
+Removing the overweight database. This will be automagically recreated at the restart of the DNS daemon.
+
+```berry@pihole01:~$ sudo rm /etc/pihole/pihole-FTL.db```
+
+Removal of the obese log file;
+
+```berry@pihole01:~$ sudo rm /var/log/pihole.log```
+
+Restarting the DNS server on the Pi-hole closed the deal and made the Pi-hole a happy dandy again.
+
+```berry@pihole01:~$ pihole restartdns
+  [✓] Restarting DNS server```

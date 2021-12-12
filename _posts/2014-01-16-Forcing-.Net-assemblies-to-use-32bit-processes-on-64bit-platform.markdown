@@ -1,0 +1,65 @@
+---
+layout: post
+title: Forcing .Net assemblies to use the 32-bit processes on a 64-bit platform
+date: 2014-01-16 13:37:00 +0100
+description: When a Windows application has been compiled using the “Any CPU” target register there is still a way to forcefully start the application in a 32-bit context.
+img: header/forcing-dotnet-assemblies-to-use-32bit-processes-on-64bit-platform.png
+tags: [PowerShell, PoSh, Scripting, Windows]
+---
+When a Windows application has been compiled using the “Any CPU” target register there is still a way to forcefully start the application in a 32-bit context.
+
+This can be accomplished by using the ```Microsoft (R) .NET Framework CorFlags Conversion Tool``` from the [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://www.microsoft.com/en-us/download/details.aspx?id=8279).
+
+Using the CorFlags.exe (navigate to: ```C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\CorFlags.exe``` you can toggle the 32-bit/64-bit awareness of the specific application.
+
+First we need to figure out the actual compiled/build properties of the executable.
+
+    C:\CorFlags.exe application.exe
+
+    Microsoft (R) .NET Framework CorFlags Conversion Tool. Version 3.5.30729.1
+
+    Copyright (c) Microsoft Corporation. All rights reserved.
+
+    Version : v2.0.50727
+
+    CLR Header: 2.5
+
+    PE : PE32
+
+    CorFlags : 1
+
+    ILONLY : 1
+
+    32BIT : 0
+
+    Signed : 0
+
+To enable the application only for a 32-bit processes:
+
+```CorFlags.exe Application.exe /32Bit+```
+
+To enable the application to address also the 64-bit processes:
+
+```CorFlags.exe Application.exe /32Bit-```
+
+When you executed the command using the ```**/32Bit+**``` parameter you will see a subtle but very important change.
+
+    C:\CorFlags.exe application.exe
+    Microsoft (R) .NET Framework CorFlags Conversion Tool. Version 3.5.30729.1
+
+    Copyright (c) Microsoft Corporation. All rights reserved.
+
+    Version : v2.0.50727
+
+    CLR Header: 2.5
+
+    PE : PE32
+
+    CorFlags : 3
+
+    ILONLY : 1
+
+    32BIT : 1
+
+    Signed : 0
+s

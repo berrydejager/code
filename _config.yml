@@ -9,10 +9,10 @@ site-twitter: berrydejager.com
 author: Berry de Jager
 author-img: favicon/code_berrydejager_com.png
 about-author: Enthralled by code since the arrival of the 8-bit cpu.
-#social-twitter: 6510-nl
-#social-facebook: 6510-nl
+social-twitter: berrydejager
+social-facebook: berrydejagercom
 social-github: berrydejager
-#social-linkedin: 6510-nl
+social-linkedin: berrydejager
 social-email: code@berrydejager.com
 
 # discus-identifier:

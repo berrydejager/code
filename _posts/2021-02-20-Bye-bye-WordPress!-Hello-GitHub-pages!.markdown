@@ -89,7 +89,7 @@ When hitting a ```GemNotFound``` error please run the bundler update
 
 ```bundle update```
 
-When getting a ```Gem::LoadError``` error; run the following command to start the local webserver
+When getting a ```Gem::LoadError``` error, run the following command to start the local webserver
 
 ```bundle exec jekyll serve -s .```
 

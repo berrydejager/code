@@ -2,18 +2,33 @@
 layout: post
 title: DevOps using a Commodore_64
 date: 2021-12-31 13:37:00 +0100
-description: This blog describes the use case of compiling a .ASM source file into a .PRG file while using GitHub Workflow. The GitHub Workflow Runner is running on a `Pi Zero 2 W` which is internally mounted on the Ultimate64. The CI workflow also runs, after compiling the .PRG on the Ultimate64. 
+description: This blog describes the use case of compiling a .ASM source file into a .PRG file while using GitHub Workflow. The GitHub Workflow Runner runs, in my case, on a `Pi Zero 2 W`. The Pi is mounted internally into the Commodore casing. The CI workflow runs after compiling the binary .PRG on the Ultimate64. 
 img: header/devops64.png
 tags: [DevOps, GitHub, Commodore 64, C64, Ultimate64, 1541U2, 1541U2+, KickAssembler]
 ---
-# Why DevOps on a Commodore 64
+# Why DevOps using a Commodore 64?
 
-Because it is fun, it is possible! 
+Exploring the possibilities of current and vintage technology is always fascinating. Combining the technology of 1982 with the 'new world' technologies makes me smile. Also to shows that the old technology is [still relevant to this day](https://csdb.dk/latestreleases.php).
 
-# What do i need
+My childhood was filled with hexadecimal number, monochrome green-screens, buzzing transformers and rattling disk drives and i absolutely loved it. Day went by really fast and nights were short.
+
+Playing games wasn't part of my routine. Althought the internet wasn't a thing yet the [demo-scene](https://en.wikipedia.org/wiki/Demoscene), had travel to the copy-parties and swap disks using postal services. Games and demos went 'viral' on those parties, the 0-day warez had an other meaning; getting a cracked game or demo on the day of the release. Crackers put an intro in front of the game to sign there crack. That [crack intro](https://csdb.dk/release/?id=53390) or [demo](https://csdb.dk/release/?id=4986) were for me the most intresting things. How does that FLD-effect work? How goes that beam in front and in the back of the text? How to do a smooth scroll with colors flowing? I wanted to learn assembly (machine language) programming on the Commodore 64. Having a book on my lap, I started to dig my way throught the bible; [Programmers Reference Guide](assets/pdf/C64PRG.pdf).
+
+Many years later now I am still getting sparkly joy from the C64. Combining this with the currerent technology is even more fun!
+
+# What do you need?
+
+Next to the interest in retro-computing you need to have some hardware, which is not very common in this cloud/virtual realm we live in.
+
+1.  Commodore 64
+2.  1541 Ultimate2(+) or Ultimate64 device 
+3.  Raspberry Pi
+4.  GitHub account
+
+My setup looks like this.
 
 ![](images/ultimate64_rpi-zero-2-w.png)
 
-# How can i use it
+# How to use the setup?
 
-In the [READme.md](https://github.com/6510nl/DevOps64/blob/main/README.md) in the [DevOps64 repository](https://github.com/6510nl/DevOps64) i have jotted down the requirements and instruction on how to create the same setup as me.
+In the [READme.md](https://github.com/6510nl/DevOps64/blob/main/README.md) in the [DevOps64 repository](https://github.com/6510nl/DevOps64) I have jotted down the requirements and instructions on how to create the same setup as me.

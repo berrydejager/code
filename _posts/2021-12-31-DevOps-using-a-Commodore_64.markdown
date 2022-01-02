@@ -25,10 +25,20 @@ Next to the interest in retro-computing you need to have some hardware, which is
 3.  Raspberry Pi
 4.  GitHub account
 
-My setup looks like this.
-
-![](images/ultimate64_rpi-zero-2-w.png)
+![](assets/img/ultimate64_rpi-zero-2-w.png)
 
 # How to use the setup?
 
-In the [READme.md](https://github.com/6510nl/DevOps64/blob/main/README.md) in the [DevOps64 repository](https://github.com/6510nl/DevOps64) I have jotted down the requirements and instructions on how to create the same setup as me.
+The [READme.md](https://github.com/6510nl/DevOps64/blob/main/README.md) on the [DevOps64 repository](https://github.com/6510nl/DevOps64) contains the requirements and the instructions on how to create a simular setup to get things going.
+
+Essentially;
+
+*   Fork the repo
+*   Install preconfigged Raspberry Pi OS on a SD card.
+*   Insert the card in the RPi
+*   Boot the RPi
+*   Setup the GitHub Runner on the RPI
+*   Start up your 'Ultimate' C64
+*   Start the Workflow from the GitHub website.
+
+Have fun!

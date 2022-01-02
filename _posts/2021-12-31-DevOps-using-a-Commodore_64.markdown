@@ -14,7 +14,7 @@ My childhood was filled with hexadecimal numbers, monochrome green screens, buzz
 
 Playing games wasn't part of my routine. Although the internet wasn't a thing yet, [we](https://en.wikipedia.org/wiki/Demoscene) had to travel to the copy-parties or swap disks using postal services. Games and demos went 'viral' on those parties, the 0-day warez had another meaning; getting a cracked game or demo on the day of the release. Crackers put an intro in front of the game to sign their crack. 
 
-That [crack intro](https://csdb.dk/release/?id=53390) or [demo](https://csdb.dk/release/?id=4986) was for me the most interesting thing. How does that FLD-effect work? How does that beam go in front and on the back of the text? How to make a smooth scroller with colors flowing over it? I wanted to learn assembly (machine language) programming on the Commodore 64. Having a book on my lap, I started to dig my way through the Bible of the 6510 religion; [Programmers Reference Guide](assets/pdf/C64PRG.pdf).
+That [crack intro](https://csdb.dk/release/?id=53390) or [demo](https://csdb.dk/release/?id=4986) was for me the most interesting thing. How does that FLD-effect work? How does that beam go in front and on the back of the text? How to make a smooth scroller with colors flowing over it? I wanted to learn assembly (machine language) programming on the Commodore 64. Having a book on my lap, I started to dig my way through the Bible of the 6510 religion; [Commodore 64 Programmer's Reference Guide](assets/pdf/C64PRG.pdf).
 
 Many years later now I am still getting sparkly joy from the C64. Combining this with the currerent technology is even more fun!
 

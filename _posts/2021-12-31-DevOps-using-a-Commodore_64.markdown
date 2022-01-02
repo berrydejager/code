@@ -27,7 +27,7 @@ Next to the interest in retro-computing you need to have some hardware, which is
 3.  Raspberry Pi
 4.  GitHub account
 
-![](assets/img/ultimate64_rpi-zero-2-w.png)
+![](/assets/img/ultimate64_rpi-zero-2-w.png)
 
 # How to use the setup?
 

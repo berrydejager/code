@@ -22,10 +22,15 @@ Many years later now I am still getting sparkly joy from the C64. Combining this
 
 Next to the interest in retro-computing you need to have some hardware, which is not very common in this cloud/virtual realm we live in.
 
-1.  Commodore 64
-2.  1541 Ultimate2(+) or Ultimate64 device 
-3.  Raspberry Pi
-4.  GitHub account
+*   Stock hardware:
+    *   [Commodore 64](https://en.wikipedia.org/wiki/Commodore_64)
+    *   1541 Ultimate2 or [1541 Ultimate 2+ cartridge](https://ultimate64.com/Main_products) cartridge, sporting firmware 3.x
+    *   USB2LAN adapter, based on the ASIX AX88772/-A/-B chip 
+*   [FPGA](https://en.wikipedia.org/wiki/Field-programmable_gate_array) implementation of the C64:
+    *   [Ultimate64](https://ultimate64.com/Ultimate64)
+*   [Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/)
+*   [USB cable, USB-A to Micro-B](https://en.wikipedia.org/wiki/USB)
+*   [Micro SD card, minimal 4GB](https://www.raspberrypi.com/documentation/computers/getting-started.html#sd-cards)
 
 [![](/assets/img/ultimate64_rpi-zero-2-w_thumb.png)](/assets/img/ultimate64_rpi-zero-2-w.png)
 

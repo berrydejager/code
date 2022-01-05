@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DevOps using a Commodore_64
+title: DevOps using a Commodore 64
 date: 2021-12-31 13:37:00 +0100
 description: This blog describes the use case of compiling a .ASM source file into a .PRG file while using GitHub Workflow. The GitHub Workflow Runner runs, in my case, on a `Pi Zero 2 W`. The Pi is mounted internally into the Commodore casing. The CI workflow runs after compiling the binary .PRG on the Ultimate64. 
 img: header/devops64.png

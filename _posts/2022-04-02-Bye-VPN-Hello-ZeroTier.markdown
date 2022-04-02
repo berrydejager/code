@@ -14,7 +14,7 @@ Fiddling around with a Raspberry Pi and using this as an USB-tethering bridge ma
 
 Still having a little caveat; connecting from home to the office was not feasible as the telecom provider does NAT on the 4G connection, resulting into the inabilitiy to open port for a VPN connection. I was stumped for a while... until a fellow Commodore enthusiast pointed [ZeroTier](https://www.zerotier.com/) to me.
 
-## What is ZeroTier?
+# What is ZeroTier?
 
 "ZeroTier is a smart Ethernet switch for planet Earth. It’s a distributed network hypervisor built atop a cryptographically secure global peer to peer network. It provides advanced network virtualization and management capabilities on par with an enterprise SDN switch, but across both local and wide area networks and connecting almost any kind of app or device."
 
@@ -22,7 +22,7 @@ So far for the marketing fluff, in essence it allows you to create a virtual net
 
 ![](/assets/img/ZT_NetworkGraphic_Homepage.png)
 
-## Why choosing ZeroTier?
+# Why choosing ZeroTier?
 
 This virtual network is acccessible as long as you connected to "The System". The best part of all this is that you don't need to worry about router configuration of opening ports, forwarding traffic etc. , hence it really fits my need.
 
@@ -35,7 +35,7 @@ It checked all my requirements
 [x] [API-enabled and well documented](https://docs.zerotier.com/central/v1/)
 [x] Support for HashiCorp [Terraform](https://docs.zerotier.com/terraform/quickstart)
 
-## How does it work?
+# How does it work?
 
 Essentially it requires just a few steps;'
 
@@ -43,7 +43,7 @@ Essentially it requires just a few steps;'
 2. [Download ZeroTier](https://www.zerotier.com/download/) on any device to get a unique 10-digit node address and enter your 16-digit network ID into the join network field on the device to request access to your network.
 3. Check the Auth checkbox on your admin console when your 10-digit node address presents itself.
 
-## What did i use?
+# What did i use?
 
 * VMWare ESXi 6.7 as a hypervisor platform
 * ZeroTier account, which is free

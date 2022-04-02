@@ -12,7 +12,7 @@ During this C19-pandemic working from home (WFH) wasn't really getting the work/
 
 Fiddling around with a Raspberry Pi and using this as an USB-tethering bridge made me investigating a more stable solution; the tiny but mighty [GL.iNet Brume GL-MV1000](https://www.gl-inet.com/products/gl-mv1000/). Just plugin the USB of the smartphone, connect LAN port to a swith, hooked some machines onto the switch and away we go.
 
-Still having a little caveat; connecting from home to the office was not feasible as the telecom provider does NAT on the 4G connection, resulting into the inabilitiy to open port for a VPN connection. I was stumped for a while... until a fellow Commodore enthusiast pointed [ZeroTier](https://www.zerotier.com/) to me.
+Still having a little caveat; connecting from home to the office was not feasible as the telecom provider does NAT on the 4G connection, resulting into the inabilitiy to open port for a VPN connection. I was stumped for a while... until a fellow [Commodore](https://en.wikipedia.org/wiki/Commodore_International)-enthusiast pointed out [ZeroTier](https://www.zerotier.com/) to me.
 
 # What is ZeroTier?
 

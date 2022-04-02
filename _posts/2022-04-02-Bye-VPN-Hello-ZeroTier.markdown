@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bye VPN! Hello ZeroTier!
-date: 2022-04-02 13:37:00 +0100
+date: 2022-01-01 13:37:00 +0100
 description: While looking for a solution to access my servers behind a NAT/routed network i stumbled upon ZeroTier. This leverages the VPN capabiities to a out-of-this-world next dimension, everything is super simple and cloud driven. 
 img: header/zerotier.png
 tags: [ZeroTier, VPN]

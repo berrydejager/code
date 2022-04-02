@@ -20,7 +20,7 @@ Still having a little caveat; connecting from home to the office was not feasibl
 
 So far for the marketing fluff, in essence it allows you to create a virtual network in the cloud and install the [ZeroTier software](https://www.zerotier.com/download/) onto a Linux/Windows/MacOS (virtual) machine, as a docker, a router and even onto NAS devices.
 
-!{}(/assets/img/ZT_NetworkGraphic_Homepage.png)
+![](/assets/img/ZT_NetworkGraphic_Homepage.png)
 
 ## Why choosing ZeroTier?
 

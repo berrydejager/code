@@ -50,6 +50,9 @@ Just install from the ISO and make sure that the installed distro is up to date
     sudo apt install xrdp
 
 ## Creating a ZeroTier network
+
+First create a virtual network to span accross two or multiple sites.
+
 | NETWORK ID        | NETWORK NAME      | DESCRIPTION   | SUBNET            | NODES | CREATED       |
 | ---               | ---               | ---           | ---               | ---   | ---           | 
 | 3efa5cb78a7f3d2d  | berserk_licklider |               | 192.168.196.0/24  | 0/0   | 2022-04-02    |

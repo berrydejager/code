@@ -35,7 +35,7 @@ It checked all my requirements
 [x] [API-enabled and well documented](https://docs.zerotier.com/central/v1/)
 [x] Support for HashiCorp [Terraform](https://docs.zerotier.com/terraform/quickstart)
 
-# How does it work?
+## How does it work?
 
 Essentially it requires just a few steps;'
 
@@ -43,15 +43,13 @@ Essentially it requires just a few steps;'
 2. [Download ZeroTier](https://www.zerotier.com/download/) on any device to get a unique 10-digit node address and enter your 16-digit network ID into the join network field on the device to request access to your network.
 3. Check the Auth checkbox on your admin console when your 10-digit node address presents itself.
 
-# What did i use?
+## What did i use?
 
 * VMWare ESXi 6.7 as a hypervisor platform
 * ZeroTier account, which is free
 * a Linux Mint 20.3 virtual machine at the local location
 * a Linux Mint 20.3 virtual machine at the remote location
 * Creating a ZeroTier network between these two VMs
-
-# How to use the setup?
 
 ## Installing Linux Mint in a VM
 
@@ -91,3 +89,7 @@ Starting the installer script
 Joining the network 
 
     sudo zerotier-cli join 3efa5cb78a7f3d2d
+
+## Start networking
+
+Enjoy the simplicity of ZetoTier.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bye VPN! Hello ZeroTier!
-date: 2021-04-02 13:37:00 +0100
+date: 2022-04-02 13:37:00 +0100
 description: While looking for a solution to access my servers behind a NAT/routed network i stumbled upon ZeroTier. This leverages the VPN capabiities to a out-of-this-world next dimension, everything is super simple and cloud driven. 
 img: header/zerotier.png
 tags: [ZeroTier, VPN]
@@ -50,6 +50,9 @@ Just install from the ISO and make sure that the installed distro is up to date
     sudo apt install xrdp
 
 ## Creating a ZeroTier network
+
+First create a virtual network to span accross two or multiple sites.
+
 | NETWORK ID        | NETWORK NAME      | DESCRIPTION   | SUBNET            | NODES | CREATED       |
 | ---               | ---               | ---           | ---               | ---   | ---           | 
 | 3efa5cb78a7f3d2d  | berserk_licklider |               | 192.168.196.0/24  | 0/0   | 2022-04-02    |

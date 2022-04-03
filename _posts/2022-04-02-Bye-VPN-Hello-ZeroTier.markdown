@@ -53,8 +53,10 @@ Essentially it requires just a few steps;
 
 ## Installing Linux Mint in a VM
 
-Cinnamon -> RDP -> Linux Mint interface
-XFCE -> no Linux Mint interface
+When selecting a Linux Mint distribution and you want to RDP into is, please take the following in account;
+
+* Cinnamon, renders the nice Linux Mint interface
+* Mate or XFCE, renders in a default X interface
 
 Just install from the ISO and make sure that the installed distro is up to date
 

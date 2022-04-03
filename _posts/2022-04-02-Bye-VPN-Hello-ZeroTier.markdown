@@ -43,13 +43,26 @@ Essentially it requires just a few steps;
 2. [Download ZeroTier](https://www.zerotier.com/download/) on any device to get a unique 10-digit node address and enter your 16-digit network ID into the join network field on the device to request access to your network.
 3. Check the Auth checkbox on your admin console when your 10-digit node address presents itself.
 
+
+
 # What did I use?
 
 * VMWare ESXi 6.7 as a hypervisor platform
-* ZeroTier account, which is free
+* ZeroTier Basic account, which is free see; [pricing plan](https://www.zerotier.com/pricing/)
 * a Linux Mint 20.3 virtual machine at the local location
 * a Linux Mint 20.3 virtual machine at the remote location
 * Creating a ZeroTier network between these two VMs
+
+The free basic plan comes with;
+
+* Up to 50(!) members on the virtual private network.
+* Unlimited amount of network to be configured on your tenant.
+* A single ZeroTier admin account
+* Support is based on the large community, helping eachother out is what i like.
+
+If you don't like the ZeroTier Hosted Controller you can go for the Open Source plan and [sport your own controller](https://docs.zerotier.com/self-hosting/network-controllers/) and gain the unlimited admin accounts as a bonus.
+
+Using this Basic plan it gave me access to my devices on the other side of the line, good enough.
 
 ## Installing Linux Mint in a VM
 

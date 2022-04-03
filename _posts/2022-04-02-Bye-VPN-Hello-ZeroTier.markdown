@@ -8,7 +8,7 @@ tags: [ZeroTier, VPN, GL.iNet, Brume, GL-MV1000]
 ---
 # Why do I need to have a remoting solution?
 
-During this C19-pandemic working from home (WFH) didn't get the work/life balance in equilibrium, so I decided to rent an office for myself. This all seems nice and dandy, up to the point that no internet connectivity is available at the remote office. Juggling around with a USB tethered phone to my laptop wasn't cutting it in the long run as I needed to have multiple machines hooked onto ["The System"](https://en.wikipedia.org/wiki/Internet).
+During this C19-pandemic working from home (WFH) didn't get the work/life balance in equilibrium, so I decided to rent an office (WFHO) for myself. This all seems nice and dandy, up to the point that no internet connectivity is available at the remote office. Juggling around with a USB tethered phone to my laptop wasn't cutting it in the long run as I needed to have multiple machines hooked onto ["The System"](https://en.wikipedia.org/wiki/Internet).
 
 Fiddling around with a Raspberry Pi and using this as a USB-tethering bridge made me investigate a more stable solution; the tiny but mighty [GL.iNet Brume GL-MV1000](https://www.gl-inet.com/products/gl-mv1000/). Just plug in the USB of the smartphone, connect LAN port to a switch, hook some machines onto the switch, and away we go.
 
@@ -74,22 +74,22 @@ First, create a virtual network to span across two or multiple sites.
 
 ## Installing the ZeroTier software
 
+The default Zerotier installation method doesn't take a newer version of Ubunt/Linux Mint in account. Just a little addition to the default method takes care of this.
+
 Downloading and fixing the installer script to support Linux Mint / Ubuntu (Focal) distribution.
 
-    curl -s https://install.zerotier.com | sed 's/xenial/focal/g' > zerotier_install.sh 
+    curl -s https://install.zerotier.com | sed 's/xenial/focal/g' | bash
 
-Giving the downloaded script executing permissions
-
-    chmod +x zerotier_install.sh
-
-Starting the installer script
-
-    ./zerotier_install.sh 
-
-Joining the network 
+Next up, joining the network 
 
     sudo zerotier-cli join 3efa5cb78a7f3d2d
 
 ## Start networking
+
+When logged on to the [ZeroTier web interface](https://my.zerotier.com/) you need to 'Auth' your newly added device tot the virtual network.
+
+When adding another device to the ZeroTier network those device are able to communicate with eachother, even though they are behind a NAT or firewalled solution like in my WFHO 4G-scenario.
+
+![](/assets/img/ZT_Members.png)
 
 Enjoy the simplicity of ZetoTier.

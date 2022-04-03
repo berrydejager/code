@@ -88,7 +88,7 @@ Next up, joining the network
 
 ## Start networking
 
-When logged on to the [ZeroTier web interface](https://my.zerotier.com/) you need to 'Auth' your newly added device tot the virtual network.
+When logged on to the [ZeroTier web interface](https://my.zerotier.com/) you need to 'Auth' your newly added device to the virtual network.
 
 When adding another device to the ZeroTier network those device are able to communicate with eachother, even though they are behind a NAT or firewalled solution like in my WFHO 4G-scenario.
 

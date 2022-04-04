@@ -29,10 +29,15 @@ This virtual network is accessible as long as you connect to "The System". The b
 It checked all my requirements
 
 [x] Open source [on GitHub.com](https://github.com/zerotier)
+
 [x] hassle-free, no port forwarding
+
 [x] [Free plan](https://www.zerotier.com/pricing/), no purchase/creditcard registration required
+
 [x] A large variety of platform support
+
 [x] [API-enabled and well documented](https://docs.zerotier.com/central/v1/)
+
 [x] Support for HashiCorp [Terraform](https://docs.zerotier.com/terraform/quickstart)
 
 # How does it work?

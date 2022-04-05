@@ -8,7 +8,7 @@ tags: [ZeroTier, VPN, GL.iNet, Brume, GL-MV1000]
 ---
 # Why do I need to have a remoting solution?
 
-During this C19-pandemic working from home (WFH) didn't get the work/life balance in equilibrium, so I decided to rent an office (WFHO) for myself. This all seems nice and dandy, up to the point that no internet connectivity is available at the remote office. Juggling around with a USB tethered phone to my laptop wasn't cutting it in the long run as I needed to have multiple machines hooked onto ["The System"](https://en.wikipedia.org/wiki/Internet).
+During this C19-pandemic working from home (WFH) didn't get the work/life balance in equilibrium, so I decided to rent an office (WFHO) for myself. This all seems nice and dandy, up to the point that no internet connectivity is available at the remote office. Juggling around with a USB tethered phone to my laptop wasn't cutting it in the long run as I needed to have multiple machines hooked onto [The System](https://en.wikipedia.org/wiki/Internet).
 
 Fiddling around with a Raspberry Pi and using this as a USB-tethering bridge made me investigate a more stable solution; the tiny but mighty [GL.iNet Brume GL-MV1000](https://www.gl-inet.com/products/gl-mv1000/). Just plug in the USB of the smartphone, connect LAN port to a switch, hook some machines onto the switch, and away we go.
 
@@ -112,4 +112,4 @@ When adding another device to the ZeroTier network those device are able to comm
 
 ![](/assets/img/ZT_Members.png)
 
-Enjoy the simplicity of ZetoTier.
+Enjoy the simplicity of ZeroTier.

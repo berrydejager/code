@@ -18,7 +18,9 @@ Still having a little caveat; connecting from home to the office was not feasibl
 
 "ZeroTier is a smart Ethernet switch for planet Earth. It's a distributed network hypervisor built atop a cryptographically secure global peer to peer network. It provides advanced network virtualization and management capabilities on par with an enterprise SDN switch, but across both local and wide area networks and connecting almost any kind of app or device."
 
-So far for the marketing fluff, in essence, it allows you to create a virtual network in the cloud and install the [ZeroTier software](https://www.zerotier.com/download/) onto a Linux/Windows/MacOS (virtual) machine, as a docker, a router and even onto NAS devices.
+So far for the marketing fluff, in essence, it allows you to create a virtual network in the cloud and install the [ZeroTier software](https://www.zerotier.com/download/) onto a Linux/Windows/MacOS (virtual) machine, as a docker, a router, smartphone and even onto NAS devices.
+
+I use this in a very smal context but it also works in large (scale-in/scale-out) scenarios. ZeroTiers generousity allows up to 50 clients in the free plan already.
 
 ![](/assets/img/ZT_NetworkGraphic_Homepage.png)
 

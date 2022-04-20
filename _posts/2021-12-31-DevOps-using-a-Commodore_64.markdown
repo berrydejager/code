@@ -36,7 +36,7 @@ Next to the interest in retro-computing you need to have some hardware, which is
 
 # How to use the setup?
 
-The [READme.md](https://github.com/6510nl/DevOps64/blob/main/README.md) on the [DevOps64 repository](https://github.com/6510nl/DevOps64) contains the requirements and the instructions on how to create a similar setup to get things going.
+The [READme.md](https://github.com/opensource64/DevOps64/blob/main/README.md) on the [DevOps64 repository](https://github.com/opensource64/DevOps64) contains the requirements and the instructions on how to create a similar setup to get things going.
 
 Essentially;
 

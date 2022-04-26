@@ -4,24 +4,22 @@ title: Home Assistant iLO2 entities.
 date: 2022-04-26 13:37:00 +0100
 description: Intergrating HP iLO2 into Home Assistent dashboards.
 img: header/HASS-iLO.png
-tags: [HomeAssistant, HASS, HASSio, HP, iLO2]
+tags: [HomeAssistant, HASS, HASSio, HP, ML350G6, iLO2]
 ---
-# Why
+Being fond of statistics I decided to monitor my, old and beefy, iLO2-equipped HP ML360-G6 servers. My use-case for the servers is running a lab environment for educational purposes. Giving easy insight to the statistics keeps the usage down to necessary-level only.
 
-Monitor the iLO2 servers that I use for my lab environment.
+# What do i use?
 
-# What
-
-Home Assistant as OS installation
+Home Assistant `OS` (or `Supervised`) for maximum functionality (see; [Home Assistant installation methods](https://www.home-assistant.io/installation/#compare-installation-methods))
 
 Benefits:
-*   Add-ons
-    *   Studio Code Server, web enabled editor with code linting.
+* Supervisor
+* Add-ons
+  *   Studio Code Server, web enabled editor with code linting.
 
-# How 
+# How to configure iLO integration
 
 ## Create specific accounts in iLO2 interface
-
 
 ## Secrets configuration
 
@@ -41,7 +39,7 @@ sensor:
     host: !secret hpILOIP01
     username: !secret hpILOUsername
     password: !secret hpILOPassword
-    scan_interval: 300
+    scan_interval: 120
     monitored_variables:
       - name: server01_power_status
         sensor_type: server_power_status
@@ -90,7 +88,7 @@ conditions:
   - entity: sensor.hp_ilo_server01_power_status
     state: 'ON'
 card:
-  title: HYPER01
+  title: iLO2 server01
   state_color: true
   header:
     type: graph

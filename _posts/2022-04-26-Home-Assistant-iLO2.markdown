@@ -28,8 +28,6 @@ Benefits:
 You can use the `/config/secrets.yaml` file to stash your iLO2 servers specifics and credentials.
 
 ```
-# Use this file to store secrets like usernames and passwords.
-# Learn more at https://www.home-assistant.io/docs/configuration/secrets/
 hpILOIP01: server01-ilo2.lab.corp
 hpILOUsername: readonly
 hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
@@ -38,16 +36,6 @@ hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
 ## Integration configuration
 
 ```
-# Loads default set of integrations. Do not remove.
-default_config:
-
-# Text to speech
-tts:
-  - platform: google_translate
-
-automation: !include automations.yaml
-script: !include scripts.yaml
-scene: !include scenes.yaml
 sensor:
   - platform: hp_ilo
     host: !secret hpILOIP01

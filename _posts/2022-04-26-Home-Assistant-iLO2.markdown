@@ -12,7 +12,7 @@ I know that the wingspan of the HP_iLO platform, [open-sourced on Github](https:
 
 # What do i use?
 
-Home Assistant `OS` (or `Supervised`) for maximum functionality (see; [Home Assistant installation methods](https://www.home-assistant.io/installation/#compare-installation-methods)).
+For maximum functionality i went for the Home Assistant OS (or Supervised), see; [Home Assistant installation methods](https://www.home-assistant.io/installation/#compare-installation-methods).
 
 Benefits:
 * [Supervisor](https://www.home-assistant.io/integrations/hassio/)
@@ -53,6 +53,9 @@ sensor:
     monitored_variables:
       - name: server01_power_status
         sensor_type: server_power_status
+
+      - name: HYPER03_uid_status
+        sensor_type: server_uid_status
 
       - name: server01_power_readings
         sensor_type: server_power_readings
@@ -109,6 +112,10 @@ card:
     - entity: sensor.hp_ilo_server01_power_status
       name: 'Power status changed:'
       icon: mdi:power
+      secondary_info: last-changed
+    - entity: sensor.hp_ilo_server01_uid_status
+      name: 'UID LED changed:'
+      icon: mdi:led-on
       secondary_info: last-changed
     - entity: sensor.hp_ilo_server01_temp_ambient
       name: 'Ambient Temp updated:'

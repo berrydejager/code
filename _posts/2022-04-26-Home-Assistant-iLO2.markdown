@@ -179,10 +179,10 @@ Drives - https://host00-ilo.lab.home/dhealthd.htm
 
 ## Outputs
 
-### HAAG
+### Heatlth-t-a-glance
 {'fans': {'status': 'Ok', 'redundancy': 'Fully Redundant'}, 'temperature': {'status': 'Ok'}, 'vrm': {'status': 'Ok'}, 'power_supplies': {'status': 'Ok', 'redundancy': 'Not Redundant'}, 'drive': {'status': 'Ok'}}
 
-### FANS
+### Fan
 {'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (27, 'Percentage')} 
 
 

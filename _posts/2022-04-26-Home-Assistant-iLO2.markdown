@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Home Assistant iLO2 entities.
+title: Integrating HP iLO2 entities into Home Assistant.
 date: 2022-04-26 13:37:00 +0100
-description: Intergrating HP iLO2 into Home Assistent dashboards.
+description: Integrating HP iLO2 into Home Assistent dashboards.
 img: header/HASS-iLO.png
-tags: [HomeAssistant, HASS, HASSio, HP, ML350G6, iLO2, hp_ilo]
+tags: [HomeAssistant, HASS, HASSio, HP, ML350-G6, iLO2, hp_ilo]
 ---
-Being fond of statistics, I decided to monitor my, old-but-beefy, iLO2-equipped HP ML360-G6 servers. 
+Being fond of statistics, I decided to monitor my, old-but-beefy, iLO2-equipped HP ML350-G6 servers.
 
 The use case for my servers is running a lab environment for educational purposes. Giving easy insight into the statistics helps to keep the usage down to the necessary level only.
 
@@ -166,7 +166,7 @@ card:
 
 # iLO2 integration reference table
 
-Here you find all the iLO2 items which I was able to find while fiddling around.
+Here you can find all the iLO2 items, which I was able to gather while fiddling around.
 
 Health-at-a-glance - https://server01-ilo2.lab.corp/dhealth.htm
 ```

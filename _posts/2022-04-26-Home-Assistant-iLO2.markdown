@@ -45,13 +45,19 @@ hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
 
 ## Integration configuration
 
+The intergration is based on a [YAML](https://yaml.org/) file. The colon-centered syntax of this so-called "human-friendly data serialization language" is very strict. Luckily the Visual Studio Code has a YAML code linting feature to help you out by higlighting syntax errors.  
+
+
+Add this to you existing `/config/configuration.yaml` file to enable the hp-ilo platform intergation.
+
+Please note: the `scan_interval` has been set to 300 seconds to give the iLO2 time to respond for all monitored variables. The default value is set to 30 seconds according to the [scan_interval documentation](https://www.home-assistant.io/docs/configuration/platform_options/#scan-interval).
 ```
 sensor:
   - platform: hp_ilo
     host: !secret hpILOIP01
     username: !secret hpILOUsername
     password: !secret hpILOPassword
-    scan_interval: 120
+    scan_interval: 300
     monitored_variables:
       - name: server01_power_status
         sensor_type: server_power_status
@@ -96,6 +102,14 @@ sensor:
 ```
 
 ## Lovelace card configuration
+
+Showing your harvested data into a card on the overview is the next step. 
+
+Firstly navigate in the browser to the [overview dashboard](http://homeassistant.local:8123/lovelace/default_view).
+
+Create a card and navigate to the 'show code editor`. From here you can overwrite the content with the code mentioned below.
+
+This conditional card will only be shown when the iLO reports itself when the power status is `ON`.
 
 ```
 type: conditional

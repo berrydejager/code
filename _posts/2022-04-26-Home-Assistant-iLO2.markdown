@@ -6,15 +6,15 @@ description: Intergrating HP iLO2 into Home Assistent dashboards.
 img: header/HASS-iLO.png
 tags: [HomeAssistant, HASS, HASSio, HP, ML350G6, iLO2, hp_ilo]
 ---
-Being fond of statistics,I decided to monitor my, old-but-beefy, iLO2-equipped HP ML360-G6 servers. 
+Being fond of statistics, I decided to monitor my, old-but-beefy, iLO2-equipped HP ML360-G6 servers. 
 
-My use-case for the servers is running a lab environment for educational purposes. Giving easy insight to the statistics helps keeping the usage down to necessary-level only.
+The use case for my servers is running a lab environment for educational purposes. Giving easy insight into the statistics helps to keep the usage down to the necessary level only.
 
 I know that the wingspan of the HP_iLO platform, [open-sourced on Github](https://github.com/home-assistant/core/tree/dev/homeassistant/components/hp_ilo), is not only restricted to iLO2.
 
-# What do i use?
+# What to use?
 
-For maximum functionality i went for the Home Assistant OS (or Supervised), see; [Home Assistant installation methods](https://www.home-assistant.io/installation/#compare-installation-methods).
+For maximum functionality, I went for the Home Assistant OS (or Supervised), see; [Home Assistant installation methods](https://www.home-assistant.io/installation/#compare-installation-methods).
 
 Benefits:
 * [Supervisor](https://www.home-assistant.io/integrations/hassio/)
@@ -25,17 +25,17 @@ Benefits:
 
 Adding the [HP_iLO-integration](https://www.home-assistant.io/integrations/hp_ilo/) to your Home Assistent is easy-peasy. 
 
-Although there is, up to now, no GUI way of addding this YAML-based intergration the configuration can be done by editing the `/config/configuration.yaml` file.
+Although there is, up to now, no GUI way of adding this YAML-based integration the configuration can be done by editing the `/config/configuration.yaml` file.
 
 I use the Studio Code Server add-on for the ease of altering the Home Assistant configuration files.
 
-## Create specific accounts in iLO2 interface
+## Create specific accounts in  he iLO2 interface
 
-For the ease of configuration and not handing out the full access credentials to Home Assistant I opted to create seperate accounts on the iLO interface for the handling of the HP_iLO requests.
+For the ease of configuration and not handing out the full access credentials to Home Assistant I opted to create separate accounts on the iLO interface for the handling of the HP_iLO requests.
 
 ## Secrets configuration
 
-You can use the `/config/secrets.yaml` file to stash your iLO2 servers specifics and credentials.
+You can use the `/config/secrets.yaml` file to stash your iLO2 servers' specifics and credentials.
 
 ```
 hpILOIP01: server01-ilo2.lab.corp
@@ -45,10 +45,10 @@ hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
 
 ## Integration configuration
 
-The intergration is based on a [YAML](https://yaml.org/) file. The colon-centered syntax of this so-called "human-friendly data serialization language" is very strict. Luckily the Visual Studio Code has a YAML code linting feature to help you out by higlighting syntax errors.  
+The integration is based on a [YAML](https://yaml.org/) file. The colon-centered syntax of this so-called "human-friendly data serialization language" is very strict. Luckily the Visual Studio Code has a YAML code linting feature to help you out by highlighting syntax errors.  
 
 
-Add this to you existing `/config/configuration.yaml` file to enable the hp-ilo platform intergation.
+Add this to your existing `/config/configuration.yaml` file to enable the hp_ilo platform integration.
 
 Please note: the `scan_interval` has been set to 300 seconds to give the iLO2 time to respond for all monitored variables. The default value is set to 30 seconds according to the [scan_interval documentation](https://www.home-assistant.io/docs/configuration/platform_options/#scan-interval).
 ```
@@ -166,7 +166,7 @@ card:
 
 # iLO2 integration reference table
 
-Here you find all the iLO2 items which i was able to find while fiddling around.
+Here you find all the iLO2 items which I was able to find while fiddling around.
 
 Health-at-a-glance - https://server01-ilo2.lab.corp/dhealth.htm
 ```
@@ -200,6 +200,6 @@ Drives - https://host00-ilo.lab.home/dhealthd.htm
 {'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (27, 'Percentage')} 
 
 
-# Reference information
+# Home work / Reference information
 
 [HP iLO2 Scripting and Command Line Guide](./assets/pdf/HP ilo 2 Scripting and Command Line Guide.pdf)

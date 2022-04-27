@@ -25,7 +25,7 @@ Benefits:
 
 Adding the [HP_iLO-integration](https://www.home-assistant.io/integrations/hp_ilo/) to your Home Assistent is easy-peasy. 
 
-Although there is no GUI way of addding the intergration the configuration can be done by editing the `/config/configuration.yaml` file.
+Although there is, up to now, no GUI way of addding this YAML-based intergration the configuration can be done by editing the `/config/configuration.yaml` file.
 
 I use the Studio Code Server add-on for the ease of altering the Home Assistant configuration files.
 

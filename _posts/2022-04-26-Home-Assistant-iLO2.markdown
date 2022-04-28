@@ -6,11 +6,15 @@ description: Integrating HP iLO2 into Home Assistent dashboards.
 img: header/HASS-iLO.png
 tags: [HomeAssistant, HASS, HASSio, HP, ML350-G6, iLO2, hp_ilo]
 ---
-Being fond of statistics, I decided to monitor my, old-but-beefy, iLO2-equipped HP ML350-G6 servers.
+Being fond of statistics, I decided to monitor my, old-but-beefy, iLO2-equipped [HP ML350-G6](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c01713311) servers.
 
 The use case for my servers is running a lab environment for educational purposes. Giving easy insight into the statistics helps to keep the usage down to the necessary level only.
 
 I know that the wingspan of the HP_iLO platform, [open-sourced on Github](https://github.com/home-assistant/core/tree/dev/homeassistant/components/hp_ilo), is not only restricted to iLO2. It can work with many more [HP iLO](https://en.wikipedia.org/wiki/HP_Integrated_Lights-Out) versions. However, for this post, the focus is the HP iLO2 only.
+
+The result of this configure reflects the following, however, as always with Home Assistant, your milage may vary. At least you learn from it!
+
+![](/assets/img/HASS-iLO_overview.png)]
 
 # What to use?
 

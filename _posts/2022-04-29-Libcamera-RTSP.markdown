@@ -43,7 +43,8 @@ sudo apt install
 
 Setting up `stream.sh` file
 ```
-libcamera-vid -t 0 --hflip --inline --framerate 5 -o - | cvlc -vvv stream:///dev/stdin --sout '#r
+#!/bin/bash
+libcamera-vid -t 0 -- width 1920 --height 1080 --hflip --inline --framerate 5 -o - | cvlc -vvv stream:///dev/stdin --sout '#r
 tp{sdp=rtsp://:8554/stream}' :demux=h264
 ```
 

@@ -14,7 +14,7 @@ I know that the wingspan of the HP_iLO platform, [open-sourced on Github](https:
 
 The result of this configure reflects the following, however, as always with Home Assistant, your milage may vary. At least you learn from it!
 
-![](/assets/img/HASS-iLO_overview.png)]
+![](/assets/img/HASS-iLO_overview.png)
 
 # What to use?
 

@@ -208,6 +208,11 @@ sensor.hp_ilo_hyper03_exp24
 
 | Description | Location | Platform integration: Status | Platform integration: Reading | Caution | Critical |
 | --- | --- | --- | --- | --- | --- |
+| Description | Location | Platform integration: Status | Platform integration: Reading | Caution | Critical |
+
+
+| Description | Location | Platform integration: Status | Platform integration: Reading | Caution | Critical |
+| --- | --- | --- | --- | --- | --- |
 | Temp 1: | Ambient | sensor_type: server_health<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 1"].status }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 1"].currentreading[0] }}' | 42C | 46C |
 | Temp 2: | CPU 1 | Ok | 40C | 82C | 83C |
 | Temp 3: | CPU 2 | Ok | 40C | 82C | 83C |

@@ -48,7 +48,7 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 
 ---
 
-### System Status - Summary
+## System Status - Summary
 
 ```https://server01-ilo2.lab.corp/dqstat.htm```.
 
@@ -64,7 +64,7 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 
 ---
 
-### System Information - Summary
+## System Information - Summary
 
 ```https://server01-ilo2.lab.corp/dhealth.htm```
 
@@ -78,7 +78,7 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 
 ---
 
-### System Information - Fans
+## System Information - Fans
 
 ```https://server01-ilo2.lab.corp/dhealthf.htm```
 
@@ -90,7 +90,7 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 | Fan 4: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 4"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 4"].speed[0] }}' |
 ---
 
-### System Information - Temperatures
+## System Information - Temperatures
 
 ```https://server01-ilo2.lab.corp/dhealtht.htm```
 
@@ -239,27 +239,27 @@ sensor.hp_ilo_hyper03_exp24
 
 ---
 
-### System Information - Power
+## System Information - Power
 
 ```https://server01-ilo2.lab.corp/dhealthv.htm```
 
 ---
-### System Information - Processors
+## System Information - Processors
 
 ```https://server01-ilo2.lab.corp/dsysproc.htm```
 
 ---
-### System Information - Memory
+## System Information - Memory
 
 ```https://server01-ilo2.lab.corp/dsysmem.htm```
 
 ---
-### System Information - NIC
+## System Information - NIC
 
 ```https://server01-ilo2.lab.corp/dhealthp.htm```
 
 ---
-### System Information - Drives
+## System Information - Drives
 
 ```https://server01-ilo2.lab.corp/dhealthd.htm```
 
@@ -408,42 +408,6 @@ card:
  name: 'Fan 4 updated:'
  icon: mdi:fan
 ```
-
-# iLO2 integration reference table
-
-Here you can find all the iLO2 items, which I was able to gather while fiddling around.
-
-Health-at-a-glance - https://server01-ilo2.lab.corp/dhealth.htm
-```
-{'fans': {'status': 'Ok', 'redundancy': 'Fully Redundant'}, 'temperature': {'status': 'Ok'}, 'vrm': {'status': 'Ok'}, 'power_supplies': {'status': 'Ok', 'redundancy': 'Not Redundant'}, 'drive': {'status': 'Ok'}}
-```
-
-Fans - https://server01-ilo2.lab.corp/dhealthf.htm
-
-```
-{'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (27, 'Percentage')} 	
-```
-
-Temperatures - https://server01-ilo2.lab.corp/dhealtht.htm
-
-Power - https://server01-ilo2.lab.corp/dhealthv.htm
-
-Processors - https://server01-ilo2.lab.corp/dsysproc.htm
-
-Memory - https://server01-ilo2.lab.corp/dsysmem.htm
-
-NIC - https://server01-ilo2.lab.corp/dhealthp.htm
-
-Drives - https://server01-ilo2.lab.corp/dhealthd.htm
-
-## Outputs
-
-### Heatlth-t-a-glance
-{'fans': {'status': 'Ok', 'redundancy': 'Fully Redundant'}, 'temperature': {'status': 'Ok'}, 'vrm': {'status': 'Ok'}, 'power_supplies': {'status': 'Ok', 'redundancy': 'Not Redundant'}, 'drive': {'status': 'Ok'}}
-
-### Fan
-{'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (27, 'Percentage')} 
-
 
 # Home work / Reference information
 

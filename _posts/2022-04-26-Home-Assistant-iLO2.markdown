@@ -40,10 +40,10 @@ For the ease of configuration and not handing out the full access credentials to
 
 The user management (```https://server01-ilo2.lab.corp/dusrpref.htm```) on the iLO2 enables you, while logged in using the administrator role, to add/alter accounts.
 
-| Description   | Platform integration                                                            | Example of returned data  | 
-| ---           | ---                                                                             | ---                       |
-| Server power  | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF                       |
-| UID Light     | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status   | OFF                       |
+| Description | Platform integration | Example of returned data | 
+| --- | --- | --- |
+| Server power | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF |
+| UID Light | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status | OFF |
 
 
 
@@ -58,10 +58,10 @@ The Summary on the System Status pages shows:
 ```https://server01-ilo2.lab.corp/dqstat.htm```
 
 
-| Description   | Platform integration                                                            | Example of returned data  | 
-| ---           | ---                                                                             | ---                       |
-| Server power  | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF                       |
-| UID Light     | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status   | OFF                       |
+| Description | Platform integration | Example of returned data | 
+| --- | --- | --- |
+| Server power | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF |
+| UID Light | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status | OFF |
 
 ---
 
@@ -97,119 +97,119 @@ System Information - Temperatures
 
 
 sensor.hp_ilo_hyper03_exp1
-  HP ILO HYPER03_exp1 
-  {'label': 'Temp 1', 'location': 'Ambient', 'status': 'Ok', 'currentreading': (28, 'Celsius'), 'caution': (42, 'Celsius'), 'critical': (46, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp1
+ HP ILO HYPER03_exp1 
+ {'label': 'Temp 1', 'location': 'Ambient', 'status': 'Ok', 'currentreading': (28, 'Celsius'), 'caution': (42, 'Celsius'), 'critical': (46, 'Celsius')} 	
+ friendly_name: HP ILO HYPER03_exp1
 
 sensor.hp_ilo_hyper03_exp2
 HP ILO HYPER03_exp2
 	{'label': 'Temp 2', 'location': 'CPU 1', 'status': 'Ok', 'currentreading': (40, 'Celsius'), 'caution': (82, 'Celsius'), 'critical': (83, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp2
+ friendly_name: HP ILO HYPER03_exp2
 
 sensor.hp_ilo_hyper03_exp3
-  HP ILO HYPER03_exp3
+ HP ILO HYPER03_exp3
 	{'label': 'Temp 3', 'location': 'CPU 2', 'status': 'Ok', 'currentreading': (40, 'Celsius'), 'caution': (82, 'Celsius'), 'critical': (83, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp3
+ friendly_name: HP ILO HYPER03_exp3
 
 sensor.hp_ilo_hyper03_exp4
-  HP ILO HYPER03_exp4
+ HP ILO HYPER03_exp4
 	{'label': 'Temp 4', 'location': 'Memory', 'status': 'Ok', 'currentreading': (42, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp4
+ friendly_name: HP ILO HYPER03_exp4
 
 sensor.hp_ilo_hyper03_exp5
-  HP ILO HYPER03_exp5
+ HP ILO HYPER03_exp5
 	{'label': 'Temp 5', 'location': 'Memory', 'status': 'Ok', 'currentreading': (36, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	friendly_name: HP ILO HYPER03_exp5
 
 sensor.hp_ilo_hyper03_exp6
-  HP ILO HYPER03_exp6
+ HP ILO HYPER03_exp6
 	{'label': 'Temp 6', 'location': 'Memory', 'status': 'Ok', 'currentreading': (36, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	friendly_name: HP ILO HYPER03_exp6
 
 sensor.hp_ilo_hyper03_exp7
-  HP ILO HYPER03_exp7
+ HP ILO HYPER03_exp7
 	{'label': 'Temp 7', 'location': 'Memory', 'status': 'Ok', 'currentreading': (36, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	friendly_name: HP ILO HYPER03_exp7
 
 sensor.hp_ilo_hyper03_exp8
-  HP ILO HYPER03_exp8
+ HP ILO HYPER03_exp8
 	{'label': 'Temp 8', 'location': 'Memory', 'status': 'Ok', 'currentreading': (39, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	friendly_name: HP ILO HYPER03_exp8
 
 sensor.hp_ilo_hyper03_exp9
-  HP ILO HYPER03_exp9
+ HP ILO HYPER03_exp9
 	{'label': 'Temp 9', 'location': 'Memory', 'status': 'Ok', 'currentreading': (40, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	friendly_name: HP ILO HYPER03_exp9
 
 sensor.hp_ilo_hyper03_exp10
-  HP ILO HYPER03_exp10
-  {'label': 'Temp 10', 'location': 'Memory', 'status': 'Ok', 'currentreading': (43, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp10
-  
+ HP ILO HYPER03_exp10
+ {'label': 'Temp 10', 'location': 'Memory', 'status': 'Ok', 'currentreading': (43, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
+ friendly_name: HP ILO HYPER03_exp10
+ 
 sensor.hp_ilo_hyper03_exp11
-  HP ILO HYPER03_exp11
+ HP ILO HYPER03_exp11
 	{'label': 'Temp 11', 'location': 'Memory', 'status': 'Ok', 'currentreading': (47, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp11
+ friendly_name: HP ILO HYPER03_exp11
 
 sensor.hp_ilo_hyper03_exp12
 HP ILO HYPER03_exp12
 	{'label': 'Temp 12', 'location': 'I/O Board 7', 'status': 'Ok', 'currentreading': (47, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp12
+ friendly_name: HP ILO HYPER03_exp12
 
 sensor.hp_ilo_hyper03_exp13
 HP ILO HYPER03_exp13
 	{'label': 'Temp 13', 'location': 'I/O Board 6', 'status': 'Ok', 'currentreading': (46, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp13
+ friendly_name: HP ILO HYPER03_exp13
 
 sensor.hp_ilo_hyper03_exp14
 HP ILO HYPER03_exp14
 	{'label': 'Temp 14', 'location': 'I/O Board 5', 'status': 'Ok', 'currentreading': (43, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp14
+ friendly_name: HP ILO HYPER03_exp14
 
 sensor.hp_ilo_hyper03_exp15
 HP ILO HYPER03_exp15
 	{'label': 'Temp 15', 'location': 'I/O Board 4', 'status': 'Ok', 'currentreading': (41, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp15
+ friendly_name: HP ILO HYPER03_exp15
 
 sensor.hp_ilo_hyper03_exp16
 HP ILO HYPER03_exp16
 	{'label': 'Temp 16', 'location': 'I/O Board 3', 'status': 'Ok', 'currentreading': (39, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp16
+ friendly_name: HP ILO HYPER03_exp16
 
 sensor.hp_ilo_hyper03_exp17
 HP ILO HYPER03_exp17
 	{'label': 'Temp 17', 'location': 'I/O Board 2', 'status': 'Ok', 'currentreading': (37, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp17
+ friendly_name: HP ILO HYPER03_exp17
 
 sensor.hp_ilo_hyper03_exp18
 HP ILO HYPER03_exp18
 	{'label': 'Temp 18', 'location': 'I/O Board 1', 'status': 'Ok', 'currentreading': (37, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp18
+ friendly_name: HP ILO HYPER03_exp18
 
 sensor.hp_ilo_hyper03_exp19
 HP ILO HYPER03_exp19
 	{'label': 'Temp 19', 'location': 'CPU', 'status': 'Ok', 'currentreading': (35, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp19
+ friendly_name: HP ILO HYPER03_exp19
 
 sensor.hp_ilo_hyper03_exp20
-  HP ILO HYPER03_exp20
+ HP ILO HYPER03_exp20
 	{'label': 'Temp 20', 'location': 'Memory', 'status': 'Ok', 'currentreading': (38, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp20
-  
+ friendly_name: HP ILO HYPER03_exp20
+ 
 sensor.hp_ilo_hyper03_exp21
-  HP ILO HYPER03_exp21
+ HP ILO HYPER03_exp21
 	{'label': 'Temp 21', 'location': 'Storage', 'status': 'Ok', 'currentreading': (35, 'Celsius'), 'caution': (60, 'Celsius'), 'critical': (65, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp21
+ friendly_name: HP ILO HYPER03_exp21
 
 sensor.hp_ilo_hyper03_exp22
-  HP ILO HYPER03_exp22
+ HP ILO HYPER03_exp22
 	{'label': 'Temp 22', 'location': 'System', 'status': 'Ok', 'currentreading': (69, 'Celsius'), 'caution': (110, 'Celsius'), 'critical': (115, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp22
+ friendly_name: HP ILO HYPER03_exp22
 
 sensor.hp_ilo_hyper03_exp23
-  HP ILO HYPER03_exp23
+ HP ILO HYPER03_exp23
 	{'label': 'Temp 23', 'location': 'System', 'status': 'Ok', 'currentreading': (46, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp23
+ friendly_name: HP ILO HYPER03_exp23
 
 sensor.hp_ilo_hyper03_exp24
-  HP ILO HYPER03_exp24
+ HP ILO HYPER03_exp24
 	{'label': 'Temp 24', 'location': 'System', 'status': 'Ok', 'currentreading': (49, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
-  friendly_name: HP ILO HYPER03_exp24
+ friendly_name: HP ILO HYPER03_exp24
 
 | Description | Location | Platform integration: Status | Platform integration: Reading | Caution | Critical |
 | --- | --- | --- | --- | --- | --- |

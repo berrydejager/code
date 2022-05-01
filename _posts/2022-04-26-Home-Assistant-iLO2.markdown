@@ -33,13 +33,14 @@ Although there is, up to now, no GUI way of adding this YAML-based integration t
 
 I use the Studio Code Server add-on for the ease of altering the Home Assistant configuration files.
 
+Please note that when using the latest iLO firmware you have to pay extra performance point, see my blog-post; [HP iLO2 extremely slow over HTTPS](https://code.berrydejager.com/HP-iLO2-extremely-slow-over-HTTPS/)
+
 ## Create specific accounts in he iLO2 interface
 
 For the ease of configuration and not handing out the full access credentials to Home Assistant I opted to create separate accounts on the iLO interface for the handling of the HP_iLO requests.
 
-The user management on the iLO2 can be reached here, make sure to login with the administrator role to add/alter accounts
+The user management (```https://server01-ilo2.lab.corp/dusrpref.htm```) on the iLO2 enables you, while logged in using the administrator role, to add/alter accounts.
 
-```https://server01-ilo2.lab.corp/dusrpref.htm```
 
 ## Checking the sensors
 
@@ -78,11 +79,10 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 
 | Description | Location | Platform integration: Status | Platform integration: Speed |
 | :-- | :-- | :-- | :-- |
-| Fan 1: | &nbsp; | &nbsp; | &nbsp; |
-| Fan 2: | &nbsp; | &nbsp; | &nbsp; |
-| Fan 3: | &nbsp; | &nbsp; | &nbsp; |
-| Fan 4: | &nbsp; | &nbsp; | &nbsp; |
-
+| Fan 1: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 1"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 1"].speed[0] }}' |
+| Fan 2: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 2"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 2"].speed[0] }}' |
+| Fan 3: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 3"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 3"].speed[0] }}' |
+| Fan 4: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 4"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 4"].speed[0] }}' |
 ---
 
 ### System Information - Temperatures
@@ -90,8 +90,8 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 ```https://server01-ilo2.lab.corp/dhealtht.htm```
 
 | Description | Location | Platform integration: Status | Platform integration: Reading | Caution | Critical |
-| :-- | :-- | :--: | :--: | :--: | :--: |
-| Temp 1: | Ambient Zone | Ok | 26C | 42C | 46C |
+| :-- | :-- | :-- | :-- | :--: | :--: |
+| Temp 1: | Ambient Zone | Ok | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 1"].currentreading[0] }}' | 42C | 46C |
 | Temp 2: | CPU 1 | Ok | 40C | 82C | 83C |
 | Temp 3: | CPU 2 | Ok | 40C | 82C | 83C |
 | Temp 4: | Memory Zone | Ok | 38C | 87C | 92C |

@@ -77,6 +77,14 @@ https://server01-ilo2.lab.corp/dhealth.htm
 
 https://server01-ilo2.lab.corp/dhealthf.htm
 
+Requesting data: 
+``` '{{ ilo_data.fans["Fan 1"].speed[0] }}' ```
+
+Response data: 
+``` {'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (26, 'Percentage')}```
+
+From this I distilled the following sensor configuration;
+
 | Description | Location | Platform integration - Status | Platform integration - Speed |
 | --- | --- | --- | --- |
 | Fan 1: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '\{\{ ilo_data.fans["Fan 1"].status[0] \}\}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '\{\{ ilo_data.fans["Fan 1"].speed[0] \}\}' |

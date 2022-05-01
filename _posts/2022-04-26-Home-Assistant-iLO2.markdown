@@ -14,6 +14,11 @@ I know that the wingspan of the HP_iLO platform, [open-sourced on Github](https:
 
 The result of this configure reflects the following, however, as always with Home Assistant, your milage may vary. At least you learn from it!
 
+| test1 | test2 | test3 |
+| ---   | ---   | ---   |
+| a     | b     | c     |
+| 1     | 2     | 3     |
+
 ![](/assets/img/HASS-iLO_overview.png)
 
 # What to use?
@@ -204,13 +209,6 @@ sensor.hp_ilo_hyper03_exp24
   HP ILO HYPER03_exp24
 	{'label': 'Temp 24', 'location': 'System', 'status': 'Ok', 'currentreading': (49, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
   friendly_name: HP ILO HYPER03_exp24
-
-
-| Description | Location  | Platform integration - Status   | Platform integration - Reading  | Caution | Critical  |
-| ---         | ---       | ---                             | ---                             | ---     | ---       |
-| Description | Location  | Platform integration -  Status  | Platform integration - Reading  | Caution | Critical  |
-
-
 
 | Description | Location | Platform integration: Status | Platform integration: Reading | Caution | Critical |
 | --- | --- | --- | --- | --- | --- |

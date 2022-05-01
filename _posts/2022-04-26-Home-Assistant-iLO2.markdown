@@ -56,7 +56,7 @@ https://server01-ilo2.lab.corp/dqstat.htm
 | server_power_status | ON |
 | server_uid_status | OFF |
 
-The power and UID only report `ON`, `OFF` and for the UID the `BLINKING` state is present.
+The power and UID only reports `ON`, `OFF` and for the UID the `BLINKING` state is present.
 
 
 ```
@@ -78,7 +78,7 @@ Interestingly you see that the reading is combined as in the value and the unit-
       - name: SERVER01_power_readings
         sensor_type: server_power_readings
         unit_of_measurement: "Watts"
-        value_template: "{{ ilo_data.present_power_reading[0]}}"
+        value_template: "\{\{ ilo_data.present_power_reading[0]\}\}"
 ```
 
 ---
@@ -96,7 +96,7 @@ From this i could create the following sensor
 ```
       - name: SERVER01_haag_fans_status
         sensor_type: server_health
-        value_template: "{{ ilo_data.health_at_a_glance['fans']['status'] }}"
+        value_template: "\{\{ ilo_data.health_at_a_glance['fans']['status'] \}\}"
 ```
 
 
@@ -129,144 +129,76 @@ From this I distilled the following sensor configuration;
       - name: SERVER01_health_fan_1_speed
         sensor_type: server_health
         unit_of_measurement: "%"
-        value_template: '{{ ilo_data.fans["Fan 1"].speed[0] }}'
+        value_template: '\[\{ ilo_data.fans["Fan 1"].speed[0] \}\}'
       - name: SERVER01_health_fan_2_speed
         sensor_type: server_health
         unit_of_measurement: "%"
-        value_template: '{{ ilo_data.fans["Fan 2"].speed[0] }}'
+        value_template: '\{\{ ilo_data.fans["Fan 2"].speed[0] \}\}'
       - name: SERVER01_health_fan_3_speed
         sensor_type: server_health
         unit_of_measurement: "%"
-        value_template: '{{ ilo_data.fans["Fan 3"].speed[0] }}'
+        value_template: '\{\{ ilo_data.fans["Fan 3"].speed[0] \}\}'
       - name: SERVER01_health_fan_4_speed
         sensor_type: server_health
         unit_of_measurement: "%"
-        value_template: '{{ ilo_data.fans["Fan 4"].speed[0] }}'
+        value_template: '\{\{ ilo_data.fans["Fan 4"].speed[0] \}\}'
 ```
 
 ## System Information - Temperatures
 
+From the temperature overview in ILO2, in my case `https://server01-ilo2.lab.corp/dhealtht.htm`,  i took the Health Temperature info and noted the amount of temperature sensors. Those sensors i mapped to the values i wanted to retrieve using Home Assistant. 
+
+Please note that the sensor `caution' and 'critical' levels vary per sensor.
+
 https://server01-ilo2.lab.corp/dhealtht.htm
 
+| Sensor number   | Requesting data   | Response data |
+| ---             | ---               | ---           |
+| 01 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 01"].currentreading[0] }}' | \{'label': 'Temp 1', 'location': 'Ambient', 'status': 'Ok', 'currentreading': (28, 'Celsius'), 'caution': (42, 'Celsius'), 'critical': (46, 'Celsius')\} |
+| 02 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 02"].currentreading[0] }}' | \{'label': 'Temp 2', 'location': 'CPU 1', 'status': 'Ok', 'currentreading': (40, 'Celsius'), 'caution': (82, 'Celsius'), 'critical': (83, 'Celsius')\} |
+| 03 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 03"].currentreading[0] }}' | \{'label': 'Temp 3', 'location': 'CPU 2', 'status': 'Ok', 'currentreading': (40, 'Celsius'), 'caution': (82, 'Celsius'), 'critical': (83, 'Celsius')\} |
+| 04 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 04"].currentreading[0] }}' | \{'label': 'Temp 4', 'location': 'Memory', 'status': 'Ok', 'currentreading': (42, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} | 	
+| 05 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 05"].currentreading[0] }}' | \{'label': 'Temp 5', 'location': 'Memory', 'status': 'Ok', 'currentreading': (36, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
+| 06 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 06"].currentreading[0] }}' | \{'label': 'Temp 6', 'location': 'Memory', 'status': 'Ok', 'currentreading': (36, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
+| 07 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 07"].currentreading[0] }}' | \{'label': 'Temp 7', 'location': 'Memory', 'status': 'Ok', 'currentreading': (36, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
+| 08 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 08"].currentreading[0] }}' | \{'label': 'Temp 8', 'location': 'Memory', 'status': 'Ok', 'currentreading': (39, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
+| 09 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 09"].currentreading[0] }}' | \{'label': 'Temp 9', 'location': 'Memory', 'status': 'Ok', 'currentreading': (40, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
+| 10 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 10"].currentreading[0] }}' | \{'label': 'Temp 10', 'location': 'Memory', 'status': 'Ok', 'currentreading': (43, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
+| 11 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 11"].currentreading[0] }}' | \{'label': 'Temp 11', 'location': 'Memory', 'status': 'Ok', 'currentreading': (47, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
+| 12 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 12"].currentreading[0] }}' | \{'label': 'Temp 12', 'location': 'I/O Board 7', 'status': 'Ok', 'currentreading': (47, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')\} |
+| 13 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 13"].currentreading[0] }}' | \{'label': 'Temp 13', 'location': 'I/O Board 6', 'status': 'Ok', 'currentreading': (46, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')\} |
+| 14 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 14"].currentreading[0] }}' | \{'label': 'Temp 14', 'location': 'I/O Board 5', 'status': 'Ok', 'currentreading': (43, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')\} |
+| 15 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 15"].currentreading[0] }}' | \{'label': 'Temp 15', 'location': 'I/O Board 4', 'status': 'Ok', 'currentreading': (41, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')\} |
+| 16 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 16"].currentreading[0] }}' | \{'label': 'Temp 16', 'location': 'I/O Board 3', 'status': 'Ok', 'currentreading': (39, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')\} |
+| 17 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 17"].currentreading[0] }}' | \{'label': 'Temp 17', 'location': 'I/O Board 2', 'status': 'Ok', 'currentreading': (37, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')\} |
+| 18 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 18"].currentreading[0] }}' | \{'label': 'Temp 18', 'location': 'I/O Board 1', 'status': 'Ok', 'currentreading': (37, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')\} |
+| 19 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 19"].currentreading[0] }}' | \{'label': 'Temp 19', 'location': 'CPU', 'status': 'Ok', 'currentreading': (35, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
+| 20 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 20"].currentreading[0] }}' | \{'label': 'Temp 20', 'location': 'Memory', 'status': 'Ok', 'currentreading': (38, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
+| 21 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 21"].currentreading[0] }}' | \{'label': 'Temp 21', 'location': 'Storage', 'status': 'Ok', 'currentreading': (35, 'Celsius'), 'caution': (60, 'Celsius'), 'critical': (65, 'Celsius')\} |
+| 22 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 22"].currentreading[0] }}' | \{'label': 'Temp 22', 'location': 'System', 'status': 'Ok', 'currentreading': (69, 'Celsius'), 'caution': (110, 'Celsius'), 'critical': (115, 'Celsius')\} |
+| 23 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 23"].currentreading[0] }}' | \{'label': 'Temp 23', 'location': 'System', 'status': 'Ok', 'currentreading': (46, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
+| 24 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 24"].currentreading[0] }}' | \{'label': 'Temp 24', 'location': 'System', 'status': 'Ok', 'currentreading': (49, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
 
-sensor.hp_ilo_SERVER01_exp1
- HP ILO SERVER01_exp1 
- {'label': 'Temp 1', 'location': 'Ambient', 'status': 'Ok', 'currentreading': (28, 'Celsius'), 'caution': (42, 'Celsius'), 'critical': (46, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp1
+Again, I extracted the values to get some sensible data in to the HASS dashboard. I didn't take every measurement in account as this dramatically increases the time needed to harvest the information.
 
-sensor.hp_ilo_SERVER01_exp2
-HP ILO SERVER01_exp2
-	{'label': 'Temp 2', 'location': 'CPU 1', 'status': 'Ok', 'currentreading': (40, 'Celsius'), 'caution': (82, 'Celsius'), 'critical': (83, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp2
+While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that they stick at 40 degrees celsius at all times. This was measured over different servers and scenarios. For this reason I monitor the `Temp 19: CPU Zone` and `Tmep 21: Storage Zone` to give meaningfull info to the dashboard.
 
-sensor.hp_ilo_SERVER01_exp3
- HP ILO SERVER01_exp3
-	{'label': 'Temp 3', 'location': 'CPU 2', 'status': 'Ok', 'currentreading': (40, 'Celsius'), 'caution': (82, 'Celsius'), 'critical': (83, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp3
 
-sensor.hp_ilo_SERVER01_exp4
- HP ILO SERVER01_exp4
-	{'label': 'Temp 4', 'location': 'Memory', 'status': 'Ok', 'currentreading': (42, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp4
+```
+      - name: SERVER01_temp_ambient
+        sensor_type: server_health
+        unit_of_measurement: "°C"
+        value_template: '{{ ilo_data.temperature["Temp 1"].currentreading[0] }}'
+      - name: SERVER01_temp_cpu_zone
+        sensor_type: server_health
+        unit_of_measurement: "°C"
+        value_template: '{{ ilo_data.temperature["Temp 19"].currentreading[0] }}'
+      - name: SERVER01_temp_storage_zone
+        sensor_type: server_health
+        unit_of_measurement: "°C"
+        value_template: '{{ ilo_data.temperature["Temp 21"].currentreading[0] }}'
 
-sensor.hp_ilo_SERVER01_exp5
- HP ILO SERVER01_exp5
-	{'label': 'Temp 5', 'location': 'Memory', 'status': 'Ok', 'currentreading': (36, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	friendly_name: HP ILO SERVER01_exp5
-
-sensor.hp_ilo_SERVER01_exp6
- HP ILO SERVER01_exp6
-	{'label': 'Temp 6', 'location': 'Memory', 'status': 'Ok', 'currentreading': (36, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	friendly_name: HP ILO SERVER01_exp6
-
-sensor.hp_ilo_SERVER01_exp7
- HP ILO SERVER01_exp7
-	{'label': 'Temp 7', 'location': 'Memory', 'status': 'Ok', 'currentreading': (36, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	friendly_name: HP ILO SERVER01_exp7
-
-sensor.hp_ilo_SERVER01_exp8
- HP ILO SERVER01_exp8
-	{'label': 'Temp 8', 'location': 'Memory', 'status': 'Ok', 'currentreading': (39, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	friendly_name: HP ILO SERVER01_exp8
-
-sensor.hp_ilo_SERVER01_exp9
- HP ILO SERVER01_exp9
-	{'label': 'Temp 9', 'location': 'Memory', 'status': 'Ok', 'currentreading': (40, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	friendly_name: HP ILO SERVER01_exp9
-
-sensor.hp_ilo_SERVER01_exp10
- HP ILO SERVER01_exp10
- {'label': 'Temp 10', 'location': 'Memory', 'status': 'Ok', 'currentreading': (43, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp10
- 
-sensor.hp_ilo_SERVER01_exp11
- HP ILO SERVER01_exp11
-	{'label': 'Temp 11', 'location': 'Memory', 'status': 'Ok', 'currentreading': (47, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp11
-
-sensor.hp_ilo_SERVER01_exp12
-HP ILO SERVER01_exp12
-	{'label': 'Temp 12', 'location': 'I/O Board 7', 'status': 'Ok', 'currentreading': (47, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp12
-
-sensor.hp_ilo_SERVER01_exp13
-HP ILO SERVER01_exp13
-	{'label': 'Temp 13', 'location': 'I/O Board 6', 'status': 'Ok', 'currentreading': (46, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp13
-
-sensor.hp_ilo_SERVER01_exp14
-HP ILO SERVER01_exp14
-	{'label': 'Temp 14', 'location': 'I/O Board 5', 'status': 'Ok', 'currentreading': (43, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp14
-
-sensor.hp_ilo_SERVER01_exp15
-HP ILO SERVER01_exp15
-	{'label': 'Temp 15', 'location': 'I/O Board 4', 'status': 'Ok', 'currentreading': (41, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp15
-
-sensor.hp_ilo_SERVER01_exp16
-HP ILO SERVER01_exp16
-	{'label': 'Temp 16', 'location': 'I/O Board 3', 'status': 'Ok', 'currentreading': (39, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp16
-
-sensor.hp_ilo_SERVER01_exp17
-HP ILO SERVER01_exp17
-	{'label': 'Temp 17', 'location': 'I/O Board 2', 'status': 'Ok', 'currentreading': (37, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp17
-
-sensor.hp_ilo_SERVER01_exp18
-HP ILO SERVER01_exp18
-	{'label': 'Temp 18', 'location': 'I/O Board 1', 'status': 'Ok', 'currentreading': (37, 'Celsius'), 'caution': (68, 'Celsius'), 'critical': (73, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp18
-
-sensor.hp_ilo_SERVER01_exp19
-HP ILO SERVER01_exp19
-	{'label': 'Temp 19', 'location': 'CPU', 'status': 'Ok', 'currentreading': (35, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp19
-
-sensor.hp_ilo_SERVER01_exp20
- HP ILO SERVER01_exp20
-	{'label': 'Temp 20', 'location': 'Memory', 'status': 'Ok', 'currentreading': (38, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp20
- 
-sensor.hp_ilo_SERVER01_exp21
- HP ILO SERVER01_exp21
-	{'label': 'Temp 21', 'location': 'Storage', 'status': 'Ok', 'currentreading': (35, 'Celsius'), 'caution': (60, 'Celsius'), 'critical': (65, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp21
-
-sensor.hp_ilo_SERVER01_exp22
- HP ILO SERVER01_exp22
-	{'label': 'Temp 22', 'location': 'System', 'status': 'Ok', 'currentreading': (69, 'Celsius'), 'caution': (110, 'Celsius'), 'critical': (115, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp22
-
-sensor.hp_ilo_SERVER01_exp23
- HP ILO SERVER01_exp23
-	{'label': 'Temp 23', 'location': 'System', 'status': 'Ok', 'currentreading': (46, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp23
-
-sensor.hp_ilo_SERVER01_exp24
- HP ILO SERVER01_exp24
-	{'label': 'Temp 24', 'location': 'System', 'status': 'Ok', 'currentreading': (49, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} 	
- friendly_name: HP ILO SERVER01_exp24
-
-| Description | Location | Platform integration: Status | Platform integration: Reading | Caution | Critical |
-| --- | --- | --- | --- | --- | --- |
-| Temp 1: | Ambient | sensor_type: server_health<br />&nbsp;&nbsp;value_template: '\{\{ ilo_data.temperature["Temp 1"].status \}\}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '\{\{ ilo_data.temperature["Temp 1"].currentreading[0] \}\}' | 42C | 46C |
+```
 
 ---
 
@@ -314,12 +246,7 @@ hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
 
 The integration is based on a [YAML](https://yaml.org/) file. The colon-centered syntax of this so-called "human-friendly data serialization language" is very strict. Luckily the Visual Studio Code has a YAML code linting feature to help you out by highlighting syntax errors. 
 
-From the temperature overview in ILO2, in my case `https://server01-ilo2.lab.corp/dhealtht.htm`, over you can pick your temperature readings. 
-
-While observing the `CPU 1` and `CPU 2` i noticed that they stick at 40 degrees celsius at all times, measured over different servers and scenarios. This is the reason I monitor the `Temp 19: CPU Zone` and `Tmep 21: Storage Zone` to give meaningfull info to the dashboard.
-
 Please note: the `scan_interval` has been set to 300 seconds to give the iLO2 time to respond for all monitored variables. The default value is set to 30 seconds according to the [scan_interval documentation](https://www.home-assistant.io/docs/configuration/platform_options/#scan-interval).
-
 
 Add the `sensor` section to your existing `/config/configuration.yaml` file to enable the hp_ilo platform integration.
 

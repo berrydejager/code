@@ -6,6 +6,9 @@ description: Integrating HP iLO2 into Home Assistent dashboards.
 img: header/HASS-iLO.png
 tags: [HomeAssistant, HASS, HASSio, HP, ML350-G6, iLO2, hp_ilo]
 ---
+
+[TOC]
+
 Being fond of statistics, I decided to monitor my, old-but-beefy, iLO2-equipped [HP ML350-G6](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c01713311) servers.
 
 The use case for my servers is running a lab environment for educational purposes. Giving easy insight into the statistics helps to keep the usage down to the necessary level only.
@@ -43,6 +46,81 @@ The user management on the iLO2 can be reached here, make sure to login with the
 https://server01-ilo2.lab.corp/dusrpref.htm
 ```
 
+## Checking the sensors
+
+### Summary (Health-at-a-Glance)
+| Description     | Status  | Redundancy level  |
+| :--             | :--     | :--               |
+| Fans:           |         |                   |
+| Temperatures:   |         |                   |
+| VRMs:           |         |                   |
+| Power Supplies: |         |                   |
+| Drives:         |         |                   |
+
+---
+
+### Fans
+| Description     | Location  | Status  | Speed |
+| :--             | :--       | :--     | :--   |
+| Fan 1:          |           |         |       |
+| Fan 2:          |           |         |       |
+| Fan 3:          |           |         |       |
+| Fan 4:          |           |         |       |
+
+---
+
+### Temperatures
+
+| Description     | Location      | Status  | Reading | Thresholds  |
+| :--             | :--           | :--     | :--     | :--         | 
+| Temp 1:         | Ambient Zone  | Ok      | 26C     | Caution: 42C; Critical:46C  |
+| Temp 2:         | CPU 1         | Ok  	  | 40C  	  | Caution: 82C; Critical:83C  |
+| Temp 3:         | CPU 2         | Ok  	  | 40C  	  | Caution: 82C; Critical:83C  |
+| Temp 4:         | Memory Zone   | Ok  	  | 38C  	  | Caution: 87C; Critical:92C  |
+| Temp 5:         | Memory Zone   | Ok  	  | 33C  	  | Caution: 87C; Critical:92C  |
+| Temp 6:         | Memory Zone   | Ok  	  | 33C  	  | Caution: 87C; Critical:92C  |
+| Temp 7:         | Memory Zone   | Ok  	  | 33C  	  | Caution: 87C; Critical:92C  |
+| Temp 8:         | Memory Zone   | Ok  	  | 34C  	  | Caution: 87C; Critical:92C  |
+| Temp 9:         | Memory Zone   | Ok  	  | 34C  	  | Caution: 87C; Critical:92C  |
+| Temp 10:        | Memory Zone   | Ok  	  | 37C  	  | Caution: 87C; Critical:92C  |
+| Temp 11:        | Memory Zone   | Ok  	  | 42C  	  | Caution: 87C; Critical:92C  |
+| Temp 12:        | I/O Board 7   | Ok  	  | 42C  	  | Caution: 68C; Critical:73C  |
+| Temp 13:        | I/O Board 6   | Ok  	  | 41C  	  | Caution: 68C; Critical:73C  |
+| Temp 14:        | I/O Board 5   | Ok  	  | 38C  	  | Caution: 68C; Critical:73C  |
+| Temp 15:        | I/O Board 4   | Ok  	  | 36C  	  | Caution: 68C; Critical:73C  |
+| Temp 16:        | I/O Board 3   | Ok  	  | 34C  	  | Caution: 68C; Critical:73C  |
+| Temp 17:        | I/O Board 2   | Ok  	  | 32C  	  | Caution: 68C; Critical:73C  |
+| Temp 18:        | I/O Board 1   | Ok  	  | 31C  	  | Caution: 68C; Critical:73C  |
+| Temp 19:        | CPU Zone      | Ok  	  | 31C  	  | Caution: 87C; Critical:92C  |
+| Temp 20:        | Memory Zone   | Ok  	  | 32C  	  | Caution: 87C; Critical:92C  |
+| Temp 21:        | Storage Zone  | Ok  	  | 0C  	  | Caution: 60C; Critical:65C  |
+| Temp 22:        | System Zone   | Ok  	  | 61C  	  | Caution: 110C; Critical:115C | 
+| Temp 23:        | System Zone   | Ok  	  | 39C  	  | Caution: 87C; Critical:92C  |
+| Temp 24:        | System Zone   | Ok  	  | 44C  	  | Caution: 87C; Critical:92C  |
+
+---
+
+### Power
+
+
+---
+### Processors
+
+
+---
+### Memory
+
+
+---
+### NIC
+
+
+---
+### Drives
+
+
+---
+
 ## Secrets configuration
 
 You can use the `/config/secrets.yaml` file to stash your iLO2 servers' specifics and credentials.
@@ -58,6 +136,8 @@ hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
 The integration is based on a [YAML](https://yaml.org/) file. The colon-centered syntax of this so-called "human-friendly data serialization language" is very strict. Luckily the Visual Studio Code has a YAML code linting feature to help you out by highlighting syntax errors.  
 
 From the temperature overview in ILO2, in my case `https://server01-ilo2.lab.corp/dhealtht.htm`, over you can pick your temperature readings. 
+
+| | Location | Status 
 
 While observing the `CPU 1` and `CPU 2` i noticed that they stick at 40 degrees celsius at all times, measured over different servers and scenarios. This is the reason I monitor the `Temp 19: CPU Zone` and `Tmep 21: Storage Zone` to give meaningfull info to the dashboard.
 

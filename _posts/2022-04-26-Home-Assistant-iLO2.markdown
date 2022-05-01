@@ -16,7 +16,19 @@ The result of this configure reflects the following, however, as always with Hom
 
 ![](/assets/img/HASS-iLO_overview.png)
 
+
+| test1 | test2 | test3 |
+| ---   | ---   | ---   |
+| a     | b     | c     |
+| 1     | 2     | 3     |
+
 # What to use?
+
+
+| test1 | test2 | test3 |
+| ---   | ---   | ---   |
+| a     | b     | c     |
+| 1     | 2     | 3     |
 
 For maximum functionality, I went for the Home Assistant OS (or Supervised), see; [Home Assistant installation methods](https://www.home-assistant.io/installation/#compare-installation-methods).
 
@@ -50,7 +62,7 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 
 # System Status - Summary
 
-```https://server01-ilo2.lab.corp/dqstat.htm```.
+```https://server01-ilo2.lab.corp/dqstat.htm```
 
 | test1 | test2 | test3 |
 | ---   | ---   | ---   |

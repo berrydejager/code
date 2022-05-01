@@ -14,11 +14,6 @@ I know that the wingspan of the HP_iLO platform, [open-sourced on Github](https:
 
 The result of this configure reflects the following, however, as always with Home Assistant, your milage may vary. At least you learn from it!
 
-| test1 | test2 | test3 |
-| ---   | ---   | ---   |
-| a     | b     | c     |
-| 1     | 2     | 3     |
-
 ![](/assets/img/HASS-iLO_overview.png)
 
 # What to use?
@@ -57,10 +52,15 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 
 ```https://server01-ilo2.lab.corp/dqstat.htm```.
 
-| Description | Platform integration: | Example of returned data | 
-| --- | --- | --- |
-| Server power | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF |
-| UID Light | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status | OFF |
+| test1 | test2 | test3 |
+| ---   | ---   | ---   |
+| a     | b     | c     |
+| 1     | 2     | 3     |
+
+| Description   | Platform integration                                                            | Example of returned data  | 
+| ---           | ---                                                                             | ---                       |
+| Server power  | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF                       |
+| UID Light     | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status   | OFF                       |
 
 ---
 

@@ -56,6 +56,9 @@ https://server01-ilo2.lab.corp/dqstat.htm
 | server_power_status | ON |
 | server_uid_status | OFF |
 
+The power and UID only report `ON`, `OFF` and for the UID the `BLINKING` state is present.
+
+
 ```
       - name: SERVER01_power_status
         sensor_type: server_power_status
@@ -68,6 +71,8 @@ https://server01-ilo2.lab.corp/dqstat.htm
 | Requesting data | Response data |
 | ---             | ---           |
 | server_power_readings | \{'present_power_reading': (186, 'Watts'), 'average_power_reading': (186, 'Watts'), 'maximum_power_reading': (281, 'Watts'), 'minimum_power_reading': (185, 'Watts')\} |
+
+Interestingly you see that the reading is combined as in the value and the unit-size.
 
 ```
       - name: SERVER01_power_readings
@@ -85,6 +90,8 @@ https://server01-ilo2.lab.corp/dhealth.htm
 | Requesting data | Response data |
 | ---             | ---           |
 | value_template: "\{\{ ilo_data.health_at_a_glance \}\}" | \{'fans': \{'status': 'Ok', 'redundancy': 'Fully Redundant'\}, 'temperature': \{'status': 'Ok'\}, 'vrm': \{'status': 'Ok'\}, 'power_supplies': \{'status': 'Ok', 'redundancy': 'Not Redundant'\}, 'drive': \{'status': 'Ok'\}\} |
+
+From this i could create the following sensor
 
 ```
       - name: SERVER01_haag_fans_status

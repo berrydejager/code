@@ -79,7 +79,7 @@ https://server01-ilo2.lab.corp/dhealthf.htm
 
 | Description | Location | Platform integration - Status | Platform integration - Speed |
 | --- | --- | --- | --- |
-| Fan 1: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 1"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 1"].speed[0] }}' |
+| Fan 1: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 1"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '/{/{ ilo_data.fans["Fan 1"].speed[0] /}/}' |
 | Fan 2: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 2"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 2"].speed[0] }}' |
 | Fan 3: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 3"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 3"].speed[0] }}' |
 | Fan 4: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 4"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 4"].speed[0] }}' |

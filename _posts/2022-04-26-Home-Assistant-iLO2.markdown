@@ -93,7 +93,8 @@ The power and UID only reports `ON`, `OFF` and for the UID the `BLINKING` state 
 
 | Requesting data | Response data |
 | ---             | ---           |
-| server_power_readings | \{'present_power_reading': (186, 'Watts'), 'average_power_reading': (186, 'Watts'), 'maximum_power_reading': (281, 'Watts'), 'minimum_power_reading': (185, 'Watts')\} |
+|         sensor_type: server_power_readings
+        unit_of_measurement: "Watts"<br />server_power_readings<br />value_template: "\{\{ ilo_data\}\}" | \{'present_power_reading': (186, 'Watts'), 'average_power_reading': (186, 'Watts'), 'maximum_power_reading': (281, 'Watts'), 'minimum_power_reading': (185, 'Watts')\} |
 
 Interestingly you see that the reading is combined as in the value and the unit-size.
 
@@ -101,7 +102,7 @@ Interestingly you see that the reading is combined as in the value and the unit-
       - name: SERVER01_power_readings
         sensor_type: server_power_readings
         unit_of_measurement: "Watts"
-        value_template: "\{\{ ilo_data.present_power_reading[0]\}\}"
+        value_template: "\{\{ ilo_data\}\}"
 ```
 
 ---
@@ -112,7 +113,7 @@ https://server01-ilo2.lab.corp/dhealth.htm
 
 | Requesting data | Response data |
 | ---             | ---           |
-| value_template: "\{\{ ilo_data.health_at_a_glance \}\}" | \{'fans': \{'status': 'Ok', 'redundancy': 'Fully Redundant'\}, 'temperature': \{'status': 'Ok'\}, 'vrm': \{'status': 'Ok'\}, 'power_supplies': \{'status': 'Ok', 'redundancy': 'Not Redundant'\}, 'drive': \{'status': 'Ok'\}\} |
+| sensor_type: server_health<br />value_template: "\{\{ ilo_data.health_at_a_glance \}\}" | \{'fans': \{'status': 'Ok', 'redundancy': 'Fully Redundant'\}, 'temperature': \{'status': 'Ok'\}, 'vrm': \{'status': 'Ok'\}, 'power_supplies': \{'status': 'Ok', 'redundancy': 'Not Redundant'\}, 'drive': \{'status': 'Ok'\}\} |
 
 From this i could create the following sensor
 
@@ -140,10 +141,10 @@ Using the Home Assistent developer tools;
 
 | Requesting data | Response data |
 | ---             | ---           |
-| \{\{ ilo_data.fans["Fan 1"] \}\} | \{'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (26, 'Percentage')\} |
-| \{\{ ilo_data.fans["Fan 2"] \}\} | \{'label': 'Fan 2', 'zone': 'System', 'status': 'Ok', 'speed': (21, 'Percentage')\} |
-| \{\{ ilo_data.fans["Fan 3"] \}\} | \{'label': 'Fan 3', 'zone': 'System', 'status': 'Ok', 'speed': (31, 'Percentage')\} |
-| \{\{ ilo_data.fans["Fan 4"] \}\} | \{'label': 'Fan 4', 'zone': 'System', 'status': 'Ok', 'speed': (30, 'Percentage')\} |
+| sensor_type: server_health<br />unit_of_measurement: "%"<br />\{\{ ilo_data.fans["Fan 1"] \}\} | \{'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (26, 'Percentage')\} |
+| sensor_type: server_health<br />unit_of_measurement: "%"<br />\{\{ ilo_data.fans["Fan 2"] \}\} | \{'label': 'Fan 2', 'zone': 'System', 'status': 'Ok', 'speed': (21, 'Percentage')\} |
+| sensor_type: server_health<br />unit_of_measurement: "%"<br />\{\{ ilo_data.fans["Fan 3"] \}\} | \{'label': 'Fan 3', 'zone': 'System', 'status': 'Ok', 'speed': (31, 'Percentage')\} |
+| sensor_type: server_health<br />unit_of_measurement: "%"<br />\{\{ ilo_data.fans["Fan 4"] \}\} | \{'label': 'Fan 4', 'zone': 'System', 'status': 'Ok', 'speed': (30, 'Percentage')\} |
 
 From this I distilled the following sensor configuration;
 

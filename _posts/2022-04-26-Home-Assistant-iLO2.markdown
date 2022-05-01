@@ -95,7 +95,7 @@ The power and UID only reports `ON`, `OFF` and for the UID the `BLINKING` state 
 
 | Requesting data | Response data |
 | ---             | ---           |
-|         sensor_type: server_power_readings <br />        unit_of_measurement: "Watts"<br />server_power_readings<br />value_template: "\{\{ ilo_data\}\}" | \{'present_power_reading': (186, 'Watts'), 'average_power_reading': (186, 'Watts'), 'maximum_power_reading': (281, 'Watts'), 'minimum_power_reading': (185, 'Watts')\} |
+| sensor_type: server_power_readings <br />unit_of_measurement: "Watts"<br />server_power_readings<br />value_template: "\{\{ ilo_data\}\}" | \{'present_power_reading': (186, 'Watts'), 'average_power_reading': (186, 'Watts'), 'maximum_power_reading': (281, 'Watts'), 'minimum_power_reading': (185, 'Watts')\} |
 
 Interestingly you see that the reading is combined as in the value and the unit-size.
 
@@ -103,7 +103,7 @@ Interestingly you see that the reading is combined as in the value and the unit-
       - name: SERVER01_power_readings
         sensor_type: server_power_readings
         unit_of_measurement: "Watts"
-        value_template: "\{\{ ilo_data\}\}"
+        value_template: "{{ ilo_data.present_power_reading[0]}}"
 ```
 
 ---

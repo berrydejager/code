@@ -6,9 +6,6 @@ description: Integrating HP iLO2 into Home Assistent dashboards.
 img: header/HASS-iLO.png
 tags: [HomeAssistant, HASS, HASSio, HP, ML350-G6, iLO2, hp_ilo]
 ---
-
-[TOC]
-
 Being fond of statistics, I decided to monitor my, old-but-beefy, iLO2-equipped [HP ML350-G6](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c01713311) servers.
 
 The use case for my servers is running a lab environment for educational purposes. Giving easy insight into the statistics helps to keep the usage down to the necessary level only.
@@ -26,7 +23,7 @@ For maximum functionality, I went for the Home Assistant OS (or Supervised), see
 Benefits:
 * [Supervisor](https://www.home-assistant.io/integrations/hassio/)
 * Add-ons
-  *   [Studio Code Server](https://community.home-assistant.io/t/home-assistant-community-add-on-visual-studio-code/107863), web enabled editor with code linting.
+ * [Studio Code Server](https://community.home-assistant.io/t/home-assistant-community-add-on-visual-studio-code/107863), web enabled editor with code linting.
 
 # How to configure iLO integration
 
@@ -36,7 +33,7 @@ Although there is, up to now, no GUI way of adding this YAML-based integration t
 
 I use the Studio Code Server add-on for the ease of altering the Home Assistant configuration files.
 
-## Create specific accounts in  he iLO2 interface
+## Create specific accounts in he iLO2 interface
 
 For the ease of configuration and not handing out the full access credentials to Home Assistant I opted to create separate accounts on the iLO interface for the handling of the HP_iLO requests.
 
@@ -48,55 +45,66 @@ https://server01-ilo2.lab.corp/dusrpref.htm
 
 ## Checking the sensors
 
-### Summary (Health-at-a-Glance)
-| Description     | Status  | Redundancy level  |
-| :--             | :--     | :--               |
-| Fans:           |         |                   |
-| Temperatures:   |         |                   |
-| VRMs:           |         |                   |
-| Power Supplies: |         |                   |
-| Drives:         |         |                   |
+The hp_ilo integration details can be defined in the `configuration.yaml` under `monitored_variables:` section.
+
+
+### Status Summary
+
+| Description | Platform integration details | Example of returned data | 
+| :-- | :-- | :-- |
+| Server power | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF |
+| UID Light | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status | OFF |
+
+
+### Health-at-a-Glance
+| Description | Status | Redundancy level |
+| :-- | :-- | :-- |
+| Fans: | &nbsp; | &nbsp; |
+| Temperatures: | &nbsp; | &nbsp; |
+| VRMs: | &nbsp; | &nbsp; |
+| Power Supplies: | &nbsp; | &nbsp; |
+| Drives: | &nbsp; | &nbsp; |
 
 ---
 
 ### Fans
-| Description     | Location  | Status  | Speed |
-| :--             | :--       | :--     | :--   |
-| Fan 1:          |           |         |       |
-| Fan 2:          |           |         |       |
-| Fan 3:          |           |         |       |
-| Fan 4:          |           |         |       |
+| Description | Location | Status | Speed |
+| :-- | :-- | :-- | :-- |
+| Fan 1: | &nbsp; | &nbsp; | &nbsp; |
+| Fan 2: | &nbsp; | &nbsp; | &nbsp; |
+| Fan 3: | &nbsp; | &nbsp; | &nbsp; |
+| Fan 4: | &nbsp; | &nbsp; | &nbsp; |
 
 ---
 
 ### Temperatures
 
-| Description     | Location      | Status  | Reading | Thresholds  |
-| :--             | :--           | :--     | :--     | :--         | 
-| Temp 1:         | Ambient Zone  | Ok      | 26C     | Caution: 42C; Critical:46C  |
-| Temp 2:         | CPU 1         | Ok  	  | 40C  	  | Caution: 82C; Critical:83C  |
-| Temp 3:         | CPU 2         | Ok  	  | 40C  	  | Caution: 82C; Critical:83C  |
-| Temp 4:         | Memory Zone   | Ok  	  | 38C  	  | Caution: 87C; Critical:92C  |
-| Temp 5:         | Memory Zone   | Ok  	  | 33C  	  | Caution: 87C; Critical:92C  |
-| Temp 6:         | Memory Zone   | Ok  	  | 33C  	  | Caution: 87C; Critical:92C  |
-| Temp 7:         | Memory Zone   | Ok  	  | 33C  	  | Caution: 87C; Critical:92C  |
-| Temp 8:         | Memory Zone   | Ok  	  | 34C  	  | Caution: 87C; Critical:92C  |
-| Temp 9:         | Memory Zone   | Ok  	  | 34C  	  | Caution: 87C; Critical:92C  |
-| Temp 10:        | Memory Zone   | Ok  	  | 37C  	  | Caution: 87C; Critical:92C  |
-| Temp 11:        | Memory Zone   | Ok  	  | 42C  	  | Caution: 87C; Critical:92C  |
-| Temp 12:        | I/O Board 7   | Ok  	  | 42C  	  | Caution: 68C; Critical:73C  |
-| Temp 13:        | I/O Board 6   | Ok  	  | 41C  	  | Caution: 68C; Critical:73C  |
-| Temp 14:        | I/O Board 5   | Ok  	  | 38C  	  | Caution: 68C; Critical:73C  |
-| Temp 15:        | I/O Board 4   | Ok  	  | 36C  	  | Caution: 68C; Critical:73C  |
-| Temp 16:        | I/O Board 3   | Ok  	  | 34C  	  | Caution: 68C; Critical:73C  |
-| Temp 17:        | I/O Board 2   | Ok  	  | 32C  	  | Caution: 68C; Critical:73C  |
-| Temp 18:        | I/O Board 1   | Ok  	  | 31C  	  | Caution: 68C; Critical:73C  |
-| Temp 19:        | CPU Zone      | Ok  	  | 31C  	  | Caution: 87C; Critical:92C  |
-| Temp 20:        | Memory Zone   | Ok  	  | 32C  	  | Caution: 87C; Critical:92C  |
-| Temp 21:        | Storage Zone  | Ok  	  | 0C  	  | Caution: 60C; Critical:65C  |
-| Temp 22:        | System Zone   | Ok  	  | 61C  	  | Caution: 110C; Critical:115C | 
-| Temp 23:        | System Zone   | Ok  	  | 39C  	  | Caution: 87C; Critical:92C  |
-| Temp 24:        | System Zone   | Ok  	  | 44C  	  | Caution: 87C; Critical:92C  |
+| Description | Location | Status | Reading | Thresholds |
+| :-- | :-- | :-- | :-- | :-- | 
+| Temp 1: | Ambient Zone | Ok | 26C | Caution: 42C; Critical:46C |
+| Temp 2: | CPU 1 | Ok 	 | 40C 	 | Caution: 82C; Critical:83C |
+| Temp 3: | CPU 2 | Ok 	 | 40C 	 | Caution: 82C; Critical:83C |
+| Temp 4: | Memory Zone | Ok 	 | 38C 	 | Caution: 87C; Critical:92C |
+| Temp 5: | Memory Zone | Ok 	 | 33C 	 | Caution: 87C; Critical:92C |
+| Temp 6: | Memory Zone | Ok 	 | 33C 	 | Caution: 87C; Critical:92C |
+| Temp 7: | Memory Zone | Ok 	 | 33C 	 | Caution: 87C; Critical:92C |
+| Temp 8: | Memory Zone | Ok 	 | 34C 	 | Caution: 87C; Critical:92C |
+| Temp 9: | Memory Zone | Ok 	 | 34C 	 | Caution: 87C; Critical:92C |
+| Temp 10: | Memory Zone | Ok 	 | 37C 	 | Caution: 87C; Critical:92C |
+| Temp 11: | Memory Zone | Ok 	 | 42C 	 | Caution: 87C; Critical:92C |
+| Temp 12: | I/O Board 7 | Ok 	 | 42C 	 | Caution: 68C; Critical:73C |
+| Temp 13: | I/O Board 6 | Ok 	 | 41C 	 | Caution: 68C; Critical:73C |
+| Temp 14: | I/O Board 5 | Ok 	 | 38C 	 | Caution: 68C; Critical:73C |
+| Temp 15: | I/O Board 4 | Ok 	 | 36C 	 | Caution: 68C; Critical:73C |
+| Temp 16: | I/O Board 3 | Ok 	 | 34C 	 | Caution: 68C; Critical:73C |
+| Temp 17: | I/O Board 2 | Ok 	 | 32C 	 | Caution: 68C; Critical:73C |
+| Temp 18: | I/O Board 1 | Ok 	 | 31C 	 | Caution: 68C; Critical:73C |
+| Temp 19: | CPU Zone | Ok 	 | 31C 	 | Caution: 87C; Critical:92C |
+| Temp 20: | Memory Zone | Ok 	 | 32C 	 | Caution: 87C; Critical:92C |
+| Temp 21: | Storage Zone | Ok 	 | 0C 	 | Caution: 60C; Critical:65C |
+| Temp 22: | System Zone | Ok 	 | 61C 	 | Caution: 110C; Critical:115C | 
+| Temp 23: | System Zone | Ok 	 | 39C 	 | Caution: 87C; Critical:92C |
+| Temp 24: | System Zone | Ok 	 | 44C 	 | Caution: 87C; Critical:92C |
 
 ---
 
@@ -133,7 +141,7 @@ hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
 
 ## Integration configuration
 
-The integration is based on a [YAML](https://yaml.org/) file. The colon-centered syntax of this so-called "human-friendly data serialization language" is very strict. Luckily the Visual Studio Code has a YAML code linting feature to help you out by highlighting syntax errors.  
+The integration is based on a [YAML](https://yaml.org/) file. The colon-centered syntax of this so-called "human-friendly data serialization language" is very strict. Luckily the Visual Studio Code has a YAML code linting feature to help you out by highlighting syntax errors. 
 
 From the temperature overview in ILO2, in my case `https://server01-ilo2.lab.corp/dhealtht.htm`, over you can pick your temperature readings. 
 
@@ -148,52 +156,58 @@ Add the `sensor` section to your existing `/config/configuration.yaml` file to e
 
 ```
 sensor:
-  - platform: hp_ilo
-    host: !secret hpILOIP01
-    username: !secret hpILOUsername
-    password: !secret hpILOPassword
-    scan_interval: 300
-    monitored_variables:
-      - name: server01_power_status
-        sensor_type: server_power_status
+ - platform: hp_ilo
+ host: !secret hpILOIP01
+ username: !secret hpILOUsername
+ password: !secret hpILOPassword
+ scan_interval: 300
+ monitored_variables:
 
-      - name: HYPER03_uid_status
-        sensor_type: server_uid_status
+ - name: server01_power_status
+ sensor_type: server_power_status
 
-      - name: server01_power_readings
-        sensor_type: server_power_readings
-        unit_of_measurement: "Watts"
-        value_template: "{{ ilo_data.present_power_reading[0]}}"
+ - name: server01_uid_status
+ sensor_type: server_uid_status
 
-      - name: server01_health_fan_1_speed
-        sensor_type: server_health
-        unit_of_measurement: "%"
-        value_template: '{{ ilo_data.fans["Fan 1"].speed[0] }}'
-      - name: server01_health_fan_2_speed
-        sensor_type: server_health
-        unit_of_measurement: "%"
-        value_template: '{{ ilo_data.fans["Fan 2"].speed[0] }}'
-      - name: server01_health_fan_3_speed
-        sensor_type: server_health
-        unit_of_measurement: "%"
-        value_template: '{{ ilo_data.fans["Fan 3"].speed[0] }}'
-      - name: server01_health_fan_4_speed
-        sensor_type: server_health
-        unit_of_measurement: "%"
-        value_template: '{{ ilo_data.fans["Fan 4"].speed[0] }}'
+ - name: server01_power_readings
+ sensor_type: server_power_readings
+ unit_of_measurement: "Watts"
+ value_template: "{{ ilo_data.present_power_reading[0]}}"
 
-      - name: server01_temp_ambient
-        sensor_type: server_health
-        unit_of_measurement: "°C"
-        value_template: '{{ ilo_data.temperature["Temp 1"].currentreading[0] }}'
-      - name: server01_temp_cpu1
-        sensor_type: server_health
-        unit_of_measurement: "°C"
-        value_template: '{{ ilo_data.temperature["Temp 2"].currentreading[0] }}'
-      - name: server01_temp_cpu2
-        sensor_type: server_health
-        unit_of_measurement: "°C"
-        value_template: '{{ ilo_data.temperature["Temp 3"].currentreading[0] }}'
+ - name: server01_health_fan_1_speed
+ sensor_type: server_health
+ unit_of_measurement: "%"
+ value_template: '{{ ilo_data.fans["Fan 1"].speed[0] }}'
+ 
+ - name: server01_health_fan_2_speed
+ sensor_type: server_health
+ unit_of_measurement: "%"
+ value_template: '{{ ilo_data.fans["Fan 2"].speed[0] }}'
+ 
+ - name: server01_health_fan_3_speed
+ sensor_type: server_health
+ unit_of_measurement: "%"
+ value_template: '{{ ilo_data.fans["Fan 3"].speed[0] }}'
+ 
+ - name: server01_health_fan_4_speed
+ sensor_type: server_health
+ unit_of_measurement: "%"
+ value_template: '{{ ilo_data.fans["Fan 4"].speed[0] }}'
+
+ - name: server01_temp_ambient
+ sensor_type: server_health
+ unit_of_measurement: "°C"
+ value_template: '{{ ilo_data.temperature["Temp 1"].currentreading[0] }}'
+ 
+ - name: server01_temp_cpu1
+ sensor_type: server_health
+ unit_of_measurement: "°C"
+ value_template: '{{ ilo_data.temperature["Temp 2"].currentreading[0] }}'
+ 
+ - name: server01_temp_cpu2
+ sensor_type: server_health
+ unit_of_measurement: "°C"
+ value_template: '{{ ilo_data.temperature["Temp 3"].currentreading[0] }}'
 ```
 
 ## Lovelace card configuration
@@ -209,54 +223,54 @@ This conditional card will only be shown when the iLO reports itself when the po
 ```
 type: conditional
 conditions:
-  - entity: sensor.hp_ilo_server01_power_status
-    state: 'ON'
+ - entity: sensor.hp_ilo_server01_power_status
+ state: 'ON'
 card:
-  title: iLO2 server01
-  state_color: true
-  header:
-    type: graph
-    entity: sensor.hp_ilo_server01_temp_ambient
-    detail: 2
-  type: entities
-  entities:
-    - entity: sensor.hp_ilo_server01_power_status
-      name: 'Power status changed:'
-      icon: mdi:power
-      secondary_info: last-changed
-    - entity: sensor.hp_ilo_server01_uid_status
-      name: 'UID LED changed:'
-      icon: mdi:led-on
-      secondary_info: last-changed
-    - entity: sensor.hp_ilo_server01_temp_ambient
-      name: 'Ambient Temp updated:'
-      secondary_info: last-updated
-    - entity: sensor.hp_ilo_server01_temp_cpu1
-      name: 'CPU 1 Temp updated:'
-      secondary_info: last-updated
-    - entity: sensor.hp_ilo_server01_temp_cpu2
-      name: 'CPU 2 Temp updated:'
-      secondary_info: last-updated
-    - entity: sensor.hp_ilo_server01_power_readings
-      secondary_info: last-updated
-      name: 'Power consumption updated:'
-      icon: mdi:power-plug
-    - entity: sensor.hp_ilo_server01_health_fan_1_speed
-      secondary_info: last-updated
-      name: 'Fan 1 updated:'
-      icon: mdi:fan
-    - entity: sensor.hp_ilo_server01_health_fan_2_speed
-      secondary_info: last-updated
-      name: 'Fan 2 updated:'
-      icon: mdi:fan
-    - entity: sensor.hp_ilo_server01_health_fan_3_speed
-      secondary_info: last-updated
-      name: 'Fan 3 updated:'
-      icon: mdi:fan
-    - entity: sensor.hp_ilo_server01_health_fan_4_speed
-      secondary_info: last-updated
-      name: 'Fan 4 updated:'
-      icon: mdi:fan
+ title: iLO2 server01
+ state_color: true
+ header:
+ type: graph
+ entity: sensor.hp_ilo_server01_temp_ambient
+ detail: 2
+ type: entities
+ entities:
+ - entity: sensor.hp_ilo_server01_power_status
+ name: 'Power status changed:'
+ icon: mdi:power
+ secondary_info: last-changed
+ - entity: sensor.hp_ilo_server01_uid_status
+ name: 'UID LED changed:'
+ icon: mdi:led-on
+ secondary_info: last-changed
+ - entity: sensor.hp_ilo_server01_temp_ambient
+ name: 'Ambient Temp updated:'
+ secondary_info: last-updated
+ - entity: sensor.hp_ilo_server01_temp_cpu1
+ name: 'CPU 1 Temp updated:'
+ secondary_info: last-updated
+ - entity: sensor.hp_ilo_server01_temp_cpu2
+ name: 'CPU 2 Temp updated:'
+ secondary_info: last-updated
+ - entity: sensor.hp_ilo_server01_power_readings
+ secondary_info: last-updated
+ name: 'Power consumption updated:'
+ icon: mdi:power-plug
+ - entity: sensor.hp_ilo_server01_health_fan_1_speed
+ secondary_info: last-updated
+ name: 'Fan 1 updated:'
+ icon: mdi:fan
+ - entity: sensor.hp_ilo_server01_health_fan_2_speed
+ secondary_info: last-updated
+ name: 'Fan 2 updated:'
+ icon: mdi:fan
+ - entity: sensor.hp_ilo_server01_health_fan_3_speed
+ secondary_info: last-updated
+ name: 'Fan 3 updated:'
+ icon: mdi:fan
+ - entity: sensor.hp_ilo_server01_health_fan_4_speed
+ secondary_info: last-updated
+ name: 'Fan 4 updated:'
+ icon: mdi:fan
 ```
 
 # iLO2 integration reference table

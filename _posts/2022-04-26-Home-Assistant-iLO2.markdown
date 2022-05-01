@@ -92,7 +92,7 @@ The Summary on the System Status pages shows:
 https://server01-ilo2.lab.corp/dqstat.htm
 
 | Requesting data | Response data |
-| ---             | ---           |
+| --- | --- |
 | server_power_status | ON |
 | server_uid_status | OFF |
 
@@ -119,7 +119,7 @@ Interestingly you see that the reading is combined as in the value and the unit-
       - name: SERVER01_power_readings
         sensor_type: server_power_readings
         unit_of_measurement: "Watts"
-        value_template: "{{ ilo_data.present_power_reading[0]}}"
+        value_template: "\{{ ilo_data.present_power_reading[0]\}}"
 ```
 
 ---
@@ -137,15 +137,15 @@ From this you can define the following sensors.
 ```
       - name: SERVER01_haag_fans_status
         sensor_type: server_health
-        value_template: "\{\{ ilo_data.health_at_a_glance['fans']['status'] \}\}"
+        value_template: "{{ ilo_data.health_at_a_glance['fans']['status'] }}"
 
       - name: SERVER01_haag_fans_redundancy
         sensor_type: server_health
-        value_template: "\{\{ ilo_data.health_at_a_glance['fans']['redundancy'] \}\}"
+        value_template: "{{ ilo_data.health_at_a_glance['fans']['redundancy'] }}"
 
       - name: SERVER01_haag_fans_redundancy
         sensor_type: server_health
-        value_template: "\{\{ ilo_data.health_at_a_glance['powersupplies']['redundancy'] \}\}"
+        value_template: "{{ ilo_data.health_at_a_glance['powersupplies']['redundancy'] }\}"
 ```
 
 In this case the general health of the fans will be shown as `Ok`, the fans redundancy will be shown as `Fully Redudant` and the powersupply are reported as `Not Redundant`. 
@@ -171,19 +171,19 @@ From this I distilled the following sensor configuration;
       - name: SERVER01_health_fan_1_speed
         sensor_type: server_health
         unit_of_measurement: "%"
-        value_template: '\[\{ ilo_data.fans["Fan 1"].speed[0] \}\}'
+        value_template: '{{ ilo_data.fans["Fan 1"].speed[0] }}'
       - name: SERVER01_health_fan_2_speed
         sensor_type: server_health
         unit_of_measurement: "%"
-        value_template: '\{\{ ilo_data.fans["Fan 2"].speed[0] \}\}'
+        value_template: '{{ ilo_data.fans["Fan 2"].speed[0] }}'
       - name: SERVER01_health_fan_3_speed
         sensor_type: server_health
         unit_of_measurement: "%"
-        value_template: '\{\{ ilo_data.fans["Fan 3"].speed[0] \}\}'
+        value_template: '{{ ilo_data.fans["Fan 3"].speed[0] }}'
       - name: SERVER01_health_fan_4_speed
         sensor_type: server_health
         unit_of_measurement: "%"
-        value_template: '\{\{ ilo_data.fans["Fan 4"].speed[0] \}\}'
+        value_template: '{{ ilo_data.fans["Fan 4"].speed[0] }}'
 ```
 
 ## System Information - Temperatures

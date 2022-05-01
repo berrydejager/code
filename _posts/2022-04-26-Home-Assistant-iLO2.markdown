@@ -70,7 +70,7 @@ The hp_ilo integration details can be defined in the `/config/configuration.yaml
 
 Please note:
 1. The `scan_interval` has been set to 300 seconds to give the iLO2 time to respond for all monitored variables. The default value is set to 30 seconds according to the [scan_interval documentation](https://www.home-assistant.io/docs/configuration/platform_options/#scan-interval).
-2. While checking the iLO I discovered that polling the root level of certain sensor_types resulted in a `State max length is 255 characters.` error. A little bit of digging got me to [the issue described here at Github](https://github.com/home-assistant/core/issues/44426). For that i decided to document the values here.
+2. While checking the iLO I discovered that polling the root level of certain sensor_types resulted in a `State max length is 255 characters.` error. A little bit of digging got me to [the issue described here at Github](https://github.com/home-assistant/core/issues/44426). Therefor I decided to document the iLO2 requirements in this blog post.
 
 {% raw %}
 ```
@@ -208,7 +208,7 @@ From this I distilled the following sensor configuration;
 
 ## System Information - Temperatures
 
-From the temperature overview in ILO2, in my case `https://server01-ilo2.lab.corp/dhealtht.htm`,  i took the Health Temperature info and noted the amount of temperature sensors. Those sensors i mapped to the values i wanted to retrieve using Home Assistant. 
+From the temperature overview in ILO2, in my case `https://server01-ilo2.lab.corp/dhealtht.htm`,  I took the Health Temperature info and noted the amount of temperature sensors. Those sensors I mapped to the values I wanted to retrieve using Home Assistant. 
 
 Please note that the sensor `caution' and 'critical' levels vary per sensor.
 

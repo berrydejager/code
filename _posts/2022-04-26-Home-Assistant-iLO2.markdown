@@ -39,24 +39,29 @@ For the ease of configuration and not handing out the full access credentials to
 
 The user management on the iLO2 can be reached here, make sure to login with the administrator role to add/alter accounts
 
-```
-https://server01-ilo2.lab.corp/dusrpref.htm
-```
+```https://server01-ilo2.lab.corp/dusrpref.htm```
 
 ## Checking the sensors
 
 The hp_ilo integration details can be defined in the `configuration.yaml` under `monitored_variables:` section.
 
+---
 
-### Status Summary
+### System Status - Summary
 
-| Description | Platform integration details | Example of returned data | 
+```https://server01-ilo2.lab.corp/dqstat.htm```.
+
+| Description | Platform integration: | Example of returned data | 
 | :-- | :-- | :-- |
 | Server power | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF |
 | UID Light | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status | OFF |
 
+---
 
-### Health-at-a-Glance
+### System Information - Summary
+
+```https://server01-ilo2.lab.corp/dhealth.htm```
+
 | Description | Status | Redundancy level |
 | :-- | :-- | :-- |
 | Fans: | &nbsp; | &nbsp; |
@@ -67,8 +72,11 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 
 ---
 
-### Fans
-| Description | Location | Status | Speed |
+### System Information - Fans
+
+```https://server01-ilo2.lab.corp/dhealthf.htm```
+
+| Description | Location | Platform integration: Status | Platform integration: Speed |
 | :-- | :-- | :-- | :-- |
 | Fan 1: | &nbsp; | &nbsp; | &nbsp; |
 | Fan 2: | &nbsp; | &nbsp; | &nbsp; |
@@ -77,55 +85,62 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 
 ---
 
-### Temperatures
+### System Information - Temperatures
 
-| Description | Location | Status | Reading | Thresholds |
-| :-- | :-- | :-- | :-- | :-- | 
-| Temp 1: | Ambient Zone | Ok | 26C | Caution: 42C; Critical:46C |
-| Temp 2: | CPU 1 | Ok 	 | 40C 	 | Caution: 82C; Critical:83C |
-| Temp 3: | CPU 2 | Ok 	 | 40C 	 | Caution: 82C; Critical:83C |
-| Temp 4: | Memory Zone | Ok 	 | 38C 	 | Caution: 87C; Critical:92C |
-| Temp 5: | Memory Zone | Ok 	 | 33C 	 | Caution: 87C; Critical:92C |
-| Temp 6: | Memory Zone | Ok 	 | 33C 	 | Caution: 87C; Critical:92C |
-| Temp 7: | Memory Zone | Ok 	 | 33C 	 | Caution: 87C; Critical:92C |
-| Temp 8: | Memory Zone | Ok 	 | 34C 	 | Caution: 87C; Critical:92C |
-| Temp 9: | Memory Zone | Ok 	 | 34C 	 | Caution: 87C; Critical:92C |
-| Temp 10: | Memory Zone | Ok 	 | 37C 	 | Caution: 87C; Critical:92C |
-| Temp 11: | Memory Zone | Ok 	 | 42C 	 | Caution: 87C; Critical:92C |
-| Temp 12: | I/O Board 7 | Ok 	 | 42C 	 | Caution: 68C; Critical:73C |
-| Temp 13: | I/O Board 6 | Ok 	 | 41C 	 | Caution: 68C; Critical:73C |
-| Temp 14: | I/O Board 5 | Ok 	 | 38C 	 | Caution: 68C; Critical:73C |
-| Temp 15: | I/O Board 4 | Ok 	 | 36C 	 | Caution: 68C; Critical:73C |
-| Temp 16: | I/O Board 3 | Ok 	 | 34C 	 | Caution: 68C; Critical:73C |
-| Temp 17: | I/O Board 2 | Ok 	 | 32C 	 | Caution: 68C; Critical:73C |
-| Temp 18: | I/O Board 1 | Ok 	 | 31C 	 | Caution: 68C; Critical:73C |
-| Temp 19: | CPU Zone | Ok 	 | 31C 	 | Caution: 87C; Critical:92C |
-| Temp 20: | Memory Zone | Ok 	 | 32C 	 | Caution: 87C; Critical:92C |
-| Temp 21: | Storage Zone | Ok 	 | 0C 	 | Caution: 60C; Critical:65C |
-| Temp 22: | System Zone | Ok 	 | 61C 	 | Caution: 110C; Critical:115C | 
-| Temp 23: | System Zone | Ok 	 | 39C 	 | Caution: 87C; Critical:92C |
-| Temp 24: | System Zone | Ok 	 | 44C 	 | Caution: 87C; Critical:92C |
+```https://server01-ilo2.lab.corp/dhealtht.htm```
 
----
-
-### Power
-
+| Description | Location | Platform integration: Status | Platform integration: Reading | Caution | Critical |
+| :-- | :-- | :--: | :--: | :--: | :--: |
+| Temp 1: | Ambient Zone | Ok | 26C | 42C | 46C |
+| Temp 2: | CPU 1 | Ok | 40C | 82C | 83C |
+| Temp 3: | CPU 2 | Ok | 40C | 82C | 83C |
+| Temp 4: | Memory Zone | Ok | 38C | 87C | 92C |
+| Temp 5: | Memory Zone | Ok | 33C | 87C | 92C |
+| Temp 6: | Memory Zone | Ok | 33C | 87C | 92C |
+| Temp 7: | Memory Zone | Ok | 33C | 87C | 92C |
+| Temp 8: | Memory Zone | Ok | 34C | 87C | 92C |
+| Temp 9: | Memory Zone | Ok | 34C | 87C | 92C |
+| Temp 10: | Memory Zone | Ok | 37C | 87C | 92C |
+| Temp 11: | Memory Zone | Ok | 42C | 87C | 92C |
+| Temp 12: | I/O Board 7 | Ok | 42C | 68C | 73C |
+| Temp 13: | I/O Board 6 | Ok | 41C | 68C | 73C |
+| Temp 14: | I/O Board 5 | Ok | 38C | 68C | 73C |
+| Temp 15: | I/O Board 4 | Ok | 36C | 68C | 73C |
+| Temp 16: | I/O Board 3 | Ok | 34C | 68C | 73C |
+| Temp 17: | I/O Board 2 | Ok | 32C | 68C | 73C |
+| Temp 18: | I/O Board 1 | Ok | 31C | 68C | 73C |
+| Temp 19: | CPU Zone | Ok | 31C | 87C | 92C |
+| Temp 20: | Memory Zone | Ok | 32C | 87C | 92C |
+| Temp 21: | Storage Zone | Ok | 0C | 60C | 65C |
+| Temp 22: | System Zone | Ok | 61C | 110C | 115C | 
+| Temp 23: | System Zone | Ok | 39C | 87C | 92C |
+| Temp 24: | System Zone | Ok | 44C | 87C | 92C |
 
 ---
-### Processors
 
+### System Information - Power
 
----
-### Memory
-
+```https://server01-ilo2.lab.corp/dhealthv.htm```
 
 ---
-### NIC
+### System Information - Processors
 
+```https://server01-ilo2.lab.corp/dsysproc.htm```
 
 ---
-### Drives
+### System Information - Memory
 
+```https://server01-ilo2.lab.corp/dsysmem.htm```
+
+---
+### System Information - NIC
+
+```https://server01-ilo2.lab.corp/dhealthp.htm```
+
+---
+### System Information - Drives
+
+```https://server01-ilo2.lab.corp/dhealthd.htm```
 
 ---
 
@@ -292,13 +307,13 @@ Temperatures - https://server01-ilo2.lab.corp/dhealtht.htm
 
 Power - https://server01-ilo2.lab.corp/dhealthv.htm
 
-Processors - https://host00-ilo.lab.home/dsysproc.htm
+Processors - https://server01-ilo2.lab.corp/dsysproc.htm
 
-Memory - https://host00-ilo.lab.home/dsysmem.htm
+Memory - https://server01-ilo2.lab.corp/dsysmem.htm
 
-NIC - https://host00-ilo.lab.home/dhealthp.htm
+NIC - https://server01-ilo2.lab.corp/dhealthp.htm
 
-Drives - https://host00-ilo.lab.home/dhealthd.htm
+Drives - https://server01-ilo2.lab.corp/dhealthd.htm
 
 ## Outputs
 

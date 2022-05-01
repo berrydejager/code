@@ -40,9 +40,32 @@ For the ease of configuration and not handing out the full access credentials to
 
 The user management (https://server01-ilo2.lab.corp/dusrpref.htm) on the iLO2 enables you, while logged in using the administrator role, to add/alter accounts.
 
-Checking the sensors
+## Secrets configuration
 
-The hp_ilo integration details can be defined in the `configuration.yaml` under `monitored_variables` section.
+There iLO2 specifics and credentials you stash in the `/config/secrets.yaml` as there are referenced to in the main configuration file.
+
+```
+hpILOIP01: server01-ilo2.lab.corp
+hpILOUsername: readonly
+hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
+```
+
+## Checking the sensors
+
+The hp_ilo integration details can be defined in the `/config/configuration.yaml`.
+
+```
+sensor:
+  - platform: hp_ilo
+    host: !secret hpILOIP01
+    username: !secret hpILOUsername
+    password: !secret hpILOPassword
+    scan_interval: 120
+
+    monitored_variables:
+```
+
+ Below the `monitored_variables` you can append each section to your config file.
 
 ## System Status - Summary
 
@@ -98,7 +121,6 @@ From this i could create the following sensor
         sensor_type: server_health
         value_template: "\{\{ ilo_data.health_at_a_glance['fans']['status'] \}\}"
 ```
-
 
 | Description | Status | Redundancy level |
 | --- | --- | --- |
@@ -232,15 +254,6 @@ https://server01-ilo2.lab.corp/dhealthd.htm
 
 ---
 
-# Secrets configuration
-
-You can use the `/config/secrets.yaml` file to stash your iLO2 servers' specifics and credentials.
-
-```
-hpILOIP01: server01-ilo2.lab.corp
-hpILOUsername: readonly
-hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
-```
 
 # Integration configuration
 

@@ -53,7 +53,7 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 ```https://server01-ilo2.lab.corp/dqstat.htm```.
 
 | Description | Platform integration: | Example of returned data | 
-| :-- | :-- | :-- |
+| --- | --- | --- |
 | Server power | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF |
 | UID Light | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status | OFF |
 
@@ -64,7 +64,7 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 ```https://server01-ilo2.lab.corp/dhealth.htm```
 
 | Description | Status | Redundancy level |
-| :-- | :-- | :-- |
+| --- | --- | --- |
 | Fans: | &nbsp; | &nbsp; |
 | Temperatures: | &nbsp; | &nbsp; |
 | VRMs: | &nbsp; | &nbsp; |
@@ -78,7 +78,7 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 ```https://server01-ilo2.lab.corp/dhealthf.htm```
 
 | Description | Location | Platform integration: Status | Platform integration: Speed |
-| :-- | :-- | :-- | :-- |
+| --- | --- | --- | --- |
 | Fan 1: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 1"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 1"].speed[0] }}' |
 | Fan 2: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 2"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 2"].speed[0] }}' |
 | Fan 3: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 3"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 3"].speed[0] }}' |
@@ -90,7 +90,7 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 ```https://server01-ilo2.lab.corp/dhealtht.htm```
 
 | Description | Location | Platform integration: Status | Platform integration: Reading | Caution | Critical |
-| :-- | :-- | :-- | :-- | :--: | :--: |
+| --- | --- | --- | --- | --- | --- |
 | Temp 1: | Ambient Zone | Ok | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 1"].currentreading[0] }}' | 42C | 46C |
 | Temp 2: | CPU 1 | Ok | 40C | 82C | 83C |
 | Temp 3: | CPU 2 | Ok | 40C | 82C | 83C |

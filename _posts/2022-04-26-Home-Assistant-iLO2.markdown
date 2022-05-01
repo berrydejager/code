@@ -52,6 +52,8 @@ hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
 
 ## Checking the sensors
 
+While checking the iLO I discovered that polling the root level of certain sensor_types resulted in a `State max length is 255 characters.` error. A little bit of digging got me to [the issue described here at Github](https://github.com/home-assistant/core/issues/44426). For that i decided to document the values here.
+
 The hp_ilo integration details can be defined in the `/config/configuration.yaml`.
 
 ```
@@ -114,7 +116,7 @@ https://server01-ilo2.lab.corp/dhealth.htm
 | ---             | ---           |
 | sensor_type: server_health<br />value_template: "\{\{ ilo_data.health_at_a_glance \}\}" | \{'fans': \{'status': 'Ok', 'redundancy': 'Fully Redundant'\}, 'temperature': \{'status': 'Ok'\}, 'vrm': \{'status': 'Ok'\}, 'power_supplies': \{'status': 'Ok', 'redundancy': 'Not Redundant'\}, 'drive': \{'status': 'Ok'\}\} |
 
-From this i could create the following sensor
+From this i could create the following sensor.
 
 ```
       - name: SERVER01_haag_fans_status

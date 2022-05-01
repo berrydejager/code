@@ -18,12 +18,6 @@ The result of this configure reflects the following, however, as always with Hom
 
 What to use?
 
-| Description   | Platform integration                                                            | Example of returned data  | 
-| ---           | ---                                                                             | ---                       |
-| Server power  | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF                       |
-| UID Light     | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status   | OFF                       |
-
-
 For maximum functionality, I went for the Home Assistant OS (or Supervised), see; [Home Assistant installation methods](https://www.home-assistant.io/installation/#compare-installation-methods).
 
 Benefits:
@@ -33,6 +27,13 @@ Benefits:
 How to configure iLO integration
 
 Adding the [HP_iLO-integration](https://www.home-assistant.io/integrations/hp_ilo/) to your Home Assistent is easy-peasy. 
+
+
+| Description   | Platform integration                                                            | Example of returned data  | 
+| ---           | ---                                                                             | ---                       |
+| Server power  | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF                       |
+| UID Light     | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status   | OFF                       |
+
 
 Although there is, up to now, no GUI way of adding this YAML-based integration the configuration can be done by editing the `/config/configuration.yaml` file.
 

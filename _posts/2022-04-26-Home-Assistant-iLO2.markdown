@@ -177,10 +177,10 @@ Using the Home Assistent developer tools;
 {% raw %}
 | Requesting data | Response data |
 | ---             | ---           |
-| sensor_type: server_health<br />unit_of_measurement: "%"<br />{{ ilo_data.fans["Fan 1"] }} | {'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (26, 'Percentage')} |
-| sensor_type: server_health<br />unit_of_measurement: "%"<br />{{ ilo_data.fans["Fan 2"] }} | {'label': 'Fan 2', 'zone': 'System', 'status': 'Ok', 'speed': (21, 'Percentage')} |
-| sensor_type: server_health<br />unit_of_measurement: "%"<br />{{ ilo_data.fans["Fan 3"] }} | {'label': 'Fan 3', 'zone': 'System', 'status': 'Ok', 'speed': (31, 'Percentage')} |
-| sensor_type: server_health<br />unit_of_measurement: "%"<br />{{ ilo_data.fans["Fan 4"] }} | {'label': 'Fan 4', 'zone': 'System', 'status': 'Ok', 'speed': (30, 'Percentage')} |
+| sensor_type: server_health<br />unit_of_measurement: "%"<br />value_template: '{{ ilo_data.fans["Fan 1"] }}' | {'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (26, 'Percentage')} |
+| sensor_type: server_health<br />unit_of_measurement: "%"<br />value_template: '{{ ilo_data.fans["Fan 2"] }}' | {'label': 'Fan 2', 'zone': 'System', 'status': 'Ok', 'speed': (21, 'Percentage')} |
+| sensor_type: server_health<br />unit_of_measurement: "%"<br />value_template: '{{ ilo_data.fans["Fan 3"] }}' | {'label': 'Fan 3', 'zone': 'System', 'status': 'Ok', 'speed': (31, 'Percentage')} |
+| sensor_type: server_health<br />unit_of_measurement: "%"<br />value_template: '{{ ilo_data.fans["Fan 4"] }}' | {'label': 'Fan 4', 'zone': 'System', 'status': 'Ok', 'speed': (30, 'Percentage')} |
 {% endraw %}
 
 From this I distilled the following sensor configuration;

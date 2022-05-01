@@ -16,6 +16,8 @@ The result of this configure reflects the following, however, as always with Hom
 
 ![](/assets/img/HASS-iLO_overview.png)
 
+---
+
 # What to use?
 
 For maximum functionality, I went for the Home Assistant OS (or Supervised), see; [Home Assistant installation methods](https://www.home-assistant.io/installation/#compare-installation-methods).
@@ -23,6 +25,8 @@ For maximum functionality, I went for the Home Assistant OS (or Supervised), see
 Benefits:
 * [Supervisor](https://www.home-assistant.io/integrations/hassio/)
 * [Studio Code Server](https://community.home-assistant.io/t/home-assistant-community-add-on-visual-studio-code/107863) add-on, web enabled editor with code linting.
+
+---
 
 # How to configure iLO integration
 
@@ -34,11 +38,15 @@ I use the Studio Code Server add-on for the ease of altering the Home Assistant 
 
 Please note that when using the latest iLO firmware you have to pay extra performance point, see my blog-post; [HP iLO2 extremely slow over HTTPS](https://code.berrydejager.com/HP-iLO2-extremely-slow-over-HTTPS/)
 
+---
+
 ## Create specific accounts for the iLO2 system
 
 For the ease of configuration and not handing out the full access credentials to Home Assistant I opted to create separate accounts on the iLO interface for the handling of the HP_iLO requests.
 
 The user management (https://server01-ilo2.lab.corp/dusrpref.htm) on the iLO2 enables you, while logged in using the administrator role, to add/alter accounts.
+
+---
 
 ## Secrets configuration
 
@@ -50,11 +58,17 @@ hpILOUsername: readonly
 hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
 ```
 
+---
+
 ## Checking the sensors
 
-While checking the iLO I discovered that polling the root level of certain sensor_types resulted in a `State max length is 255 characters.` error. A little bit of digging got me to [the issue described here at Github](https://github.com/home-assistant/core/issues/44426). For that i decided to document the values here.
+The integration is based on a [YAML](https://yaml.org/) file. The colon-centered syntax of this so-called "human-friendly data serialization language" is very strict. Luckily the Visual Studio Code has a YAML code linting feature to help you out by highlighting syntax errors. 
 
 The hp_ilo integration details can be defined in the `/config/configuration.yaml`.
+
+Please note:
+1. The `scan_interval` has been set to 300 seconds to give the iLO2 time to respond for all monitored variables. The default value is set to 30 seconds according to the [scan_interval documentation](https://www.home-assistant.io/docs/configuration/platform_options/#scan-interval).
+2. While checking the iLO I discovered that polling the root level of certain sensor_types resulted in a `State max length is 255 characters.` error. A little bit of digging got me to [the issue described here at Github](https://github.com/home-assistant/core/issues/44426). For that i decided to document the values here.
 
 ```
 sensor:
@@ -69,8 +83,9 @@ sensor:
 
  Below the `monitored_variables` you can append each section to your config file.
 
-## System Status - Summary
+---
 
+## System Status - Summary
 
 The Summary on the System Status pages shows:
 
@@ -83,7 +98,6 @@ https://server01-ilo2.lab.corp/dqstat.htm
 
 The power and UID only reports `ON`, `OFF` and for the UID the `BLINKING` state is present.
 
-
 ```
       - name: SERVER01_power_status
         sensor_type: server_power_status
@@ -91,7 +105,9 @@ The power and UID only reports `ON`, `OFF` and for the UID the `BLINKING` state 
         sensor_type: server_uid_status
 ```
 
-## System Power usage
+---
+
+## Server Power Readings
 
 | Requesting data | Response data |
 | ---             | ---           |
@@ -108,7 +124,7 @@ Interestingly you see that the reading is combined as in the value and the unit-
 
 ---
 
-## System Information - Summary
+## Server Health - System Information - Summary
 
 https://server01-ilo2.lab.corp/dhealth.htm
 
@@ -116,21 +132,25 @@ https://server01-ilo2.lab.corp/dhealth.htm
 | ---             | ---           |
 | sensor_type: server_health<br />value_template: "\{\{ ilo_data.health_at_a_glance \}\}" | \{'fans': \{'status': 'Ok', 'redundancy': 'Fully Redundant'\}, 'temperature': \{'status': 'Ok'\}, 'vrm': \{'status': 'Ok'\}, 'power_supplies': \{'status': 'Ok', 'redundancy': 'Not Redundant'\}, 'drive': \{'status': 'Ok'\}\} |
 
-From this i could create the following sensor.
+From this you can define the following sensors.
 
 ```
       - name: SERVER01_haag_fans_status
         sensor_type: server_health
         value_template: "\{\{ ilo_data.health_at_a_glance['fans']['status'] \}\}"
+
+      - name: SERVER01_haag_fans_redundancy
+        sensor_type: server_health
+        value_template: "\{\{ ilo_data.health_at_a_glance['fans']['redundancy'] \}\}"
+
+      - name: SERVER01_haag_fans_redundancy
+        sensor_type: server_health
+        value_template: "\{\{ ilo_data.health_at_a_glance['powersupplies']['redundancy'] \}\}"
+
+
 ```
 
-| Description | Status | Redundancy level |
-| --- | --- | --- |
-| Fans: | &nbsp; | &nbsp; |
-| Temperatures: | &nbsp; | &nbsp; |
-| VRMs: | &nbsp; | &nbsp; |
-| Power Supplies: | &nbsp; | &nbsp; |
-| Drives: | &nbsp; | &nbsp; |
+In this case the general health of the fans will be shown as `Ok`, the fans redundancy will be shown as `Fully Redudant` and the powersupply are reported as `Not Redundant`. 
 
 ---
 
@@ -255,71 +275,6 @@ https://server01-ilo2.lab.corp/dhealthp.htm
 https://server01-ilo2.lab.corp/dhealthd.htm
 
 ---
-
-
-# Integration configuration
-
-The integration is based on a [YAML](https://yaml.org/) file. The colon-centered syntax of this so-called "human-friendly data serialization language" is very strict. Luckily the Visual Studio Code has a YAML code linting feature to help you out by highlighting syntax errors. 
-
-Please note: the `scan_interval` has been set to 300 seconds to give the iLO2 time to respond for all monitored variables. The default value is set to 30 seconds according to the [scan_interval documentation](https://www.home-assistant.io/docs/configuration/platform_options/#scan-interval).
-
-Add the `sensor` section to your existing `/config/configuration.yaml` file to enable the hp_ilo platform integration.
-
-```
-sensor:
- - platform: hp_ilo
- host: !secret hpILOIP01
- username: !secret hpILOUsername
- password: !secret hpILOPassword
- scan_interval: 300
- monitored_variables:
-
- - name: server01_power_status
- sensor_type: server_power_status
-
- - name: server01_uid_status
- sensor_type: server_uid_status
-
- - name: server01_power_readings
- sensor_type: server_power_readings
- unit_of_measurement: "Watts"
- value_template: "\{\{ ilo_data.present_power_reading[0]\}\}"
-
- - name: server01_health_fan_1_speed
- sensor_type: server_health
- unit_of_measurement: "%"
- value_template: '\{\{ ilo_data.fans["Fan 1"].speed[0] \}\}'
- 
- - name: server01_health_fan_2_speed
- sensor_type: server_health
- unit_of_measurement: "%"
- value_template: '\{\{ ilo_data.fans["Fan 2"].speed[0] \}\}'
- 
- - name: server01_health_fan_3_speed
- sensor_type: server_health
- unit_of_measurement: "%"
- value_template: '\{\{ ilo_data.fans["Fan 3"].speed[0] \}\}'
- 
- - name: server01_health_fan_4_speed
- sensor_type: server_health
- unit_of_measurement: "%"
- value_template: '\{\{ ilo_data.fans["Fan 4"].speed[0] \}\}'
-
- - name: server01_temp_ambient
- sensor_type: server_health
- unit_of_measurement: "°C"
- value_template: '\{\{ ilo_data.temperature["Temp 1"].currentreading[0] \}\}'
- 
- - name: server01_temp_cpu1
- sensor_type: server_health
- unit_of_measurement: "°C"
- value_template: '\{\{ ilo_data.temperature["Temp 2"].currentreading[0] \}\}'
- 
- - name: server01_temp_cpu2
- sensor_type: server_health
- unit_of_measurement: "°C"
- value_template: '\{\{ ilo_data.temperature["Temp 3"].currentreading[0] \}\}'
-```
 
 # Lovelace card configuration
 

@@ -37,6 +37,12 @@ I use the Studio Code Server add-on for the ease of altering the Home Assistant 
 
 For the ease of configuration and not handing out the full access credentials to Home Assistant I opted to create separate accounts on the iLO interface for the handling of the HP_iLO requests.
 
+The user management on the iLO2 can be reached here, make sure to login with the administrator role to add/alter accounts
+
+```
+https://server01-ilo2.lab.corp/dusrpref.htm
+```
+
 ## Secrets configuration
 
 You can use the `/config/secrets.yaml` file to stash your iLO2 servers' specifics and credentials.
@@ -51,10 +57,15 @@ hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
 
 The integration is based on a [YAML](https://yaml.org/) file. The colon-centered syntax of this so-called "human-friendly data serialization language" is very strict. Luckily the Visual Studio Code has a YAML code linting feature to help you out by highlighting syntax errors.  
 
+From the temperature overview in ILO2, in my case `https://server01-ilo2.lab.corp/dhealtht.htm`, over you can pick your temperature readings. 
 
-Add this to your existing `/config/configuration.yaml` file to enable the hp_ilo platform integration.
+While observing the `CPU 1` and `CPU 2` i noticed that they stick at 40 degrees celsius at all times, measured over different servers and scenarios. This is the reason I monitor the `Temp 19: CPU Zone` and `Tmep 21: Storage Zone` to give meaningfull info to the dashboard.
 
 Please note: the `scan_interval` has been set to 300 seconds to give the iLO2 time to respond for all monitored variables. The default value is set to 30 seconds according to the [scan_interval documentation](https://www.home-assistant.io/docs/configuration/platform_options/#scan-interval).
+
+
+Add the `sensor` section to your existing `/config/configuration.yaml` file to enable the hp_ilo platform integration.
+
 ```
 sensor:
   - platform: hp_ilo

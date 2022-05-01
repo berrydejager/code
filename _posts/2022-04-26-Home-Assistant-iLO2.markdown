@@ -54,11 +54,13 @@ The user management (https://server01-ilo2.lab.corp/dusrpref.htm) on the iLO2 en
 
 There iLO2 specifics and credentials you stash in the `/config/secrets.yaml` as there are referenced to in the main configuration file.
 
+{% raw %}
 ```
 hpILOIP01: server01-ilo2.lab.corp
 hpILOUsername: readonly
 hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
 ```
+{% endraw %}
 
 ---
 
@@ -72,6 +74,7 @@ Please note:
 1. The `scan_interval` has been set to 300 seconds to give the iLO2 time to respond for all monitored variables. The default value is set to 30 seconds according to the [scan_interval documentation](https://www.home-assistant.io/docs/configuration/platform_options/#scan-interval).
 2. While checking the iLO I discovered that polling the root level of certain sensor_types resulted in a `State max length is 255 characters.` error. A little bit of digging got me to [the issue described here at Github](https://github.com/home-assistant/core/issues/44426). For that i decided to document the values here.
 
+{% raw %}
 ```
 sensor:
   - platform: hp_ilo
@@ -82,6 +85,7 @@ sensor:
 
     monitored_variables:
 ```
+{% endraw %}
 
  Below the `monitored_variables` you can append each section to your config file.
 
@@ -100,12 +104,14 @@ https://server01-ilo2.lab.corp/dqstat.htm
 
 The power and UID only reports `ON`, `OFF` and for the UID the `BLINKING` state is present.
 
+{% raw %}
 ```
       - name: SERVER01_power_status
         sensor_type: server_power_status
       - name: SERVER01_uid_status
         sensor_type: server_uid_status
 ```
+{% endraw %}
 
 ---
 
@@ -117,12 +123,14 @@ The power and UID only reports `ON`, `OFF` and for the UID the `BLINKING` state 
 
 Interestingly you see that the reading is combined as in the value and the unit-size.
 
+{% raw %}
 ```
       - name: SERVER01_power_readings
         sensor_type: server_power_readings
         unit_of_measurement: "Watts"
-        value_template: "\{{ ilo_data.present_power_reading[0]\}}"
+        value_template: "{{ ilo_data.present_power_reading[0]}}"
 ```
+{% endraw %}
 
 ---
 
@@ -136,6 +144,7 @@ https://server01-ilo2.lab.corp/dhealth.htm
 
 From this you can define the following sensors.
 
+{% raw %}
 ```
       - name: SERVER01_haag_fans_status
         sensor_type: server_health
@@ -149,6 +158,7 @@ From this you can define the following sensors.
         sensor_type: server_health
         value_template: "{{ ilo_data.health_at_a_glance['powersupplies']['redundancy'] }\}"
 ```
+{% endraw %}
 
 In this case the general health of the fans will be shown as `Ok`, the fans redundancy will be shown as `Fully Redudant` and the powersupply are reported as `Not Redundant`. 
 
@@ -169,6 +179,7 @@ Using the Home Assistent developer tools;
 
 From this I distilled the following sensor configuration;
 
+{% raw %}
 ```
       - name: SERVER01_health_fan_1_speed
         sensor_type: server_health
@@ -187,6 +198,7 @@ From this I distilled the following sensor configuration;
         unit_of_measurement: "%"
         value_template: '{{ ilo_data.fans["Fan 4"].speed[0] }}'
 ```
+{% endraw %}
 
 ## System Information - Temperatures
 
@@ -227,7 +239,7 @@ Again, I extracted the values to get some sensible data into the HASS dashboard.
 
 While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that they stick at 40 degrees celsius at all times. This was measured over different servers and scenarios. For this reason I monitor the `Temp 19: CPU Zone` and `Tmep 21: Storage Zone` to give meaningfull info to the dashboard.
 
-
+{% raw %}
 ```
       - name: SERVER01_temp_ambient
         sensor_type: server_health
@@ -242,6 +254,7 @@ While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that the
         unit_of_measurement: "°C"
         value_template: '{{ ilo_data.temperature["Temp 21"].currentreading[0] }}'
 ```
+{% endraw %}
 
 ---
 
@@ -285,6 +298,7 @@ Create a card and navigate to the 'show code editor`. From here you can overwrit
 
 This conditional card will only be shown when the iLO reports itself when the power status is `ON`.
 
+{% raw %}
 ```
 type: conditional
 conditions:
@@ -337,6 +351,7 @@ card:
  name: 'Fan 4 updated:'
  icon: mdi:fan
 ```
+{% endraw %}
 
 # Home work / Reference information
 

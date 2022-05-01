@@ -16,14 +16,6 @@ The result of this configure reflects the following, however, as always with Hom
 
 ![](/assets/img/HASS-iLO_overview.png)
 
-
-| Description   | Platform integration                                                            | Example of returned data  | 
-| ---           | ---                                                                             | ---                       |
-| Server power  | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF                       |
-| UID Light     | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status   | OFF                       |
-
-
-
 # What to use?
 
 | Description   | Platform integration                                                            | Example of returned data  | 
@@ -63,6 +55,8 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 ---
 
 # System Status - Summary
+
+The Summary on the System Status pages shows:
 
 ```https://server01-ilo2.lab.corp/dqstat.htm```
 

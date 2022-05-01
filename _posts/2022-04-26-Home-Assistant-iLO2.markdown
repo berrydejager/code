@@ -206,9 +206,10 @@ sensor.hp_ilo_hyper03_exp24
   friendly_name: HP ILO HYPER03_exp24
 
 
-| Description | Location | Platform integration: Status | Platform integration: Reading | Caution | Critical |
-| --- | --- | --- | --- | --- | --- |
-| Description | Location | Platform integration: Status | Platform integration: Reading | Caution | Critical |
+| Description | Location  | Platform integration - Status   | Platform integration - Reading  | Caution | Critical  |
+| ---         | ---       | ---                             | ---                             | ---     | ---       |
+| Description | Location  | Platform integration -  Status  | Platform integration - Reading  | Caution | Critical  |
+
 
 
 | Description | Location | Platform integration: Status | Platform integration: Reading | Caution | Critical |

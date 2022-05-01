@@ -51,11 +51,29 @@ The Summary on the System Status pages shows:
 
 https://server01-ilo2.lab.corp/dqstat.htm
 
+| Requesting data | Response data |
+| ---             | ---           |
 
-| Description | Platform integration | Example of returned data | 
-| --- | --- | --- |
-| Server power | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF |
-| UID Light | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status | OFF |
+
+```
+      - name: HYPER03_power_status
+        sensor_type: server_power_status
+      - name: HYPER03_uid_status
+        sensor_type: server_uid_status
+```
+
+## System Power usage reading
+
+| Requesting data | Response data |
+| ---             | ---           |
+| server_power_readings | \{'present_power_reading': (186, 'Watts'), 'average_power_reading': (186, 'Watts'), 'maximum_power_reading': (281, 'Watts'), 'minimum_power_reading': (185, 'Watts')\} |
+
+```
+      - name: HYPER03_power_readings
+        sensor_type: server_power_readings
+        unit_of_measurement: "Watts"
+        value_template: "{{ ilo_data.present_power_reading[0]}}"
+```
 
 ---
 

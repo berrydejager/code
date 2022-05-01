@@ -52,8 +52,6 @@ The user management (```https://server01-ilo2.lab.corp/dusrpref.htm```) on the i
 
 The hp_ilo integration details can be defined in the `configuration.yaml` under `monitored_variables:` section.
 
----
-
 # System Status - Summary
 
 The Summary on the System Status pages shows:

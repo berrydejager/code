@@ -223,7 +223,7 @@ https://server01-ilo2.lab.corp/dhealtht.htm
 | 23 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 23"].currentreading[0] }}' | \{'label': 'Temp 23', 'location': 'System', 'status': 'Ok', 'currentreading': (46, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
 | 24 | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "°C"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.temperature["Temp 24"].currentreading[0] }}' | \{'label': 'Temp 24', 'location': 'System', 'status': 'Ok', 'currentreading': (49, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')\} |
 
-Again, I extracted the values to get some sensible data in to the HASS dashboard. I didn't take every measurement in account as this dramatically increases the time needed to harvest the information.
+Again, I extracted the values to get some sensible data into the HASS dashboard. I didn't take every measurement in account as this dramatically increases the time needed to harvest the information.
 
 While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that they stick at 40 degrees celsius at all times. This was measured over different servers and scenarios. For this reason I monitor the `Temp 19: CPU Zone` and `Tmep 21: Storage Zone` to give meaningfull info to the dashboard.
 
@@ -292,7 +292,7 @@ conditions:
  - entity: sensor.hp_ilo_server01_power_status
  state: 'ON'
 card:
- title: iLO2 server01
+ title: iLO2 Server01
  state_color: true
  header:
  type: graph

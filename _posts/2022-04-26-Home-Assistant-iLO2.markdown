@@ -22,13 +22,16 @@ The result of this configure reflects the following, however, as always with Hom
 | a     | b     | c     |
 | 1     | 2     | 3     |
 
+| Description   | Platform integration                                                            | Example of returned data  | 
+| ---           | ---                                                                             | ---                       |
+| Server power  | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF                       |
+| UID Light     | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status   | OFF                       |
+
+
+
 # What to use?
 
 
-| test1 | test2 | test3 |
-| ---   | ---   | ---   |
-| a     | b     | c     |
-| 1     | 2     | 3     |
 
 For maximum functionality, I went for the Home Assistant OS (or Supervised), see; [Home Assistant installation methods](https://www.home-assistant.io/installation/#compare-installation-methods).
 
@@ -64,10 +67,6 @@ The hp_ilo integration details can be defined in the `configuration.yaml` under 
 
 ```https://server01-ilo2.lab.corp/dqstat.htm```
 
-| test1 | test2 | test3 |
-| ---   | ---   | ---   |
-| a     | b     | c     |
-| 1     | 2     | 3     |
 
 | Description   | Platform integration                                                            | Example of returned data  | 
 | ---           | ---                                                                             | ---                       |

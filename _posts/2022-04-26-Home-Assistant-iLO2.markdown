@@ -34,7 +34,7 @@ I use the Studio Code Server add-on for the ease of altering the Home Assistant 
 
 Please note that when using the latest iLO firmware you have to pay extra performance point, see my blog-post; [HP iLO2 extremely slow over HTTPS](https://code.berrydejager.com/HP-iLO2-extremely-slow-over-HTTPS/)
 
-## Create specific accounts in he iLO2 interface
+## Create specific accounts for the iLO2 system
 
 For the ease of configuration and not handing out the full access credentials to Home Assistant I opted to create separate accounts on the iLO interface for the handling of the HP_iLO requests.
 
@@ -78,10 +78,10 @@ https://server01-ilo2.lab.corp/dhealth.htm
 https://server01-ilo2.lab.corp/dhealthf.htm
 
 Requesting data: 
-``` '{{ ilo_data.fans["Fan 1"].speed[0] }}' ```
+``` '\{\{ ilo_data.fans["Fan 1"].speed[0] \}\}' ```
 
 Response data: 
-``` {'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (26, 'Percentage')}```
+``` \{'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (26, 'Percentage')\}```
 
 From this I distilled the following sensor configuration;
 

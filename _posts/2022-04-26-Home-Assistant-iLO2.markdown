@@ -16,7 +16,7 @@ The result of this configure reflects the following, however, as always with Hom
 
 ![](/assets/img/HASS-iLO_overview.png)
 
-# What to use?
+What to use?
 
 | Description   | Platform integration                                                            | Example of returned data  | 
 | ---           | ---                                                                             | ---                       |
@@ -28,10 +28,9 @@ For maximum functionality, I went for the Home Assistant OS (or Supervised), see
 
 Benefits:
 * [Supervisor](https://www.home-assistant.io/integrations/hassio/)
-* Add-ons
- * [Studio Code Server](https://community.home-assistant.io/t/home-assistant-community-add-on-visual-studio-code/107863), web enabled editor with code linting.
+* [Studio Code Server](https://community.home-assistant.io/t/home-assistant-community-add-on-visual-studio-code/107863) add-on, web enabled editor with code linting.
 
-# How to configure iLO integration
+How to configure iLO integration
 
 Adding the [HP_iLO-integration](https://www.home-assistant.io/integrations/hp_ilo/) to your Home Assistent is easy-peasy. 
 
@@ -41,18 +40,18 @@ I use the Studio Code Server add-on for the ease of altering the Home Assistant 
 
 Please note that when using the latest iLO firmware you have to pay extra performance point, see my blog-post; [HP iLO2 extremely slow over HTTPS](https://code.berrydejager.com/HP-iLO2-extremely-slow-over-HTTPS/)
 
-# Create specific accounts in he iLO2 interface
+Create specific accounts in he iLO2 interface
 
 For the ease of configuration and not handing out the full access credentials to Home Assistant I opted to create separate accounts on the iLO interface for the handling of the HP_iLO requests.
 
 The user management (```https://server01-ilo2.lab.corp/dusrpref.htm```) on the iLO2 enables you, while logged in using the administrator role, to add/alter accounts.
 
 
-# Checking the sensors
+Checking the sensors
 
 The hp_ilo integration details can be defined in the `configuration.yaml` under `monitored_variables:` section.
 
-# System Status - Summary
+System Status - Summary
 
 The Summary on the System Status pages shows:
 
@@ -66,7 +65,7 @@ The Summary on the System Status pages shows:
 
 ---
 
-# System Information - Summary
+System Information - Summary
 
 ```https://server01-ilo2.lab.corp/dhealth.htm```
 
@@ -80,7 +79,7 @@ The Summary on the System Status pages shows:
 
 ---
 
-# System Information - Fans
+System Information - Fans
 
 ```https://server01-ilo2.lab.corp/dhealthf.htm```
 
@@ -92,7 +91,7 @@ The Summary on the System Status pages shows:
 | Fan 4: | System Zone |sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 4"].status[0] }}' | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '{{ ilo_data.fans["Fan 4"].speed[0] }}' |
 ---
 
-# System Information - Temperatures
+System Information - Temperatures
 
 ```https://server01-ilo2.lab.corp/dhealtht.htm```
 
@@ -241,33 +240,33 @@ sensor.hp_ilo_hyper03_exp24
 
 ---
 
-# System Information - Power
+System Information - Power
 
 ```https://server01-ilo2.lab.corp/dhealthv.htm```
 
 ---
-# System Information - Processors
+System Information - Processors
 
 ```https://server01-ilo2.lab.corp/dsysproc.htm```
 
 ---
-# System Information - Memory
+System Information - Memory
 
 ```https://server01-ilo2.lab.corp/dsysmem.htm```
 
 ---
-# System Information - NIC
+System Information - NIC
 
 ```https://server01-ilo2.lab.corp/dhealthp.htm```
 
 ---
-# System Information - Drives
+System Information - Drives
 
 ```https://server01-ilo2.lab.corp/dhealthd.htm```
 
 ---
 
-# Secrets configuration
+Secrets configuration
 
 You can use the `/config/secrets.yaml` file to stash your iLO2 servers' specifics and credentials.
 
@@ -277,7 +276,7 @@ hpILOUsername: readonly
 hpILOPassword: jvBqefEcwfm5PeqGkATjh6YJ
 ```
 
-# Integration configuration
+Integration configuration
 
 The integration is based on a [YAML](https://yaml.org/) file. The colon-centered syntax of this so-called "human-friendly data serialization language" is very strict. Luckily the Visual Studio Code has a YAML code linting feature to help you out by highlighting syntax errors. 
 
@@ -348,7 +347,7 @@ sensor:
  value_template: '{{ ilo_data.temperature["Temp 3"].currentreading[0] }}'
 ```
 
-# Lovelace card configuration
+Lovelace card configuration
 
 Showing your harvested data into a card on the overview is the next step. 
 
@@ -411,6 +410,6 @@ card:
  icon: mdi:fan
 ```
 
-# Home work / Reference information
+Home work / Reference information
 
 [HP iLO2 Scripting and Command Line Guide](./assets/pdf/HP ilo 2 Scripting and Command Line Guide.pdf)

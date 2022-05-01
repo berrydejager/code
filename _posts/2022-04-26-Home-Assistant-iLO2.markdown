@@ -77,11 +77,11 @@ https://server01-ilo2.lab.corp/dhealth.htm
 
 https://server01-ilo2.lab.corp/dhealthf.htm
 
-Requesting data: 
-``` '\{\{ ilo_data.fans["Fan 1"].speed[0] \}\}' ```
+Using the Home Assistent developer tools;
 
-Response data: 
-``` \{'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (26, 'Percentage')\}```
+| Requesting data | Response data |
+| ---             | ---           |
+| '\{\{ ilo_data.fans["Fan 1"].speed[0] \}\}' | \{'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (26, 'Percentage')\} |
 
 From this I distilled the following sensor configuration;
 

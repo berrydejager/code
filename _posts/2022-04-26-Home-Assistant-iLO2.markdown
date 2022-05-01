@@ -146,8 +146,6 @@ From this you can define the following sensors.
       - name: SERVER01_haag_fans_redundancy
         sensor_type: server_health
         value_template: "\{\{ ilo_data.health_at_a_glance['powersupplies']['redundancy'] \}\}"
-
-
 ```
 
 In this case the general health of the fans will be shown as `Ok`, the fans redundancy will be shown as `Fully Redudant` and the powersupply are reported as `Not Redundant`. 
@@ -241,7 +239,6 @@ While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that the
         sensor_type: server_health
         unit_of_measurement: "°C"
         value_template: '{{ ilo_data.temperature["Temp 21"].currentreading[0] }}'
-
 ```
 
 ---
@@ -311,11 +308,11 @@ card:
  - entity: sensor.hp_ilo_server01_temp_ambient
  name: 'Ambient Temp updated:'
  secondary_info: last-updated
- - entity: sensor.hp_ilo_server01_temp_cpu1
- name: 'CPU 1 Temp updated:'
+ - entity: sensor.hp_ilo_server01_temp_cpu_zone
+ name: 'CPU Zone Temp updated:'
  secondary_info: last-updated
- - entity: sensor.hp_ilo_server01_temp_cpu2
- name: 'CPU 2 Temp updated:'
+ - entity: sensor.hp_ilo_server01_temp_storage_zone
+ name: 'Storage Zone Temp updated:'
  secondary_info: last-updated
  - entity: sensor.hp_ilo_server01_power_readings
  secondary_info: last-updated

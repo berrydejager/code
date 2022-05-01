@@ -82,17 +82,30 @@ Using the Home Assistent developer tools;
 | Requesting data | Response data |
 | ---             | ---           |
 | \{\{ ilo_data.fans["Fan 1"] \}\} | \{'label': 'Fan 1', 'zone': 'System', 'status': 'Ok', 'speed': (26, 'Percentage')\} |
+| \{\{ ilo_data.fans["Fan 2"] \}\} | \{'label': 'Fan 2', 'zone': 'System', 'status': 'Ok', 'speed': (21, 'Percentage')\} |
+| \{\{ ilo_data.fans["Fan 3"] \}\} | \{'label': 'Fan 3', 'zone': 'System', 'status': 'Ok', 'speed': (31, 'Percentage')\} |
+| \{\{ ilo_data.fans["Fan 4"] \}\} | \{'label': 'Fan 4', 'zone': 'System', 'status': 'Ok', 'speed': (30, 'Percentage')\} |
 
 From this I distilled the following sensor configuration;
 
-| Description | Location | Platform integration - Status | Platform integration - Speed |
-| --- | --- | --- | --- |
-| Fan 1: | System Zone | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '\{\{ ilo_data.fans["Fan 1"].speed[0] \}\}' |
-| Fan 2: | System Zone | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '\{\{ ilo_data.fans["Fan 2"].speed[0] \}\}' |
-| Fan 3: | System Zone | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '\{\{ ilo_data.fans["Fan 3"].speed[0] \}\}' |
-| Fan 4: | System Zone | sensor_type: server_health<br />&nbsp;&nbsp;unit_of_measurement: "%"<br />&nbsp;&nbsp;value_template: '\{\{ ilo_data.fans["Fan 4"].speed[0] \}\}' |
-
----
+```
+      - name: SERVER01_health_fan_1_speed
+        sensor_type: server_health
+        unit_of_measurement: "%"
+        value_template: '{{ ilo_data.fans["Fan 1"].speed[0] }}'
+      - name: SERVER01_health_fan_2_speed
+        sensor_type: server_health
+        unit_of_measurement: "%"
+        value_template: '{{ ilo_data.fans["Fan 2"].speed[0] }}'
+      - name: SERVER01_health_fan_3_speed
+        sensor_type: server_health
+        unit_of_measurement: "%"
+        value_template: '{{ ilo_data.fans["Fan 3"].speed[0] }}'
+      - name: SERVER01_health_fan_4_speed
+        sensor_type: server_health
+        unit_of_measurement: "%"
+        value_template: '{{ ilo_data.fans["Fan 4"].speed[0] }}'
+```
 
 ## System Information - Temperatures
 

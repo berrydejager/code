@@ -38,24 +38,18 @@ Create specific accounts in he iLO2 interface
 
 For the ease of configuration and not handing out the full access credentials to Home Assistant I opted to create separate accounts on the iLO interface for the handling of the HP_iLO requests.
 
-The user management (```https://server01-ilo2.lab.corp/dusrpref.htm```) on the iLO2 enables you, while logged in using the administrator role, to add/alter accounts.
-
-| Description | Platform integration | Example of returned data | 
-| --- | --- | --- |
-| Server power | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF |
-| UID Light | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status | OFF |
-
-
+The user management (https://server01-ilo2.lab.corp/dusrpref.htm) on the iLO2 enables you, while logged in using the administrator role, to add/alter accounts.
 
 Checking the sensors
 
-The hp_ilo integration details can be defined in the `configuration.yaml` under `monitored_variables:` section.
+The hp_ilo integration details can be defined in the `configuration.yaml` under `monitored_variables` section.
 
 System Status - Summary
 
+
 The Summary on the System Status pages shows:
 
-```https://server01-ilo2.lab.corp/dqstat.htm```
+https://server01-ilo2.lab.corp/dqstat.htm
 
 
 | Description | Platform integration | Example of returned data | 
@@ -67,7 +61,7 @@ The Summary on the System Status pages shows:
 
 System Information - Summary
 
-```https://server01-ilo2.lab.corp/dhealth.htm```
+https://server01-ilo2.lab.corp/dhealth.htm
 
 | Description | Status | Redundancy level |
 | --- | --- | --- |
@@ -81,7 +75,7 @@ System Information - Summary
 
 System Information - Fans
 
-```https://server01-ilo2.lab.corp/dhealthf.htm```
+https://server01-ilo2.lab.corp/dhealthf.htm
 
 | Description | Location | Platform integration: Status | Platform integration: Speed |
 | --- | --- | --- | --- |
@@ -93,7 +87,7 @@ System Information - Fans
 
 System Information - Temperatures
 
-```https://server01-ilo2.lab.corp/dhealtht.htm```
+https://server01-ilo2.lab.corp/dhealtht.htm
 
 
 sensor.hp_ilo_hyper03_exp1
@@ -242,27 +236,27 @@ sensor.hp_ilo_hyper03_exp24
 
 System Information - Power
 
-```https://server01-ilo2.lab.corp/dhealthv.htm```
+https://server01-ilo2.lab.corp/dhealthv.htm
 
 ---
 System Information - Processors
 
-```https://server01-ilo2.lab.corp/dsysproc.htm```
+https://server01-ilo2.lab.corp/dsysproc.htm
 
 ---
 System Information - Memory
 
-```https://server01-ilo2.lab.corp/dsysmem.htm```
+https://server01-ilo2.lab.corp/dsysmem.htm
 
 ---
 System Information - NIC
 
-```https://server01-ilo2.lab.corp/dhealthp.htm```
+https://server01-ilo2.lab.corp/dhealthp.htm
 
 ---
 System Information - Drives
 
-```https://server01-ilo2.lab.corp/dhealthd.htm```
+https://server01-ilo2.lab.corp/dhealthd.htm
 
 ---
 

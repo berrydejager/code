@@ -28,13 +28,6 @@ How to configure iLO integration
 
 Adding the [HP_iLO-integration](https://www.home-assistant.io/integrations/hp_ilo/) to your Home Assistent is easy-peasy. 
 
-
-| Description   | Platform integration                                                            | Example of returned data  | 
-| ---           | ---                                                                             | ---                       |
-| Server power  | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF                       |
-| UID Light     | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status   | OFF                       |
-
-
 Although there is, up to now, no GUI way of adding this YAML-based integration the configuration can be done by editing the `/config/configuration.yaml` file.
 
 I use the Studio Code Server add-on for the ease of altering the Home Assistant configuration files.
@@ -46,6 +39,12 @@ Create specific accounts in he iLO2 interface
 For the ease of configuration and not handing out the full access credentials to Home Assistant I opted to create separate accounts on the iLO interface for the handling of the HP_iLO requests.
 
 The user management (```https://server01-ilo2.lab.corp/dusrpref.htm```) on the iLO2 enables you, while logged in using the administrator role, to add/alter accounts.
+
+| Description   | Platform integration                                                            | Example of returned data  | 
+| ---           | ---                                                                             | ---                       |
+| Server power  | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_power_status | OFF                       |
+| UID Light     | - name: server01_power_status<br />&nbsp;&nbsp;sensor_type: server_uid_status   | OFF                       |
+
 
 
 Checking the sensors

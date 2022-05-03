@@ -18,9 +18,11 @@ The result of this configuration reflects the following, however, as always with
 
 # Important note regarding CPU sensors
 
-While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that they stick at 40 degrees celsius at all times, even under very high environmental temperatures. This was measured over different servers and scenarios. For this reason. I monitor the `Temp 19: CPU Zone` and `Temp 21: Storage Zone` to give meaningful information to the dashboard.
+While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that they stick at 40 degrees celsius at all times, even under very high environmental temperatures. 
 
 [![](/assets/img/HASS-iLO_sensors_thumb.png)](/assets/img/HASS-iLO_sensors.png)
+
+This was measured over different servers and scenarios. For this reason. I monitor the `Temp 19: CPU Zone` and `Temp 21: Storage Zone` to give meaningful information to the dashboard.
 
 ---
 

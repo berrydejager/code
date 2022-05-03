@@ -14,7 +14,13 @@ I know that the wingspan of the HP_iLO platform, [open-sourced on Github](https:
 
 The result of this configure reflects the following, however, as always with Home Assistant, your milage may vary. At least you learn from it!
 
-![](/assets/img/HASS-iLO_overview.png)
+[![](/assets/img/HASS-iLO_overview_thumb.png)](/assets/img/HASS-iLO_overview.png)
+
+# Important note regarding CPU sensors
+
+While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that they stick at 40 degrees celsius at all times, even under very high environment temperature. This was measured over different servers and scenarios. For this reason I monitor the `Temp 19: CPU Zone` and `Tmep 21: Storage Zone` to give meaningfull info to the dashboard.
+
+[![](/assets/img/HASS-iLO_sensors_thumb.png)](/assets/img/HASS-iLO_sensors.png)
 
 ---
 
@@ -214,6 +220,7 @@ Please note that the sensor `caution' and 'critical' levels vary per sensor.
 
 https://server01-ilo2.lab.corp/dhealtht.htm
 
+<details><summary>Open to view - Sea of Sensors - overview</summary>
 {% raw %}
 | Sensor number   | Requesting data   | Response data |
 | ---             | ---               | ---           |
@@ -242,10 +249,9 @@ https://server01-ilo2.lab.corp/dhealtht.htm
 | 23 | sensor_type: server_health<br />unit_of_measurement: "°C"<br />value_template: '{{ ilo_data.temperature["Temp 23"].currentreading[0] }}' | {'label': 'Temp 23', 'location': 'System', 'status': 'Ok', 'currentreading': (46, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} |
 | 24 | sensor_type: server_health<br />unit_of_measurement: "°C"<br />value_template: '{{ ilo_data.temperature["Temp 24"].currentreading[0] }}' | {'label': 'Temp 24', 'location': 'System', 'status': 'Ok', 'currentreading': (49, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} |
 {% endraw %}
+</details>
 
 Again, I extracted the values to get some sensible data into the HASS dashboard. I didn't take every measurement in account as this dramatically increases the time needed to harvest the information.
-
-While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that they stick at 40 degrees celsius at all times. This was measured over different servers and scenarios. For this reason I monitor the `Temp 19: CPU Zone` and `Tmep 21: Storage Zone` to give meaningfull info to the dashboard.
 
 {% raw %}
 ```

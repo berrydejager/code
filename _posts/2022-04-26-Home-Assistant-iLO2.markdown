@@ -18,7 +18,7 @@ The result of this configuration reflects the following, however, as always with
 
 # Important note regarding CPU sensors
 
-While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that they stick at 40 degrees celsius at all times, even under very high environmental temperatures. 
+While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that they stick at 40 degrees celsius at all times, even under very high environmental temperatures while all four fans running at 100% speed. 
 
 [![](/assets/img/HASS-iLO_sensors_thumb.png)](/assets/img/HASS-iLO_sensors.png)
 

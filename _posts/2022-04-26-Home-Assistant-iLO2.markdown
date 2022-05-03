@@ -6,19 +6,19 @@ description: Integrating HP iLO2 into Home Assistent dashboards.
 img: header/HASS-iLO.png
 tags: [HomeAssistant, HASS, HASSio, HP, ML350-G6, iLO2, hp_ilo]
 ---
-My lab environments are based on a hypervisor which doesn't report the hardware status. Here is where Home Assistent steps up the plate. This platform is just insanely great al gathering information from a vast amount of (re)sources and enabling me to monitor, in a sense, the old-but-beefy, iLO2-equipped [HP ML350-G6](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c01713311) servers.
+My lab environments are based on a hypervisor that doesn't report the hardware status the way i want to. Here is where Home Assistant steps up to the plate. This platform is just insanely great at gathering information from a vast amount of (re)sources and enabling me to monitor, in a sense, the old-but-beefy, iLO2-equipped [HP ML350-G6](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c01713311) servers.
 
 The use case for my servers is running a lab environment for educational purposes. Giving easy insight into the statistics helps to keep the usage down to the necessary level only.
 
 I know that the wingspan of the HP_iLO platform, [open-sourced on Github](https://github.com/home-assistant/core/tree/dev/homeassistant/components/hp_ilo), is not only restricted to iLO2. It can work with many more [HP iLO](https://en.wikipedia.org/wiki/HP_Integrated_Lights-Out) versions. However, for this post, the focus is the HP iLO2 only.
 
-The result of this configure reflects the following, however, as always with Home Assistant, your milage may vary. At least you learn from it!
+The result of this configuration reflects the following, however, as always with Home Assistant, your mileage may vary. At least you learn from it!
 
 [![](/assets/img/HASS-iLO_overview_thumb.png)](/assets/img/HASS-iLO_overview.png)
 
 # Important note regarding CPU sensors
 
-While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that they stick at 40 degrees celsius at all times, even under very high environment temperature. This was measured over different servers and scenarios. For this reason I monitor the `Temp 19: CPU Zone` and `Tmep 21: Storage Zone` to give meaningfull info to the dashboard.
+While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that they stick at 40 degrees celsius at all times, even under very high environmental temperatures. This was measured over different servers and scenarios. For this reason. I monitor the `Temp 19: CPU Zone` and `Temp 21: Storage Zone` to give meaningful information to the dashboard.
 
 [![](/assets/img/HASS-iLO_sensors_thumb.png)](/assets/img/HASS-iLO_sensors.png)
 
@@ -30,19 +30,19 @@ For maximum functionality, I went for the Home Assistant OS (or Supervised), see
 
 Benefits:
 * [Supervisor](https://www.home-assistant.io/integrations/hassio/)
-* [Studio Code Server](https://community.home-assistant.io/t/home-assistant-community-add-on-visual-studio-code/107863) add-on, web enabled editor with code linting.
+* [Studio Code Server](https://community.home-assistant.io/t/home-assistant-community-add-on-visual-studio-code/107863) add-on, web-enabled editor with code linting.
 
 ---
 
 # How to configure iLO integration
 
-Adding the [HP_iLO-integration](https://www.home-assistant.io/integrations/hp_ilo/) to your Home Assistent is easy-peasy. 
+Adding the [HP_iLO-integration](https://www.home-assistant.io/integrations/hp_ilo/) to your Home Assistent is easy peasy. 
 
 Although there is, up to now, no GUI way of adding this YAML-based integration the configuration can be done by editing the `/config/configuration.yaml` file.
 
 I use the Studio Code Server add-on for the ease of altering the Home Assistant configuration files.
 
-Please note that when using the latest iLO firmware you have to pay extra performance point, see my blog-post; [HP iLO2 extremely slow over HTTPS](https://code.berrydejager.com/HP-iLO2-extremely-slow-over-HTTPS/)
+Please note that when using the latest iLO firmware you have to pay extra performance points, see my blog post; [HP iLO2 extremely slow over HTTPS](https://code.berrydejager.com/HP-iLO2-extremely-slow-over-HTTPS/)
 
 ---
 
@@ -76,7 +76,7 @@ The hp_ilo integration details can be defined in the `/config/configuration.yaml
 
 Please note:
 1. The `scan_interval` has been set to 300 seconds to give the iLO2 time to respond for all monitored variables. The default value is set to 30 seconds according to the [scan_interval documentation](https://www.home-assistant.io/docs/configuration/platform_options/#scan-interval).
-2. While checking the iLO I discovered that polling the root level of certain sensor_types resulted in a `State max length is 255 characters.` error. A little bit of digging got me to [the issue described here at Github](https://github.com/home-assistant/core/issues/44426). Therefor I decided to document the iLO2 requirements in this blog post.
+2. While checking the iLO I discovered that polling the root level of certain sensor_types resulted in a `State max length is 255 characters.` error. A little bit of digging got me to [the issue described here on Github](https://github.com/home-assistant/core/issues/44426). Therefore I decided to document the iLO2 requirements in this blog post.
 
 {% raw %}
 ```
@@ -214,7 +214,7 @@ From this I distilled the following sensor configuration;
 
 ## System Information - Temperatures
 
-From the temperature overview in ILO2, in my case `https://server01-ilo2.lab.corp/dhealtht.htm`,  I took the Health Temperature info and noted the amount of temperature sensors. Those sensors I mapped to the values I wanted to retrieve using Home Assistant. 
+From the temperature overview in ILO2, in my case `https://server01-ilo2.lab.corp/dhealtht.htm`,  I took the Health Temperature info and noted the number of temperature sensors. Those sensors I mapped to the values I wanted to retrieve using Home Assistant. 
 
 Please note that the sensor `caution' and 'critical' levels vary per sensor.
 
@@ -365,6 +365,6 @@ card:
 ```
 {% endraw %}
 
-# Home work / Reference information
+# Homework / Reference information
 
 [HP iLO2 Scripting and Command Line Guide](./assets/pdf/HP ilo 2 Scripting and Command Line Guide.pdf)

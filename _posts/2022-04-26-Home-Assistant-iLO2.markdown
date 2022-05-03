@@ -220,7 +220,6 @@ Please note that the sensor `caution' and 'critical' levels vary per sensor.
 
 https://server01-ilo2.lab.corp/dhealtht.htm
 
-<details><summary>Open to view - Sea of Sensors - overview</summary>
 {% raw %}
 | Sensor number   | Requesting data   | Response data |
 | ---             | ---               | ---           |
@@ -249,7 +248,6 @@ https://server01-ilo2.lab.corp/dhealtht.htm
 | 23 | sensor_type: server_health<br />unit_of_measurement: "°C"<br />value_template: '{{ ilo_data.temperature["Temp 23"].currentreading[0] }}' | {'label': 'Temp 23', 'location': 'System', 'status': 'Ok', 'currentreading': (46, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} |
 | 24 | sensor_type: server_health<br />unit_of_measurement: "°C"<br />value_template: '{{ ilo_data.temperature["Temp 24"].currentreading[0] }}' | {'label': 'Temp 24', 'location': 'System', 'status': 'Ok', 'currentreading': (49, 'Celsius'), 'caution': (87, 'Celsius'), 'critical': (92, 'Celsius')} |
 {% endraw %}
-</details>
 
 Again, I extracted the values to get some sensible data into the HASS dashboard. I didn't take every measurement in account as this dramatically increases the time needed to harvest the information.
 

@@ -166,9 +166,25 @@ From this you can define the following sensors.
         sensor_type: server_health
         value_template: "{{ ilo_data.health_at_a_glance['fans']['redundancy'] }}"
 
-      - name: SERVER01_haag_fans_redundancy
+      - name: SERVER01_haag_temperature_status
+        sensor_type: server_health
+        value_template: "{{ ilo_data.health_at_a_glance['temperature']['status'] }}"
+
+      - name: SERVER01_haag_vrm_status
+        sensor_type: server_health
+        value_template: "{{ ilo_data.health_at_a_glance['vrm']['status'] }}"
+
+      - name: SERVER01_haag_powersupplies_status
+        sensor_type: server_health
+        value_template: "{{ ilo_data.health_at_a_glance['powersupplies']['status'] }}"
+
+      - name: SERVER01_haag_powersupplies_redundancy
         sensor_type: server_health
         value_template: "{{ ilo_data.health_at_a_glance['powersupplies']['redundancy'] }}"
+
+      - name: SERVER01_haag_drive_status
+        sensor_type: server_health
+        value_template: "{{ ilo_data.health_at_a_glance['drive']['status'] }}"
 ```
 {% endraw %}
 

@@ -6,7 +6,7 @@ description:
 img: header/bye-bye-wordpress-hello-github-pages.png
 tags: [Blog, Everything-as-Code, Code, GitHub, GithubPages, WordPress]
 ---
-How to step up your blog using GitHub-Pages using Jekyll. The WordPress days are gone.
+How to step up your blog using GitHub-Pages using Jekyll. The WordPress days are forever gone for me.
 
 After realizing, as stated in my [**everything and everywhere is code**](/MakingTheAzureDevopsTransition) blog post, I just couldn't keep a blog based on WordPress. Ryan, who runs the [Go-EUCplatform](https://go-euc.com) pointed out to me that GitHub also can host [GitHub Pages](https://pages.github.com), even for your own (sub-)domain.
 

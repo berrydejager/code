@@ -4,25 +4,31 @@ title: Bye Bye WordPress! Hello GitHub Pages!
 date: 2021-02-20 13:37:00 +0100
 description:  
 img: header/bye-bye-wordpress-hello-github-pages.png
-tags: [Blog, Everything-as-Code, Code, GitHub, GithubPages, WordPress]
+tags: [Blog, Everything-as-Code,PageSpeed Insight, PSI, SEO, Code, GitHub, GithubPages, WordPress]
 ---
-How to step up your blog using GitHub-Pages using Jekyll. The WordPress days are forever gone for me.
+Do you know that Google, since 2010, makes us of Page Speed Score to rate your website?
 
-After realizing, as stated in my [**everything and everywhere is code**](/MakingTheAzureDevopsTransition) blog post, I just couldn't keep a blog based on WordPress. Ryan, who runs the [Go-EUCplatform](https://go-euc.com) pointed out to me that GitHub also can host [GitHub Pages](https://pages.github.com), even for your own (sub-)domain.
+Are you running a website or blog based on a CMS like WordPress, Joomla, Dupral or any other CMS? In that case you can read below on how to make your website faster and higher rated on the [Google Page Insights rating](https://developers.google.com/speed/docs/insights/v5/about).
+
+I will show you on how to speed up your blog using an alternative to a CMS and start editing your website from a code perspective.
 
 ### Why changing over?
 
 First of all, I like the Github repository-based 
 
-Criteria | Github Pages | WordPress
------------- | ------------ | -------------
-Git-based | - | +++++
-Speed | +++++ | +++
-Version control | +++++ | +++
-Plugins | + | +++++
-Webspace needed | $false | $true
-Admin page | $false | $true
-
+| Criteria | Github Pages | WordPress | 
+| :-- | :-- | :--|
+| Speed | +++++ | ++ |
+| CDN | +++++ | - |
+| Plain and simple | +++++ | + |
+| Git-based | +++++ | - |
+| Version control | +++++ | +++ |
+| Easy local setup | +++++ | - |
+| Plugins | + | +++++ |
+| Admin page | $false | $true |
+| Free templates | +++++ | +++ |
+| Support community | +++++ | +++ |
+| Webspace needed | $false, 1GB free | $true |
 
 ## Requirements
 
@@ -38,7 +44,6 @@ Optional
 *	[Github Pages Markdown Cheatsheet](/assets/pdf/markdown-cheatsheet-online.pdf) to peek at while creating content
 *	[7Zip](https://www.7-zip.org/download.html) for ease of (de)crunching files
 *	[GIMP](https://download.gimp.org/pub/gimp/v2.10/windows/) to beautify you visual content
-
 
 ### Setting up GitHub repository
 
@@ -57,6 +62,17 @@ When you create a repository on GitHub, it exists as a remote repository. You ca
 #### Working with GitHub Desktop
 
 
+### Choosing a template
+
+There is wide variety of Jekyll templates, free and paid. You can easily adapt a template you your own wishes as it consists of plain files.
+
+Just a few Jekyll template stores:
+
+http://themes.jekyllrc.org/
+https://jekyllthemes.io/
+http://jekyllthemes.org/
+https://jekyllrb.com/docs/themes/
+https://jamstackthemes.dev/ssg/jekyll/
 
 #### Creating a local [Jekyll](https://jekyllrb.com/) instance
 

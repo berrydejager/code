@@ -13,6 +13,12 @@ As `raspicam` is deprecated in Raspbian OS 11 Bullseye, the obvious alternative 
 
 # What to use?
 
+# What not to use?
+
+The Raspberry PI Zero W / W2
+
+It doesn't detect all camera types correctly, see forum post ["Pi Zero W2 and Bullseye: *** no cameras available ***"](https://forums.raspberrypi.com/viewtopic.php?t=323462&sid=13ce0a463a98a00285ea12348abd5803&start=25)
+
 # How to configure
 
 ## Preparing hardware

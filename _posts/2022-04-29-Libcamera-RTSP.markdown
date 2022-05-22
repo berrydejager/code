@@ -42,9 +42,12 @@ sudo apt install
 ```
 
 Setting up `stream.sh` file
+
+For setting the camera configuration you can set a number of parameters, see [documentation](https://www.raspberrypi.com/documentation/accessories/camera.html)
+
 ```
 #!/bin/bash
-libcamera-vid -t 0 -- width 1920 --height 1080 --hflip --inline --framerate 5 -o - | cvlc -vvv stream:///dev/stdin --sout '#r
+libcamera-vid -t 0 -- width 1920 --height 1080 --hflip --inline --framerate 15 -o - | cvlc -vvv stream:///dev/stdin --sout '#r
 tp{sdp=rtsp://:8554/stream}' :demux=h264
 ```
 
@@ -80,6 +83,6 @@ sudo service stream status
 Start VLC media player and navigate to `Media` -> `Open network Stream`  or press CTRL+N.
 
 Enter the URL as follows:
-rtsp://raspberrypi.lab.home:8554/stream
+rtsp://raspberrypi.local:8554/stream
 
 

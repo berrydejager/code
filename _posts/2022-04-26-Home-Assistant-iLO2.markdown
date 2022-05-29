@@ -6,7 +6,7 @@ description: Integrating HP iLO2 into Home Assistent dashboards.
 img: header/HASS-iLO.png
 tags: [HomeAssistant, HASS, HASSio, HP, ML350-G6, iLO2, hp_ilo]
 ---
-My lab environments are based on a hypervisor that doesn't report the hardware status the way i want to. Here is where Home Assistant steps up to the plate. This platform is just insanely great at gathering information from a vast amount of (re)sources and enabling me to monitor, in a sense, the old-but-beefy, iLO2-equipped [HP ML350-G6](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c01713311) servers.
+My lab environments are based on a hypervisor that doesn't report the hardware status the way I want to. Here is where Home Assistant steps up to the plate. This platform is just insanely great at gathering information from a vast amount of (re)sources and enabling me to monitor, in a sense, the old-but-beefy, iLO2-equipped [HP ML350-G6](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c01713311) servers.
 
 The use case for my servers is running a lab environment for educational purposes. Giving easy insight into the statistics helps to keep the usage down to the necessary level only.
 

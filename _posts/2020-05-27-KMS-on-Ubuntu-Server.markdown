@@ -136,17 +136,17 @@ cscript ospp.vbs /sethst:#KMS-SERVER#
 
 ### [Official Microsoft Windows KMS client setup keys](https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys)
 
-#### Windows Server Semi-Annual Channel (version 1909, version 1903, and version 1809)
+#### Windows Server 2022
 
 Operating System edition | KMS client setup key
------------- | -------------
-Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D
-Windows Server Standard	| N2KJX-J94YW-TQVFB-DG9YT-724CC
+--- | ---
+Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33
+Windows Server 2022 Standard | VDYBN-27WPP-V4HQT-9VMD4-VMK7H
 
 #### Windows Server 2019
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG
 Windows Server 2019 Standard | N69G4-B89J2-4G8F4-WWYCC-J464C
 Windows Server 2019 Essentials | WVDHN-86M7X-466P6-VHXV7-YY726
@@ -155,7 +155,7 @@ Windows Server 2019 Essentials | WVDHN-86M7X-466P6-VHXV7-YY726
 #### Windows Server 2016
 
 Operating System edition | KMS client setup key
------------- | ------------- 
+--- | ---- 
 Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG
 Windows Server 2016 Standard | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY
 Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B
@@ -164,7 +164,7 @@ Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B
 See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) for information about supported versions and end of service dates.
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows 10 Pro | W269N-WFGWX-YVC9B-4J6C9-T83GX
 Windows 10 Pro N | MH37W-N47XK-V7XM9-C7227-GCQG9
 Windows 10 Pro for Workstations | NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J
@@ -181,42 +181,42 @@ Windows 10 Enterprise G N | 44RPN-FTY23-9VTTB-MP9BX-T84FV
 #### Windows 10 LTSC 2019
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows 10 Enterprise LTSC 2019 | M7XTQ-FN8P6-TTKYV-9D4CC-J462D
 Windows 10 Enterprise N LTSC 2019 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H
 
 #### Windows 10 LTSB 2016
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows 10 Enterprise LTSB 2016 | DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ
 Windows 10 Enterprise N LTSB 2016 | QFFDN-GRT3P-VKWWX-X7T3R-8B639
 
 #### Windows 10 LTSB 2015
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows 10 Enterprise 2015 LTSB | WNMTR-4C88C-JK8YV-HQ7T2-76DF9
 Windows 10 Enterprise 2015 LTSB N | 2F77B-TNFGY-69QQF-B8YKP-D69TJ
 
 #### Windows Server, version 1803
 
 Operating System edition | KMS client setup key
------------- | ------------- 
+--- | ---- 
 Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG
 Windows Server Standard | PTXN8-JFHJM-4WC78-MPCBR-9W4KR
 
 #### Windows Server, version 1709
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6
 Windows Server Standard | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4
 
 #### Windows Server 2012 R2
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows Server 2012 R2 Server Standard | D2N9P-3P6X9-2R39C-7RTCD-MDVJX
 Windows Server 2012 R2 Datacenter | W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9
 Windows Server 2012 R2 Essentials | KNC87-3J2TX-XB4WP-VCPJV-M4FWM
@@ -224,7 +224,7 @@ Windows Server 2012 R2 Essentials | KNC87-3J2TX-XB4WP-VCPJV-M4FWM
 #### Windows Server 2012
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows Server 2012 | BN3D2-R7TKB-3YPBD-8DRP2-27GG4
 Windows Server 2012 N | 8N2M2-HWPGY-7PGT9-HGDD8-GVGGY
 Windows Server 2012 Single Language | 2WN2H-YGCQR-KFX6K-CD6TF-84YXQ
@@ -237,7 +237,7 @@ Windows Server 2012 Datacenter | 48HP8-DN98B-MYWDG-T2DCC-8W83P
 #### Windows Server 2008 R2
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows Server 2008 R2 Web | 6TPJF-RBVHG-WBW2R-86QPH-6RTM4
 Windows Server 2008 R2 HPC edition | TT8MH-CG224-D3D7Q-498W2-9QCTX
 Windows Server 2008 R2 Standard | YC6KT-GKW9T-YTKYR-T4X34-R7VHC
@@ -248,7 +248,7 @@ Windows Server 2008 R2 for Itanium-based Systems | GT63C-RJFQ3-4GMB6-BRFB9-CB83V
 #### Windows Server 2008
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows Web Server 2008 | WYR28-R7TFJ-3X2YQ-YCY4H-M249D
 Windows Server 2008 Standard | TM24T-X9RMF-VWXK6-X8JC9-BFGM2
 Windows Server 2008 Standard without Hyper-V | W7VD6-7JFBR-RX26B-YKQ3Y-6FFFJ
@@ -262,7 +262,7 @@ Windows Server 2008 for Itanium-Based Systems | 4DWFP-JF3DJ-B7DTH-78FJB-PDRHK
 #### Windows 8.1
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows 8.1 Pro | GCRJD-8NW9H-F2CDX-CCM8D-9D6T9
 Windows 8.1 Pro N | HMCNV-VVBFX-7HMBH-CTY9B-B4FXY
 Windows 8.1 Enterprise | MHF9N-XY6XB-WVXMC-BTDCT-MKKG7
@@ -271,7 +271,7 @@ Windows 8.1 Enterprise N | TT4HM-HN7YT-62K67-RGRQJ-JFFXW
 #### Windows 8
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows 8 Pro | NG4HW-VH26C-733KW-K6F98-J8CK4
 Windows 8 Pro N | XCVCF-2NXM9-723PB-MHCB7-2RYQQ
 Windows 8 Enterprise | 32JNW-9KQ84-P47T8-D8GGY-CWCK7
@@ -280,7 +280,7 @@ Windows 8 Enterprise N | JMNMF-RHW7P-DMY6X-RF3DR-X2BQT
 #### Windows 7
 
 Operating System edition | KMS client setup key
------------- | -------------
+--- | ----
 Windows 7 Professional | FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4
 Windows 7 Professional N | MRPKT-YTG23-K7D7T-X2JMM-QY7MG
 Windows 7 Professional E | W82YF-2Q76Y-63HXB-FGJG9-GF7QX

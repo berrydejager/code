@@ -62,7 +62,7 @@ It's a little nifty procedure;
 *   Add the new values in this `HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig` structure
     *   REG_DWORD `BypassRAMCheck` with the value `1`
     *   REG_DWORD `BypassSecureBootCheck` with the value `1`
-   *   REG_DWORD `BypassTPMCheck` with the value `1`
+    *   REG_DWORD `BypassTPMCheck` with the value `1`
  
 Close the registry editor and the command line windows and continue the installation.
 

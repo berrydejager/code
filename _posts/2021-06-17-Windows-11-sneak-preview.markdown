@@ -4,7 +4,7 @@ title: Windows 11 - sneak preview
 date: 2021-06-17 13:37:00 +0100
 description: Windows 11 sneak preview
 img: header/windows_11_sneak_preview.png
-tags: [Windows, Windows 11, W11]
+tags: [Windows, Windows 11, W11, LabConfig]
 ---
 # "Windows 10 is the last version of Windows...", ohh sure...
 
@@ -48,6 +48,23 @@ Looking at the release cycle for the Windows Operation System, you will notice t
 ## Installing Windows 11
 
 The manual installing procedure is very similar to the Windows 10 procedure, however Windows 11 sports a more modern look, shows the OS-type date modified at "30th May 2021" and the license is updated in "June 2021". It seems that this Windows 11 was already in the pipeline for some while. 
+
+### Installing on unsupported 'hardware'
+
+When the installed states that your (virtual) hardware isn't capable of running Windows 11 you have to apply a little hack/fix to get things going again.
+
+It's a little nifty procedure;
+
+*   During the primary installation screen press `shift+F10` to enter a commandline.
+*   Start `regedit.exe` to alter the registry
+*   Navigate to `HKEY_LOCAL_MACHINE\SYSTEM\Setup`
+*   Add the a new key: `LabConfig`
+*   Add the new values in this `HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig` structure
+    *   REG_DWORD `BypassRAMCheck` with the value `1`
+    *   REG_DWORD `BypassSecureBootCheck` with the value `1`
+   *   REG_DWORD `BypassTPMCheck` with the value `1`
+ 
+Close the registry editor and the command line windows and continue the installation.
 
 [![](/assets/img/Window_11_sneak_preview_img00_t.jpg)](/assets/img/Window_11_sneak_preview_img00.png){:target="_blank"} [![](/assets/img/Window_11_sneak_preview_img01_t.jpg)](/assets/img/Window_11_sneak_preview_img01.png){:target="_blank"}
 

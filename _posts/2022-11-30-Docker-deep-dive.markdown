@@ -24,3 +24,7 @@ While iterating I use the following command line.
 This makes use of the `--no-cache` to ensure that everything is 100% freshly loaded.
 
 `docker build --no-cache --progress=plain -t myimage:latest . 2>&1 | tee myimage-build.log`
+
+## Inspecting our create image
+
+https://github.com/wagoodman/dive

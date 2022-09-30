@@ -7,11 +7,9 @@ img: header/libcamera-rtsp.png
 tags: [Raspberry PI, RPi, Bullseye, libcamera]
 ---
 
-# Why
+# Why would i switch over? 
 
 As `raspicam` is deprecated in Raspbian OS 11 Bullseye, the obvious alternative is `libcamera`.
-
-# What to use?
 
 # What not to use?
 

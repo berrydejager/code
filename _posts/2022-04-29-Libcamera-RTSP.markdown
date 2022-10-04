@@ -107,9 +107,11 @@ Set correct permissions on the service file:
 
 ```
 sudo chmod 644 /lib/systemd/system/stream.service
+```
 
 
 Creating the service on the system
+
 ```
 sudo systemctl enable stream.service
 ```
@@ -122,6 +124,7 @@ sudo service stream start
 ```
 
 Checking the status of the service
+
 ```
 sudo service stream status
 ```
@@ -131,6 +134,6 @@ sudo service stream status
 Start VLC media player and navigate to `Media` -> `Open network Stream`  or press CTRL+N.
 
 Enter the URL as follows:
-rtsp://raspberrypi.local:8554/stream
+`rtsp://raspberrypi.local:8554/stream`
 
 

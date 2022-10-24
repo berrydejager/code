@@ -20,7 +20,7 @@ Still having a little caveat; connecting from home to the office was not feasibl
 
 So far for the marketing fluff, in essence, it allows you to create a virtual network in the cloud and install the [ZeroTier software](https://www.zerotier.com/download/) onto a Linux/Windows/MacOS (virtual) machine, as a docker, a router, smartphone and even onto NAS devices.
 
-I use this in a very smal context but it also works in large (scale-in/scale-out) scenarios. ZeroTiers generousity allows up to 50 clients in the free plan already.
+I use this in a very smal context but it also works in large (scale-in/scale-out) scenarios. ZeroTiers generousity allows up to [~~50~~](https://www.zerotier.com/2022/06/09/zerotier-business-sso-is-here-and-so-is-our-new-pricing/) 25 clients in the free plan already.
 
 ![](/assets/img/ZT_NetworkGraphic_Homepage.png)
 

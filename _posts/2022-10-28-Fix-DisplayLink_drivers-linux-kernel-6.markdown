@@ -3,7 +3,7 @@ layout: post
 title: Fixing DisplayLink (EVDI) drivers for Linux kernel 6.x
 date: 2022-10-28 13:37:00 +0100
 description: Fixing the broken EVDI support for the DisplayLink drivers
-img: header/linux-kernel-evdi.png
+img: header/Fix-DisplayLink_drivers-linux-kernel-6.png
 tags: [Linux, PopOS, DisplayLink, Kernel]
 ---
 
@@ -57,7 +57,7 @@ This installs and compiles the very latest EVDI driver with works with the curre
 
 ## Enjoy your multi-monitor setup again.
 
-![WHOOHOO](assets/img/linux-kernel-evdi-whoohoo.png)
+![WHOOHOO](assets/img/Fix-DisplayLink_drivers-linux-kernel-6-whoohoo.png)
 
 # Gratitude
 

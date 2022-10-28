@@ -179,7 +179,8 @@ First rule; experiment as much as needed as this is a itirative process as menti
 ---
 
 ## Iterating
-While iterating I use the following command line. 
+While iterating I use the following command line.
+
 `docker build --progress=plain -t myimage:latest .  2>&1 | tee myimage-build.log`
 
 ## Final image run

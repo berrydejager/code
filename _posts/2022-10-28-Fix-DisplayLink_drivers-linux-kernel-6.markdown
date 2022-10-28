@@ -57,7 +57,7 @@ This installs and compiles the very latest EVDI driver with works with the curre
 
 ## Enjoy your multi-monitor setup again.
 
-![WHOOHOO](assets/img/Fix-DisplayLink_drivers-linux-kernel-6-whoohoo.png)
+![](/assets/img/Fix-DisplayLink_drivers-linux-kernel-6-whoohoo.png)
 
 # Gratitude
 

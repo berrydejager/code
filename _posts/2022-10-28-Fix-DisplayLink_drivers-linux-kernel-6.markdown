@@ -67,5 +67,5 @@ Thanks the following people:
     *   For pointing out a solution
 *   [BasSmeets](https://github.com/BasSmeets)
     *   For creating an issue on GitHub
-*   [Wesly](https://github.com/wezzynl
+*   [Wesly](https://github.com/wezzynl)
     *   For thinking along with me.

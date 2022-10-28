@@ -22,9 +22,9 @@ So, I decided to look into that direction and stumbled upon [this question on Gi
 
 # Solution
 
-As I have installed the `displaylink-driver-5.6.1-59.184.run` file I will use this as the base line
+The solution is the replaced the shipped evdi.tar.gz file, containing the EVDI driver sources, in the installed package of the downloaded installed file. This can be done by following a simple procedure as described by [Karly](https://www.displaylink.org/forum/member.php?u=23243) on the [DisplayLink forum](https://www.displaylink.org/forum/showpost.php?p=92453&postcount=3).
 
-https://www.displaylink.org/forum/showpost.php?p=92453&postcount=3
+As I have installed the `displaylink-driver-5.6.1-59.184.run` file I will use this as the base line;
 
 ## Uninstall the current EVDI driver. 
 
@@ -42,7 +42,7 @@ https://www.displaylink.org/forum/showpost.php?p=92453&postcount=3
 
     curl -L https://github.com/DisplayLink/evdi/archive/refs/heads/devel.tar.gz -o evdi.tar.gz
 
-## Modify the `displaylink-installer.sh` file at line 38:
+## Modify the `displaylink-installer.sh` file at line #38:
 
     if ! tar xf "$TARGZ" -C "$EVDI"; then
 
@@ -58,7 +58,7 @@ This installs and compiles the very latest EVDI driver with works with the curre
 
 ## Enjoy your multi-monitor setup again.
 
-![WHOOHOO](linux-kernel-evdi-whoohoo.png)
+![WHOOHOO](assets/img/linux-kernel-evdi-whoohoo.png)
 
 # Gratitude
 

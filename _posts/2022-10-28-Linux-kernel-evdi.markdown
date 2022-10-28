@@ -8,17 +8,17 @@ tags: [Linux, PopOS, DisplayLink, Kernel]
 #published: false
 ---
 
-Kernel 6.x broke the support for the EVDI which is shipped with current release (5.6.1) of the [DisplayLink drivers for Ubuntu](https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu). This is really annoying as all of a 'sudden' my workstations which sport [Pop!_OS 22.04 LTS](https://pop.system76.com/) wouldn't work with external monitors anymore. This happened by an upgrade package overnight (around 25th of October 2022). It took me a little while to realize what the actual problem is.
+Kernel 6.x broke the support for the EVDI which is shipped with current release (5.6.1) of the [DisplayLink drivers for Ubuntu](https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu). This is really annoying as all of a 'sudden' my workstations which sport [Pop!_OS 22.04 LTS](https://pop.system76.com/) wouldn't work with external monitors, connected using a DisplayLink device, anymore. This happened by an upgrade package overnight (around 25th of October 2022). It took me a little while to realize what the actual problem is.
 
 # Culprit
 
-From the log file, it became clear to me that the kernel was bugging the compatibility with the EVDI drivers. So, I decided to look into that direction.
+When reinstalling the [Pop!_OS 22.04_14 ISO](https://iso.pop-os.org/22.04/amd64/intel/14/pop-os_22.04_amd64_intel_14.iso) again; no problem!
 
-Kernel 5.x
-https://iso.pop-os.org/22.04/amd64/intel/14/pop-os_22.04_amd64_intel_14.iso
+In the meantime a new version, [Pop!_OS 22.04_15](https://iso.pop-os.org/22.04/amd64/intel/15/pop-os_22.04_amd64_intel_15.iso) was released; again no additional monitors.
 
-Kernel 6.0.2
-https://iso.pop-os.org/22.04/amd64/intel/15/pop-os_22.04_amd64_intel_15.iso
+This made me vigurously looking what was going on. From the log files, it became clear to me that the kernel was bugging the compatibility with the EVDI drivers. 
+
+So, I decided to look into that direction and stumbled upon [this question on GitHub](https://github.com/DisplayLink/evdi/issues/383), submitted by [BasSmeets](https://github.com/BasSmeets).
 
 # Solution
 

@@ -12,6 +12,9 @@ tags: [Docker, Linux]
 
 # Installing Docker Desktop on Ubuntu-distro Desktop
 
+sudo apt install snap
+
+sudo snap install docker
 
 # Creating a docker image from a docker file
 

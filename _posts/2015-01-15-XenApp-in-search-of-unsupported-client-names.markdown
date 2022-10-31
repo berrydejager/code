@@ -3,16 +3,16 @@ layout: post
 title: XenApp, in search of the unsupported client names
 date: 2015-01-15 13:37:00 +0100
 description: XenApp can choke on client names which contain client names which contains weird characters
-img: header/xenApp-in-search-of-unsupported-client-names.png
+img: header/xenApp-in-search-of-unsupported-client-names.gif
 tags: [PowerShell, PoSh, Scripting, Windows, Citrix, XenApp]
 ---
 XenApp can choke on client names which contain client names which contains weird characters (according to Citrix). The result can be that the search functionality, within Citrix AppCenter, doesnt come up with any users.
 
-![](/assets/img/XenApp-in-search-of-unsupported-client-names_img00.png)
+![](/assets/img/XenApp-in-search-of-unsupported-client-names_img00.gif)
 
 The other manifestation of the problem can occur in the 'Servers'-node in the farm seems to hang and gives an 'Unknow error occured' error.
 
-![](/assets/img/XenApp-in-search-of-unsupported-client-names_img01.png)
+![](/assets/img/XenApp-in-search-of-unsupported-client-names_img01.gif)
 
 In order to gather the invalid client names please execute the following on one of the Data Zone Collectors.
 

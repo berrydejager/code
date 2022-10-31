@@ -3,7 +3,7 @@ layout: post
 title: Getting Citrix licensings statistics
 date: 2015-04-16 13:37:00 +0100
 description: Getting Citrix licensings statistics
-img: header/getting-the-citrix-license-statistics.png
+img: header/getting-the-citrix-license-statistics.gif
 tags: [PowerShell, PoSh, Scripting, Windows, Citrix, Citrix License server]
 ---
 While being on the hunt for the daily statistics, I created a PowerShell-script that runs as a schedule job to harvest usage of the Citrix platform.

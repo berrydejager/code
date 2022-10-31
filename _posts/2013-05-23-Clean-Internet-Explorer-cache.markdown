@@ -3,7 +3,7 @@ layout: post
 title: Cleaning the Internet Explorer cache
 date: 2013-05-23 13:37:00 +0100
 description: Cleaning the Internet Explorer cache
-img: header/clean-internet-esxplorer-cache.png
+img: header/clean-internet-esxplorer-cache.gif
 tags: [PowerShell, PoSh, Scripting, Windows, Printing, Printer]
 ---
 A need for cleaning the Internet Explorer cache was risen. I took this as an opportunity to explore to do this using PowerShell and build a little script.

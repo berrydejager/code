@@ -3,7 +3,7 @@ layout: post
 title: Forcing .Net assemblies to use the 32-bit processes on a 64-bit platform
 date: 2014-01-16 13:37:00 +0100
 description: When a Windows application has been compiled using the “Any CPU” target register there is still a way to forcefully start the application in a 32-bit context.
-img: header/forcing-dotnet-assemblies-to-use-32bit-processes-on-64bit-platform.png
+img: header/forcing-dotnet-assemblies-to-use-32bit-processes-on-64bit-platform.gif
 tags: [PowerShell, PoSh, Scripting, Windows]
 ---
 When a Windows application has been compiled using the “Any CPU” target register there is still a way to forcefully start the application in a 32-bit context.

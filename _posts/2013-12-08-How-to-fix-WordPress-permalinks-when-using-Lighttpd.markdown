@@ -3,7 +3,7 @@ layout: post
 title: How to fix WordPress permalinks when using Lighttpd
 date: 2013-12-08 13:37:00 +0100
 description: Recently the blog has been moved over to Lighttpd. At first everything every looked happy and dandy however soon noticed that the WordPress permalinks didn’t work correctly.
-img: header/how-to-fix-wordpress-permalinks-when-using-lighttpd.png
+img: header/how-to-fix-wordpress-permalinks-when-using-lighttpd.gif
 tags: [WordPress, Linux, Lighttpd]
 ---
 Recently the blog has been moved over to Lighttpd. At first everything every looked happy and dandy however soon noticed that the WordPress permalinks didn’t work correctly.

@@ -3,7 +3,7 @@ layout: post
 title: DevOps using a Commodore 64
 date: 2021-12-31 13:37:00 +0100
 description: This blog describes the use case of compiling a .ASM source file into a .PRG file while using GitHub Workflow. The GitHub Workflow Runner runs, in my case, on a `Pi Zero 2 W`. The Pi is mounted internally into the Commodore casing. The CI workflow runs after compiling the binary .PRG on the Ultimate64. 
-img: header/devops64.png
+img: header/devops64.gif
 tags: [DevOps, GitHub, Commodore 64, C64, Ultimate64, 1541U2, 1541U2+, KickAssembler]
 ---
 # Why DevOps using a Commodore 64?
@@ -32,7 +32,7 @@ Next to the interest in retro-computing you need to have some hardware, which is
 *   [USB cable, USB-A to Micro-B](https://en.wikipedia.org/wiki/USB)
 *   [Micro SD card, minimal 4GB](https://www.raspberrypi.com/documentation/computers/getting-started.html#sd-cards)
 
-[![](/assets/img/ultimate64_rpi-zero-2-w_thumb.png)](/assets/img/ultimate64_rpi-zero-2-w.png)
+[![](/assets/img/ultimate64_rpi-zero-2-w_thumb.gif)](/assets/img/ultimate64_rpi-zero-2-w.gif)
 
 # How to use the setup?
 

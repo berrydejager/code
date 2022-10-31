@@ -3,7 +3,7 @@ layout: post
 title: 
 date: 2014-01-24 13:37:00 +0100
 description:  
-img: header/clean-up-of-user-profiles.png
+img: header/clean-up-of-user-profiles.gif
 tags: [PowerShell, PoSh, Scripting, Windows]
 ---
 

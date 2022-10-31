@@ -3,7 +3,7 @@ layout: post
 title: Bye bye VPN! Hello ZeroTier!
 date: 2022-04-02 13:37:00 +0100
 description: While looking for a solution to access my servers behind a NAT/routed network, I stumbled upon ZeroTier. It leverages the VPN capabilities to an out-of-this world dimension, as everything is super simple and cloud-driven. 
-img: header/zerotier.png
+img: header/zerotier.gif
 tags: [ZeroTier, VPN, GL.iNet, Brume, GL-MV1000]
 ---
 # Why do I need to have a remoting solution?
@@ -22,7 +22,7 @@ So far for the marketing fluff, in essence, it allows you to create a virtual ne
 
 I use this in a very smal context but it also works in large (scale-in/scale-out) scenarios. ZeroTiers generousity allows up to [~~50~~](https://www.zerotier.com/2022/06/09/zerotier-business-sso-is-here-and-so-is-our-new-pricing/) 25 clients in the free plan already.
 
-![](/assets/img/ZT_NetworkGraphic_Homepage.png)
+![](/assets/img/ZT_NetworkGraphic_Homepage.gif)
 
 # Why go for ZeroTier?
 
@@ -112,6 +112,6 @@ When logged on to the [ZeroTier web interface](https://my.zerotier.com/) you nee
 
 When adding another device to the ZeroTier network those device are able to communicate with eachother, even though they are behind a NAT or firewalled solution like in my WFHO 4G-scenario.
 
-![](/assets/img/ZT_Members.png)
+![](/assets/img/ZT_Members.gif)
 
 Enjoy the simplicity of ZeroTier.

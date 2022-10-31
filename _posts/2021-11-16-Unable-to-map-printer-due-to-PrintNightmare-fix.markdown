@@ -3,7 +3,7 @@ layout: post
 title: Unable to map printer due to PrintNightmare fix
 date: 2021-06-17 13:37:00 +0100
 description: Unable to map printer due to PrintNightmare fix
-img: header/printnightmare.png
+img: header/printnightmare.gif
 tags: [Windows, Windows 11, W11]
 ---
 # PrintNightmare

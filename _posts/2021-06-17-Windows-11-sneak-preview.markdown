@@ -3,7 +3,7 @@ layout: post
 title: Windows 11 - sneak preview
 date: 2021-06-17 13:37:00 +0100
 description: Windows 11 sneak preview
-img: header/windows_11_sneak_preview.png
+img: header/windows_11_sneak_preview.gif
 tags: [Windows, Windows 11, W11, LabConfig]
 ---
 # "Windows 10 is the last version of Windows...", ohh sure...
@@ -16,7 +16,7 @@ The next generation of Windows is about to be revealed at the [#MicrosoftEvent](
 
 The verdict: As far as i can see it's a little more than just dressing up the Windows 10 interface visually. The interface of the operation system needs to compete with itself and other OS's to stay relevant in a designers world and at the same time it needs to be enticing for the end-user. 
 
-[![](/assets/img/Window_11_sneak_preview_img10_t.jpg)](/assets/img/Window_11_sneak_preview_img10.png){:target="_blank"}
+[![](/assets/img/Window_11_sneak_preview_img10_t.jpg)](/assets/img/Window_11_sneak_preview_img10.gif){:target="_blank"}
 
 Having this said the VMware and Citrix OS optimalisation tools show some minor differences, see details below. To me it seems that the VMWare OSOT tool is more services focussed and Citrix Optimizer is more application oriented. Finding the right balance is just a matter of preference and trial and error.
 
@@ -66,17 +66,17 @@ It's a little nifty procedure;
  
 Close the registry editor and the command line windows and continue the installation.
 
-[![](/assets/img/Window_11_sneak_preview_img00_t.jpg)](/assets/img/Window_11_sneak_preview_img00.png){:target="_blank"} [![](/assets/img/Window_11_sneak_preview_img01_t.jpg)](/assets/img/Window_11_sneak_preview_img01.png){:target="_blank"}
+[![](/assets/img/Window_11_sneak_preview_img00_t.jpg)](/assets/img/Window_11_sneak_preview_img00.gif){:target="_blank"} [![](/assets/img/Window_11_sneak_preview_img01_t.jpg)](/assets/img/Window_11_sneak_preview_img01.gif){:target="_blank"}
 
 ### Limiting experience
 
 The "limited experience" offering, which is great for experimenting with the OS, is now hidden under "sign-in options" during the installation phase.
 
-[![](/assets/img/Window_11_sneak_preview_img04_t.jpg)](/assets/img/Window_11_sneak_preview_img04.png){:target="_blank"} [![](/assets/img/Window_11_sneak_preview_img05_t.jpg)](/assets/img/Window_11_sneak_preview_img05.png){:target="_blank"} [![](/assets/img/Window_11_sneak_preview_img06_t.jpg)](/assets/img/Window_11_sneak_preview_img06.png){:target="_blank"}
+[![](/assets/img/Window_11_sneak_preview_img04_t.jpg)](/assets/img/Window_11_sneak_preview_img04.gif){:target="_blank"} [![](/assets/img/Window_11_sneak_preview_img05_t.jpg)](/assets/img/Window_11_sneak_preview_img05.gif){:target="_blank"} [![](/assets/img/Window_11_sneak_preview_img06_t.jpg)](/assets/img/Window_11_sneak_preview_img06.gif){:target="_blank"}
 
 Even the "This might take a few minutes"-screen has been animatified. You can actually skip this part by CTRL-ALT-DEL key combo and start the taskmanager, this will start the explorer.exe and you'll know what happens...
 
-[![](/assets/img/Window_11_sneak_preview_img07_t.jpg)](/assets/img/Window_11_sneak_preview_img07.png){:target="_blank"}
+[![](/assets/img/Window_11_sneak_preview_img07_t.jpg)](/assets/img/Window_11_sneak_preview_img07.gif){:target="_blank"}
 
 This always makes me think of the [Impossible Mission](https://youtu.be/ivHFP3dJAkM?t=18) on the C-64.
 
@@ -94,7 +94,7 @@ The version of Windows 11 (Dev) tested showed up as "Version Dev (OS Build 21996
 
 ### Overal re-design
 
-[![](/assets/img/Window_11_sneak_preview_img02_t.jpg)](/assets/img/Window_11_sneak_preview_img02.png){:target="_blank"}
+[![](/assets/img/Window_11_sneak_preview_img02_t.jpg)](/assets/img/Window_11_sneak_preview_img02.gif){:target="_blank"}
 
 A brand new logo, by unskewing the Windows 10 logo to a square format, gets my eyes a little watery; Is this the real life? Is this just fantasy? It certainly looks more contemporary and elegant to me.
 
@@ -102,24 +102,24 @@ Shiny news icons, rounded corners, thin sliders and new animations are part of t
 
 Anyone got a handkerchief? 
 
-[![](/assets/img/Window_11_sneak_preview_img03_t.jpg)](/assets/img/Window_11_sneak_preview_img03.png){:target="_blank"}
+[![](/assets/img/Window_11_sneak_preview_img03_t.jpg)](/assets/img/Window_11_sneak_preview_img03.gif){:target="_blank"}
 
 The OOBE also sports a new look. Not that is that important in a VDI world, `unattended.xml` and Autopilot are our friends. Most likely the ADK and unattend.xml will not change that much.
 ### Taskbar / Start menu
 
 The most prominent change to the user interface is the taskbar/start menu. This is now "Maccyfied" into the center of the screen.
 
-[![](/assets/img/Window_11_sneak_preview_img08_t.jpg)](/assets/img/Window_11_sneak_preview_img08.png){:target="_blank"}
+[![](/assets/img/Window_11_sneak_preview_img08_t.jpg)](/assets/img/Window_11_sneak_preview_img08.gif){:target="_blank"}
 
 For altering the taskbar settings you need to activate the Windows installation, see section "Windows 11 Activation" above.
 
 The taskbar/start menu is still able to move to it's old place by setting the "Taskbar alignment" from `center` to `left`. Actually this whole taskbar menu has been changed quite a bit.
 
-[![](/assets/img/Window_11_sneak_preview_img09_t.jpg)](/assets/img/Window_11_sneak_preview_img09.png){:target="_blank"}
+[![](/assets/img/Window_11_sneak_preview_img09_t.jpg)](/assets/img/Window_11_sneak_preview_img09.gif){:target="_blank"}
 
 Besides the taskbar the start menu also has changed.
 
-When the changes of the start menu can't seem to fit in your workflow you can still revert to the Windows 10 menu style (a.k.a. [Classic mode](/assets/img/Window_11_sneak_preview_img11.png){:target="_blank"}. A little registry tweak will help you out.
+When the changes of the start menu can't seem to fit in your workflow you can still revert to the Windows 10 menu style (a.k.a. [Classic mode](/assets/img/Window_11_sneak_preview_img11.gif){:target="_blank"}. A little registry tweak will help you out.
 
 `HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced`
 

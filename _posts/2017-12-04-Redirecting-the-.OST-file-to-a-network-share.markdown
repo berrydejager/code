@@ -3,7 +3,7 @@ layout: post
 title: Redirect .OST from local to network location by using a symbolic link.
 date: 2017-12-04 13:37:00 +0100
 description: Redirect .OST from local to network location by using a symbolic link.
-img: header/redirecting-the-.ost-file-to-a-network-share.png
+img: header/redirecting-the-.ost-file-to-a-network-share.gif
 tags: [PowerShell, PoSh, Scripting, Windows, Outlook, .OST]
 ---
 

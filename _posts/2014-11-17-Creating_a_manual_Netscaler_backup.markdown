@@ -3,7 +3,7 @@ layout: post
 title: Creating a manual Netscaler backup
 date: 2014-11-17 13:37:00 +0100
 description:  Creating a manual Netscaler backup
-img: header/creating_a_manual_netscaler_backup.png
+img: header/creating_a_manual_netscaler_backup.gif
 tags: [Bash, Citrix, Netscaler, Backup]
 ---
 While using the Netscaler 10.0 version there is appearantly no way to create a backup of the Netscaler files. Neither the web interface nor the Netscaler console doesn't provide a backup facility.

@@ -3,7 +3,7 @@ layout: post
 title: The case of the missing mouse pointer
 date: 2020-01-23 13:37:00 +0100
 description: Suddenly, while working with multiple RDP sessions from my W10 VDI machine, the ‘normal select’ mouse pointer vanished.
-img: header/the-case-of-the-missing-mouse-pointer.png
+img: header/the-case-of-the-missing-mouse-pointer.gif
 tags: [Microsoft, Windows, RDP]
 ---
 Suddenly, while working with multiple RDP sessions from my W10 VDI machine, the ‘normal select’ mouse pointer vanished. Remarkably the other cursors, like ‘text select’ and ‘link select’ ,would still show.
@@ -17,7 +17,7 @@ Within the RDP execute the following sequence:
 *	Press ALT+e to unthick the ‘Enable Pointer Shadow’ option
 *	Press ALT+a to apply the settings
 
-![The-case-of-the-missing-mouse-pointer_img00.png](/assets/img/The-case-of-the-missing-mouse-pointer_img00.png)
+![The-case-of-the-missing-mouse-pointer_img00.gif](/assets/img/The-case-of-the-missing-mouse-pointer_img00.gif)
 
 The mouse pointer has returned again.
 

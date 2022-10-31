@@ -3,7 +3,7 @@ layout: post
 title: How to install XenServer 6.5 patches
 date: 2015-03-15 13:37:00 +0100
 description: How to install XenServer 6.5 patches
-img: header/how-to-install-xenserver-6.5-patches.png
+img: header/how-to-install-xenserver-6.5-patches.gif
 tags: [PowerShell, PoSh, Scripting, Windows]
 ---
 Updating your free XenServer 6.5 install can be a struggle, unless you do your home-work first!

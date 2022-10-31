@@ -3,7 +3,7 @@ layout: post
 title: Installing VICE on a Raspberry Pi
 date: 2016-10-30 13:37:00 +0100
 description: Getting your Raspberry Pi upgraded to a C64 experience
-img: header/installing-vice-on-raspberry-pi.png
+img: header/installing-vice-on-raspberry-pi.gif
 tags: [Raspberry-Pi, VICE, Raspbian, Commodore 64, C64]
 ---
 Upgrading your RPi to a Commodore 64 experience is the best upgrade you can get.

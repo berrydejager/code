@@ -3,7 +3,7 @@ layout: post
 title: Installing XenServer 6.5 on Dell PowerEdge R210
 date: 2015-05-08 13:37:00 +0100
 description: Installing XenServer 6.5 on Dell PowerEdge R210 
-img: header/installing-xenServer-6.5-on-dell-poweredge-r210.png
+img: header/installing-xenServer-6.5-on-dell-poweredge-r210.gif
 tags: [Citrix, XenServer, Installation, Dell, PowerEdge, R210]
 ---
 Firstly we set the XenServer root partition to 16GB (opposed to the default 4GB, which is kinda tight), see [Major IO blog](https://major.io/2012/01/13/xenserver-6-disable-gpt-and-get-a-larger-root-partition/)

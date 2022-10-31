@@ -3,7 +3,7 @@ layout: post
 title: HP iLO2 extremely slow over HTTPS
 date: 2020-02-04 13:37:00 +0100
 description: When using HTTPS for the iLO2 page, choose your iLO2 firmware wisely.
-img: header/hp-ilo2-extremely-slow-over-https.png
+img: header/hp-ilo2-extremely-slow-over-https.gif
 tags: [PowerShell, PoSh, Scripting, Windows]
 ---
 When you have the v2.33 (latest and greatest) iLO2 firmware installed, you might surprised that the HTTPS requests are taking forever. This is due to the new Diffie-Hellman key exchange.

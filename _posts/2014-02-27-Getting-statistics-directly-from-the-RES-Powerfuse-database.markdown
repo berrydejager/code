@@ -3,7 +3,7 @@ layout: post
 title: Getting statistics directly from the RES Powerfuse database
 date: 2014-02-27 13:37:00 +0100
 description: Getting statistics directly from the RES Powerfuse database
-img: header/getting-statistics-directly-from-the-res-powerfuse-database.png
+img: header/getting-statistics-directly-from-the-res-powerfuse-database.gif
 tags: [PowerShell, PoSh, Scripting, Windows, RES, PowerFuse, Database, SQL, MSSQL]
 ---
 Directly gathering information from RES Powerfuse using a MS-SQL query is, compared to the cumbersome PowerFuse Usage Tracker Viewer, easy to do.

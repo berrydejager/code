@@ -3,7 +3,7 @@ layout: post
 title: Installing Pihole 5.0 beta on Ubuntu Server
 date: 2020-01-26 13:37:00 +0100
 description: Do you want to install Pihole 5.x beta on Ubuntu Server?
-img: header/installing-pihole-5.0-beta-on-ubuntu-server.png
+img: header/installing-pihole-5.0-beta-on-ubuntu-server.gif
 tags: [PowerShell, PoSh, Scripting, Windows]
 ---
 Do you want to install Pihole 5.x beta on Ubuntu Server?

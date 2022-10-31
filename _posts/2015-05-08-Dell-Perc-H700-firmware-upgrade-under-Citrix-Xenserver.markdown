@@ -3,7 +3,7 @@ layout: post
 title: Dell Perc H700 firmare upgrade under Citrix XenServer
 date: 2015-05-08 13:37:00 +0100
 description: Updating the Dell Perc H700 raid controller firmware can be a hideous job. Let me explain how i got this done while having Citrix XenServer installed.
-img: header/dell-perc-h700-firmware-upgrade-under-citrix-xenserver.png
+img: header/dell-perc-h700-firmware-upgrade-under-citrix-xenserver.gif
 tags: [Dell, Citrix, XenServer, Perc, H700, firmware]
 ---
 Updating the Dell Perc H700 raid controller firmware can be a hideous job. Let me explain how i got this done while having Citrix XenServer installed.

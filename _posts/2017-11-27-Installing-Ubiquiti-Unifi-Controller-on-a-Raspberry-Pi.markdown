@@ -3,7 +3,7 @@ layout: post
 title: Installing Ubiquiti Unifi Controller on a Raspberry Pi
 date: 2017-11-27 13:37:00 +0100
 description: Installing Ubiquiti Unifi Controller on a Raspberry Pi
-img: header/installing-ubiquiti-unifi-controller-on-a-raspberry-pi.png
+img: header/installing-ubiquiti-unifi-controller-on-a-raspberry-pi.gif
 tags: [PowerShell, PoSh, Scripting, Windows]
 ---
 Just got my new Ubiquity Unifi gear at home and i need to install the controller software. The first option that came to mind is a Raspberry Pi, sporting Raspbian ‘Stretch’.

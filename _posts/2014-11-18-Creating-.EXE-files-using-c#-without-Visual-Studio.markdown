@@ -3,7 +3,7 @@ layout: post
 title: Creating .EXE-files using C# without Visual Studio
 date: 2014-11-18 13:37:00 +0100
 description: Creating .EXE-files using C# without Visual Studio
-img: header/creating-exe-files-using-c-without-visual-studio.markdown.png
+img: header/creating-exe-files-using-c-without-visual-studio.markdown.gif
 tags: [Windows, Visual Studio, c#]
 ---
 While needing a method to time the response time of the Microsoft Active Directory services I came the conclusion that it is possible to create an .EXE using the Microsoft .NET framework software. Microsoft included a command line compiler which is able to create an .EXE from a .CS file. Below you may find the source (borrowed from [PinVoke.NET](https://www.pinvoke.net/default.aspx/advapi32.lookupaccountname) which I used to include the timing measuring.

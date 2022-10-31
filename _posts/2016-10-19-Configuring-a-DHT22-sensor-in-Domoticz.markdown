@@ -3,7 +3,7 @@ layout: post
 title: Configuring a DHT22 sensor in Domoticz
 date: 2016-10-19 13:37:00 +0100
 description: How to configure a DHT22 sensor in Domoticz to measure temperature and humidity values.
-img: header/configuring-a-dht22-sensor-in-domoticz.png
+img: header/configuring-a-dht22-sensor-in-domoticz.gif
 tags: [PowerShell, PoSh, Scripting, Windows]
 ---
 How to configure a DHT22 sensor in Domoticz to measure temperature and humidity values.

@@ -3,7 +3,7 @@ layout: post
 title: Office 365 setting mailbox permissions
 date: 2016-09-30 13:37:00 +0100
 description:  
-img: header/office-365-setting-mailbox-permissions.png
+img: header/office-365-setting-mailbox-permissions.gif
 tags: [Microsoft, Office 365, PowerShell]
 ---
 When editing mailbox permissions and archiving email to a .PST files can be cumbersome. I have come up with a script to make live a little more easy.

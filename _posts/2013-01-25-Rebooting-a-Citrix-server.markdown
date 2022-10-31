@@ -3,7 +3,7 @@ layout: post
 title: Rebooting a Citrix Server
 date: 2013-01-25 13:37:00 +0100
 description:  
-img: header/rebooting-a-citrix-server.png
+img: header/rebooting-a-citrix-server.gif
 tags: [PowerShell, PoSh, Scripting, Windows, Citrix, Solution4, S4, Login Consultants]
 ---
 Rebooting a Citrix Server, restarting using the default scheme in Citrix wasn't cutting it. So I created a script for it.

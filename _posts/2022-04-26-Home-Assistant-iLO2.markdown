@@ -3,7 +3,7 @@ layout: post
 title: Integrating HP iLO2 entities into Home Assistant.
 date: 2022-04-26 13:37:00 +0100
 description: Integrating HP iLO2 into Home Assistent dashboards.
-img: header/HASS-iLO.png
+img: header/HASS-iLO.gif
 tags: [HomeAssistant, HASS, HASSio, HP, ML350-G6, iLO2, hp_ilo]
 ---
 My lab environments are based on a hypervisor that doesn't report the hardware status the way I want to. Here is where Home Assistant steps up to the plate. This platform is just insanely great at gathering information from a vast amount of (re)sources and enabling me to monitor, in a sense, the old-but-beefy, iLO2-equipped [HP ML350-G6](https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c01713311) servers.
@@ -14,13 +14,13 @@ I know that the wingspan of the HP_iLO platform, [open-sourced on Github](https:
 
 The result of this configuration reflects the following, however, as always with Home Assistant, your mileage may vary. At least you learn from it!
 
-[![](/assets/img/HASS-iLO_overview_thumb.png)](/assets/img/HASS-iLO_overview.png)
+[![](/assets/img/HASS-iLO_overview_thumb.gif)](/assets/img/HASS-iLO_overview.gif)
 
 # Important note regarding CPU sensors
 
 While observing the `Temp 2` (`CPU 1`) and `Temp 3` (`CPU 2`) I noticed that they stick at 40 degrees celsius at all times, even under very high environmental temperatures while all four fans running at 100% speed. 
 
-[![](/assets/img/HASS-iLO_sensors_thumb.png)](/assets/img/HASS-iLO_sensors.png)
+[![](/assets/img/HASS-iLO_sensors_thumb.gif)](/assets/img/HASS-iLO_sensors.gif)
 
 This was measured over different servers and scenarios. For this reason. I monitor the `Temp 19: CPU Zone` and `Temp 21: Storage Zone` to give meaningful information to the dashboard.
 

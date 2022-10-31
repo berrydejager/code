@@ -3,7 +3,7 @@ layout: post
 title: 
 date: 2020-03-14 13:37:00 +0100
 description:  
-img: header/upgrading-spotify-connect-on-pi-musicbox.png
+img: header/upgrading-spotify-connect-on-pi-musicbox.gif
 tags: [Raspberry Pi, Raspbian, Bash, PiMusicBox]
 ---
 You might have noticed that when playing music using Spotify-connect on the Pi MusicBox that there is something weird going on. When changing songs or playlists the MusicBox doesn’t follow your commands.

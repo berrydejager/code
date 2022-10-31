@@ -3,7 +3,7 @@ layout: post
 title: Bye Bye WordPress! Hello GitHub Pages!
 date: 2021-02-20 13:37:00 +0100
 description:  
-img: header/bye-bye-wordpress-hello-github-pages.png
+img: header/bye-bye-wordpress-hello-github-pages.gif
 tags: [Blog, Everything-as-Code,PageSpeed Insight, PSI, SEO, Code, GitHub, GitHubPages, WordPress]
 ---
 Do you know that Google, since 2010, makes us of Page Speed Score to rate your website?

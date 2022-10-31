@@ -3,7 +3,7 @@ layout: post
 title: 
 date: 2016-09-25 13:37:00 +0100
 description:  
-img: header/pimusicbox-not-showing-spotify-playlist.png
+img: header/pimusicbox-not-showing-spotify-playlist.gif
 tags: [Python, RaspberryPi, Linux, PiMusicBox, Spotify]
 ---
 As some point my PiMusicBox stopped showing the Spotify playlists in the PiMusicBox web interface.

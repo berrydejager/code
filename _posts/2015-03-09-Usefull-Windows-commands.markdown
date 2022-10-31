@@ -3,7 +3,7 @@ layout: post
 title: Usefull Windows commands
 date: 2015-03-09 13:37:00 +0100
 description: Windows List of RUN Commands
-img: header/usefull-windows-commands.png
+img: header/usefull-windows-commands.gif
 tags: [Windows, CMD, Command line, Shortcuts]
 ---
 Windows List of RUN Commands

@@ -3,7 +3,7 @@ layout: post
 title: Quest ActiveRoles Management Shell download
 date: 2017-11-27 13:37:00 +0100
 description: Quest ActiveRoles is a collection of very useful PowerShell cmdlets for Active Directory
-img: header/quest-activeroles-management-shell-download.png
+img: header/quest-activeroles-management-shell-download.gif
 tags: [PowerShell, PoSh, Scripting, Windows, Quest, ActiveRolesManagement]
 ---
 Quest ActiveRoles is a collection of very useful PowerShell cmdlets for Active Directory. They used to be offered for free by Quest Software (now owned by Dell), but have since after version 1.5.1 (as far as I know) started charging money for the cmdlets in later versions. Around November 2014, Dell removed the download links.

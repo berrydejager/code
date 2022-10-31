@@ -3,7 +3,7 @@ layout: post
 title: Running KMS on Ubuntu Server
 date: 2020-05-27 13:37:00 +0100
 description:  
-img: header/kms-on-ubuntu-server.png
+img: header/kms-on-ubuntu-server.gif
 tags: [Linux, Ubuntu, Microsoft, Windows, KMS, vlmcsd]
 ---
 Are you running a home lab to test software and bumping into the 180 grace period? VLMCSD might be something interesting for you.

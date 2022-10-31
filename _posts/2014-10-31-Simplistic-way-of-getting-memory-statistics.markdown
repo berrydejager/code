@@ -3,7 +3,7 @@ layout: post
 title: Simplistic way of getting memory statistics
 date: 2014-10-31 13:37:00 +0100
 description: Simplistic way of getting memory statistics
-img: header/simplistic-way-of-getting-memory-statistics.png
+img: header/simplistic-way-of-getting-memory-statistics.gif
 tags: [PowerShell, PoSh, Scriptint, Windows]
 ---
 

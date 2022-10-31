@@ -3,7 +3,7 @@ layout: post
 title: Splunk!
 date: 2014-09-14 13:37:00 +0100
 description: Splunk! 
-img: header/splunk.png
+img: header/splunk.gif
 tags: [PowerShell, PoSh, Scripting, Windows]
 ---
 Recently I participated in the Splunk Workshop at SMTware. You might recall these names as SMTware gave us a peek into Splunk during a Login Lite session. Being intrigued by this session so I instantly signed up for the workshop. So I attended this session and I would like to share my experience.
@@ -34,11 +34,11 @@ For the workshop we went throught the undermentioned topics, which I will briefl
 
 Splunk gathers **ALL** information from the distributed nodes and gathers the information as a unstructured data blob, based on a flat file system. This enables to have all information available at all times, unlike the traditional monitoring systems, which usually narrow downs information of interest, leaving out the possibility of deep dive in to the complete chain of all the data, see below:
 
-![](/assets/img/Splunk!_img00.png)
+![](/assets/img/Splunk!_img00.gif)
  
 versus
  
-![](/assets/img/Splunk!_img01.png)
+![](/assets/img/Splunk!_img01.gif)
 
  
 ### What can Splunk do for you?
@@ -75,7 +75,7 @@ The complete chain of users can benefit from the results in the different roles,
 *	Subject Matter Experts, modelling report for the specific business needs.
 *	In the end the complete business can benefit based on the analytics given.
 
-![](/assets/img/Splunk!_img02.png)
+![](/assets/img/Splunk!_img02.gif)
 
 ### Conclusion
 

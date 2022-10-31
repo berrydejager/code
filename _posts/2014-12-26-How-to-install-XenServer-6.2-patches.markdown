@@ -3,7 +3,7 @@ layout: post
 title: How to install XenServer 6.2 patches
 date: 2014-12-26 13:37:00 +0100
 description:  
-img: header/how-to-install-xenserver-6.2-patches.png
+img: header/how-to-install-xenserver-6.2-patches.gif
 tags: [Bash, XenServer, Citrix]
 ---
 Updating your free XenServer 6.2 install can be a struggle, unless you do your home-work first!

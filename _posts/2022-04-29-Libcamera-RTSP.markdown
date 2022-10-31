@@ -3,7 +3,7 @@ layout: post
 title: How to stream over RTSP using RPi Bullseye
 date: 2022-04-29 13:37:00 +0100
 description: How to stream over RTSP using Raspberry Pi 'Bullseye' combined with libcamera as a daemon.
-img: header/libcamera-rtsp.png
+img: header/libcamera-rtsp.gif
 tags: [Raspberry PI, RPi, Bullseye, libcamera]
 ---
 
@@ -23,7 +23,7 @@ It doesn't detect all camera types correctly, see forum post ["Pi Zero W2 and Bu
 
 Connecting the camera to the Raspberry PI can be done by using the CSI (Camera Serial Interface) connector. 
 
-![1](/assets/img/libcamera-rtsp_rpi_cam_01.png)![2](/assets/img/libcamera-rtsp_rpi_cam_02.png)
+![1](/assets/img/libcamera-rtsp_rpi_cam_01.gif)![2](/assets/img/libcamera-rtsp_rpi_cam_02.gif)
 
 ## Testing hardware
 

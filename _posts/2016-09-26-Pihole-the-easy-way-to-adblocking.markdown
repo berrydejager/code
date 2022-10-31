@@ -3,7 +3,7 @@ layout: post
 title: Pi-hole, the easy way of adblocking.
 date: 2016-09-26 13:37:00 +0100
 description: Pi-Hole; the easy way to ad-blocking, without configuring an ad-blocker per device.
-img: header/pihole-the-easy-way-to-adblocking.png
+img: header/pihole-the-easy-way-to-adblocking.gif
 tags: [Raspberry Pi, RPi, Pi-hole, ad-blocking]
 ---
 [Pi-Hole](https://pi-hole.net/), the easy way to ad-blocking, without configuring an ad-blocker per device. Even the smartphone, tablet and other devices can benefit from this easily. Just plug-in a Raspberry Pi Zero, wired, into the network. Install and configure the Pi-Hole and change your router to point the primary DNS to the Pi-Hole to black hole those annoying incoming "informative" search results, ads for products that you recently purchased and references to items that your are not planning to buy after all.

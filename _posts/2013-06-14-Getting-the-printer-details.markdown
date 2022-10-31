@@ -3,7 +3,7 @@ layout: post
 title: Getting printer details from a Citrix Server
 date: 2013-06-14 13:37:00 +0100
 description: Getting printer details from a Citrix Server
-img: header/getting-the-printer-details.png
+img: header/getting-the-printer-details.gif
 tags: [PowerShell, PoSh, Scripting, Windows]
 ---
 I needed to harvest the details of printers from different Citrix application servers. This is what i came up with;

@@ -3,7 +3,7 @@ layout: post
 title: 
 date: 2021-02-17 13:37:00 +0100
 description:  
-img: header/making-the-azure-devops-transition.png
+img: header/making-the-azure-devops-transition.gif
 tags: [DevOps, Everything-as-Code, Code]
 ---
 How to create world-class agility, reliability, and security in technology organizations using another way of working?

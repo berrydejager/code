@@ -3,7 +3,7 @@ layout: post
 title: Adding a virtual sound device to ESXi
 date: 2020-05-16 13:37:00 +0100
 description:  
-img: header/audio-esxi.png
+img: header/audio-esxi.gif
 tags: [VMware, ESXi, Audio, Windows, Commodore 64, WinVICE, Twitch, Ultimate64]
 ---
 While I want to stream audio and video from my Commodore 64, actually an Ultimate64, I stumbled across the absence of audio on a virtual machine running on my lab system.

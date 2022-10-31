@@ -3,7 +3,7 @@ layout: post
 title: Installing Dell OMSA on VMware ESXi
 date: 2016-10-07 13:37:00 +0100
 description: Installing Dell OMSA on VMware ESXi
-img: header/installing-omsa-on-vmware-esxi.png
+img: header/installing-omsa-on-vmware-esxi.gif
 tags: [Dell, Linux, OMSA, Perc, PowerCLI, Scripting, VMware, vSphere]
 ---
 Installing OpenManage Server Administrator VIB (OMSA) on VMware ESXi.

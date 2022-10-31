@@ -3,7 +3,7 @@ layout: post
 title: 
 date: 2020-05-26 13:37:00 +0100
 description:  
-img: header/pi-hole-stopped-synology-surveillance.png
+img: header/pi-hole-stopped-synology-surveillance.gif
 tags: [Raspberry Pi, PiHole, DNS, Synology, Surveillance Station]
 ---
 __Effectively the Synology Surveillance Station retried too many times to connect to an offline camera resulting in an overloaded Pi-hole. Removing the overloaded files and restarting the DNS daemon fixes it again. Here are my investigation and fix to the problem.__

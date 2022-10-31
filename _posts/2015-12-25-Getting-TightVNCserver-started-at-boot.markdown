@@ -3,7 +3,7 @@ layout: post
 title: Getting TightVNCserver started at boot
 date: 2015-12-25 13:37:00 +0100
 description: Getting TightVNCserver started at boot
-img: header/getting-tightvncserver-started-at-boot.png
+img: header/getting-tightvncserver-started-at-boot.gif
 tags: [Raspberry Pi, RaspberryPi, RPi, VNC]
 ---
 Getting TightVNCserver started on boot using a RaspberryPi can get some troublesome. So i aggregated the information from various forum-posts to make it work correctly.

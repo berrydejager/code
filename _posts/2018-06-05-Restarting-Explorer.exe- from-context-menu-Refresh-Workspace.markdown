@@ -3,7 +3,7 @@ layout: post
 title: Restarting explorer.exe from the context menu
 date: 2018-06-05 13:37:00 +0100
 description: In order to restart the explorer.exe in an user friendly fashion, the idea was born to arrange this from the desktop context menu.
-img: header/restarting-explorer.exe-from-context-menu.png
+img: header/restarting-explorer.exe-from-context-menu.gif
 tags: [Microsoft, Windows, Explorer, Desktop, Context menu]
 ---
 In order to restart the explorer.exe in an user friendly fashion, the idea was born to arrange this from the desktop context menu.

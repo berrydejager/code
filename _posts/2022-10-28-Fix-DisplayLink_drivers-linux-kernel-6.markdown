@@ -30,7 +30,7 @@ As I have installed the `displaylink-driver-5.6.1-59.184.run` file, I will use t
 First create a folder to temporarily store the drivers in.
 
     cd ~
-    mkdir 
+    mkdir displaylinkfix && cd displaylinkfix
 
 At the moment the 5.6.1 is the latest driver from the [Synaptics download site](https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu).
 
@@ -69,7 +69,7 @@ Replace the `evdi.tar.gz` file with the latest version from the DisplayLink GitH
 
 The downloaded `evdi.tar.gz` archive contains an extra folder which the embedded `evdi.tar.gz` omits. So while extracing the file the path needs to altered by using the `--strip-components=1` parameter to the `tar` command.
 
-Modify the `install_evdi()` function of the`displaylink-installer.sh` file, around line #39:
+Modify, using you favourite text editor, the `install_evdi()` function of the`displaylink-installer.sh` file, around line #39:
 
     if ! tar xf "$TARGZ" -C "$EVDI"; then
 
@@ -79,9 +79,9 @@ and replace it with:
 
 ## Run the installer script as root
 
-This installs and compiles the latest EVDI driver which works with the current 6.0.2 kernel.
+This installs and compiles the latest EVDI driver which works with the current 6.0.2 kernel. To make the drivers effective reboot your machine when prompted.
 
-    sudo ./displaylink-installer.sh  
+    sudo ./displaylink-installer.sh
 
 ## Enjoy the multi-monitor setup again.
 

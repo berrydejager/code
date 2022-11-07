@@ -4,16 +4,18 @@ title: Fixing DisplayLink (EVDI) drivers for Linux kernel 6.x
 date: 2022-10-28 13:37:00 +0100
 description: Fixing the broken EVDI support for the DisplayLink drivers
 img: header/Fix-DisplayLink_drivers-linux-kernel-6.gif
-tags: [Linux, PopOS, DisplayLink, Kernel]
+tags: [Linux, Ubuntu, DisplayLink, Kernel]
 ---
 
 Kernel 6.x broke the support for the EVDI which is shipped with current release (5.6.1) of the [DisplayLink drivers for Ubuntu](https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu). This is really annoying as all of a 'sudden' my workstations which sport [Pop!_OS 22.04 LTS](https://pop.system76.com/) wouldn't work with external monitors, connected using a DisplayLink device, anymore. This happened by an upgrade package overnight (around 25th of October 2022). It took me a little while to realize what the actual problem is.
 
 # Culprit
 
-When re-installing the [Pop!_OS 22.04_14 ISO](https://iso.pop-os.org/22.04/amd64/intel/14/pop-os_22.04_amd64_intel_14.iso) again; no problem!
+I noticed, during experimenting with the different 22.04 releases of Pop!_OS, that the culprit has to do with the kernel being updated from 5.19.0-x to 6.0.2-x.
 
-In the meantime a new version, [Pop!_OS 22.04_15](https://iso.pop-os.org/22.04/amd64/intel/15/pop-os_22.04_amd64_intel_15.iso) was released; again no additional monitors.
+When re-installing the [Pop!_OS 22.04_14 ISO](https://iso.pop-os.org/22.04/amd64/intel/14/pop-os_22.04_amd64_intel_14.iso), sporting the `5.19.0-76051900-generic` kernel again; no problem!
+
+In the meantime a new version, [Pop!_OS 22.04_15](https://iso.pop-os.org/22.04/amd64/intel/15/pop-os_22.04_amd64_intel_15.iso), running the `6.0.2-7606002-generic` kernel, was released; again no additional monitors.
 
 This made me vigurously looking what was going on. From the log files, it became clear to me that the kernel was bugging the compatibility with the EVDI drivers. 
 

@@ -13,9 +13,9 @@ Kernel 6.x broke the support for the EVDI which is shipped with current release 
 
 I noticed, during experimenting with the different 22.04 releases of Pop!_OS, that the culprit has to do with the kernel being updated from 5.19.0-x to 6.0.2-x.
 
-When re-installing the [Pop!_OS 22.04_14 ISO](https://iso.pop-os.org/22.04/amd64/intel/14/pop-os_22.04_amd64_intel_14.iso), sporting the `5.19.0-76051900-generic` kernel again; no problem!
+When re-installing the [Pop!_OS 22.04_14 ISO](https://iso.pop-os.org/22.04/amd64/intel/14/pop-os_22.04_amd64_intel_14.iso), sporting the `5.19.0-76051900-generic` kernel again; **No problem!**
 
-In the meantime a new version, [Pop!_OS 22.04_15](https://iso.pop-os.org/22.04/amd64/intel/15/pop-os_22.04_amd64_intel_15.iso), running the `6.0.2-7606002-generic` kernel, was released; again no additional monitors.
+In the meantime a new version, [Pop!_OS 22.04_15](https://iso.pop-os.org/22.04/amd64/intel/15/pop-os_22.04_amd64_intel_15.iso), running the `6.0.2-7606002-generic` kernel, was released; **no additional monitors!**
 
 This made me vigurously looking what was going on. From the log files, it became clear to me that the kernel was bugging the compatibility with the EVDI drivers. 
 

@@ -23,9 +23,9 @@ So, I decided to look into that direction and stumbled upon [this question on Gi
 
 # Solution
 
-The solution is the replaced the shipped evdi.tar.gz file, containing the EVDI driver sources, in the installed package of the downloaded installed file. This can be done by following a simple procedure.
+The solution is to replace the shipped evdi.tar.gz file, containing the EVDI driver sources, in the installed package with a newer version. This can be done by following a simple procedure.
 
-As I have installed the `displaylink-driver-5.6.1-59.184.run` file, I will use this as the base line version;
+As I am using the `displaylink-driver-5.6.1-59.184.run` file, I will use this as the base line version. In your case, you may need to adapt the version numbers accordingly.
 
 ## Download the latest driver
 

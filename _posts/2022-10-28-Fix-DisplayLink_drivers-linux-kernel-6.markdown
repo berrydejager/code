@@ -13,15 +13,15 @@ Kernel 6.x broke the support for the EVDI which is shipped with current release 
 
 I noticed, during experimenting with the different 22.04 releases of Pop!_OS, that the culprit has to do with the kernel being updated from 5.19.0-x to 6.0.2-x.
 
-## Linux kernel 5.x - DisplayLink working
+## Linux kernel 5.x - DisplayLink working as expected.
 
 When re-installing the [Pop!_OS 22.04_14 ISO](https://iso.pop-os.org/22.04/amd64/intel/14/pop-os_22.04_amd64_intel_14.iso), sporting the `5.19.0-76051900-generic` kernel again; **No problem!**
 
-## Linux kernel 6.x - DisplayLink broken
+## Linux kernel 6.x - DisplayLink, internal laptop display only!
 
 As a new version, [Pop!_OS 22.04_15](https://iso.pop-os.org/22.04/amd64/intel/15/pop-os_22.04_amd64_intel_15.iso), running the `6.0.2-7606002-generic` kernel, was released; **no additional monitors!**
 
-This made me vigurously looking what was going on. From the log files, it became clear to me that the kernel was bugging the compatibility with the EVDI drivers.s
+This made me vigurously looking what was going on. From the log sfiles, it became clear to me that the kernel was bugging the compatibility with the EVDI drivers.
 
 So, I decided to look into that direction and stumbled upon [this question on GitHub](https://github.com/DisplayLink/evdi/issues/383), submitted by [BasSmeets](https://github.com/BasSmeets). This led me to the forum post by [Karly](https://www.displaylink.org/forum/member.php?u=23243) on the [DisplayLink forum](https://www.displaylink.org/forum/showpost.php?p=92453&postcount=3)
 

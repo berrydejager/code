@@ -39,13 +39,23 @@ libcamera-hello
 
 ## Preparing software
 
-General updating
+General update of your Raspberry Pi
 
 ```
 sudo apt update && sudo apt -y full-upgrade
 ```
 
-Installing VLC ,this can take a while.
+## Installing libcamera apps
+
+The libcamera-apps help you to make use of the hardware
+
+```
+sudo apt install -i libcamera-apps
+```
+
+## Installing VLC
+
+Installing VLC, this can take a while.
 
 ```
 sudo apt install -y vlc
@@ -56,6 +66,27 @@ Allow VLC to be run as root. This is needed otherwise the streaming can not comm
 sudo sed -i 's/geteuid/getppid/' /usr/bin/vlc
 ```
 
+## Detecting your camera
+
+Knowing your hardware is key to select the optimal resolution. Detecting your camera is possible.
+
+```
+libcamera-hello --list-cameras
+```
+
+The output could resemble, depending on your hardware;
+
+```
+Available cameras
+-----------------
+0 : ov5647 [2592x1944] (/base/soc/i2c0mux/i2c@1/ov5647@36)
+    Modes: 'SGBRG10_CSI2P' : 640x480 [30.00 fps - (0, 0)/0x0 crop]
+                             1296x972 [30.00 fps - (0, 0)/0x0 crop]
+                             1920x1080 [30.00 fps - (0, 0)/0x0 crop]
+                             2592x1944 [30.00 fps - (0, 0)/0x0 crop]
+```
+
+## Creating a streaming script
 
 Setting up `stream.sh` file
 
@@ -68,6 +99,8 @@ sudo nano ~/stream.sh
 ```
 
 Contents of the `stream.sh` file
+
+You might need to experiment with the resolution, frame-rate and so on. 
 
 When needed you can add `--vflip` and/or `--hflip` for correcting the view.
 
@@ -135,5 +168,3 @@ Start VLC media player and navigate to `Media` -> `Open network Stream`  or pres
 
 Enter the URL as follows:
 `rtsp://raspberrypi.local:8554/stream`
-
-

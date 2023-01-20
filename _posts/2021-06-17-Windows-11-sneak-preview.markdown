@@ -55,7 +55,7 @@ When the installed states that your (virtual) hardware isn't capable of running 
 
 It's a little nifty procedure;
 
-*   During the primary installation screen press `shift+F10` to enter a commandline.
+*   During the primary installation screen, press `shift+F10` to enter a commandline.
 *   Start `regedit.exe` to alter the registry
 *   Navigate to `HKEY_LOCAL_MACHINE\SYSTEM\Setup`
 *   Add the a new key: `LabConfig`
@@ -67,6 +67,16 @@ It's a little nifty procedure;
 Close the registry editor and the command line windows and continue the installation.
 
 [![](/assets/img/Window_11_sneak_preview_img00_t.jpg)](/assets/img/Window_11_sneak_preview_img00.gif){:target="_blank"} [![](/assets/img/Window_11_sneak_preview_img01_t.jpg)](/assets/img/Window_11_sneak_preview_img01.gif){:target="_blank"}
+
+### Creating a local account for W11 22H2
+
+Use the email address `no@example.com`.
+
+Type any password for example `1234578`.
+
+The wizard says `Oops, something went wrong`.
+
+Click `Next` to open a screen that allows you to create a local account.
 
 ### Limiting experience
 

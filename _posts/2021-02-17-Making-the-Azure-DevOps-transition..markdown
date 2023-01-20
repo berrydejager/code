@@ -10,11 +10,11 @@ How to create world-class agility, reliability, and security in technology organ
 
 ### Why? 
 
-While working, together with Siebrand, on a project he planted the DevOps seed/mind-bomb in the storm of thoughts in my brain. This opened up a whole new world for me; Everything and everywhere is code!
+While working, together with Siebrand, on a project he planted the DevOps seed/mind bomb in the storm of thoughts in my brain. This opened up a whole new world for me; Everything and everywhere is code!
 
 Siebrand also introduced me to The Phoenix Project and The Unicorn Project novels by [Gene Kim/IT Revolution](https://itrevolution.com/). These are must-reads for everyone, also outside of the IT industry.
 
-Reading these novels really brought to the attention that a lot of organizations, which I met over the past years, struggle with very similar challenges. I see that the main struggle is that the IT organization within a company is on the wrong side of the general ledger and needs to become a profit center instead of a cost center. IT development and operations will be the way forward to keep up or even ahead of the game of the business its competitors.
+Reading these novels brought to my attention that a lot of organizations, which I met over the past years, struggle with very similar challenges. I see that the main struggle is that the IT organization within a company is on the wrong side of the general ledger and needs to become a profit center instead of a cost center. IT development and operations will be the way forward to keep up or even ahead of the game of the business its competitors.
 
 *	[The Phoenix Project](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262592) - A novel about IT, DevOps, and helping your business win.
 *	[The Unicorn Project](https://www.amazon.com/Unicorn-Project-Developers-Disruption-Thriving/dp/1942788762) - A novel about developers, digital disruption and thriving in the age of data.
@@ -32,7 +32,7 @@ You might also want to subscribe to [The Idealcast](https://itrevolution.com/the
 
 ### The Journey
 
-While getting acquainted with this new way of working I must admit I felt some internal resistance; I just want to code! Over time, while diving into The Phoenix Project, I understood that “I just want to code!” isn’t going to cut it. There has to be a higher purpose to the script that I am creating. All scripts should have a common denominator. The reason that I am making a tiny script should address a common goal. Having this in mind, Siebrand and I, started working on assembling scripts into a library of functions. Each function has its own purpose and can be easily reused over multiple scripts. Well, doesn’t it make it more complex? Actually, there is a thin layer of complexity over this, however, this opens the gates of uniformity. Now all subjacent scripts will make use of common functions. For instance, creating a log file and rotating those log files to prevent the server to clog up. Now all scripts will make use of this function and the log files are created in the same syntax and have a configurable rotation scheme.
+While getting acquainted with this new way of working I must admit I felt some internal resistance; I just want to code! Over time, while diving into The Phoenix Project, I understood that “I just want to code!” isn’t going to cut it. There has to be a higher purpose to the script that I am creating. All scripts should have a common denominator. The reason that I am making a tiny script should address a common goal. Having this in mind, Siebrand and I, started working on assembling scripts into a library of functions. Each function has its purpose and can be easily reused over multiple scripts. Well, doesn’t it make it more complex? Actually there is a thin layer of complexity over this, however, this opens the gates of uniformity. Now all subjacent scripts will make use of common functions. For instance, creating a log file and rotating those log files to prevent the server to clog up. Now all scripts will make use of this function and the log files are created in the same syntax and have a configurable rotation scheme.
 
 Having this concept in mind we needed to make sure that our library will remain available and that a new function in our library wouldn’t jeopardize our other coding. It is time for the versioning of our code. We opted for getting the code checked into the Microsoft Azure (GIT) repository and start using another editor. Siebrand and most other IT co-workers are used to PowerShell ISE. However, the ISE is shipped with Windows the PowerShell ISE is no longer in active feature development and there is no support for the ISE in PowerShell v6 and beyond. I was happily content with using PowerGUI from Quest Dell Quest Software is not on the product list nor being developed anymore. This is certainly not future proof so we head out for a complete IDE environment and we discovered that Microsoft Visual Studio Code was the answer. It has everything we need; the multi-platform, community-driven, open-source, vast majority of extensions, version control, debugging, and code linting. Heading out to Microsoft Visual Studio Code!
 
@@ -85,7 +85,7 @@ Having this concept in mind we needed to make sure that our library will remain 
 
 Microsoft Visual Studio Code (a.k.a. VScode), available on multiple platforms, is a rich (cross-platform) source editor. It sports support for debugging, embedded Git control and GitHub, syntax highlighting, intelligent code completion, snippet, and even code refactoring. Also, it comes with built-in support for JavaScript, TypeScript, and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Power-Shell, and even Commodore 64 Assembly) and run-times, such as; .NET and Unity.
 
-VScode also has seamless integration with Microsoft Azure DevOps Services. This enables you to check-in code, based on GIT, into the cloud.
+VScode also has seamless integration with Microsoft Azure DevOps Services. This enables you to check in code, based on GIT, into the cloud.
 
 It’s also possible to use the widely used GitHub, which has been cleverly acquired by Microsoft recently. GitHub is a smart concatenation of two syllables; Git and Hub.
 
@@ -96,7 +96,7 @@ Git is a distributed version control system for tracking changes in source code 
 When gluing the concepts together a foundation has been formed for source code versioning and collaboration, either publicly or privately.
 Getting things done (more efficiently)
 
-From all the daily tasks that I have to complete during the day i need to focus on the things that bring to most value to the customer. This isn’t necessarily always adding features to current solutions but certainly also means shortening the processing time for activities. This can be achieved either by creating an automated workflow or by optimizing the current workflow when it comes to getting (more) things done. Ideally, the work we put into automating will pay down on the technical debt and thus increasing the overall efficiency of the operation/business.
+From all the daily tasks that I have to complete during the day I need to focus on the things that bring to most value to the customer. This isn’t necessarily always adding features to current solutions but certainly also means shortening the processing time for activities. This can be achieved either by creating an automated workflow or by optimizing the current workflow when it comes to getting (more) things done. Ideally, the work we put into automating will pay down the technical debt and thus increasing the overall efficiency of the operation/business.
 
 Altogether this makes me look at work differently. It’s not about creating a fix for a small problem; we are working towards a common goal while keeping our vision in mind.
 

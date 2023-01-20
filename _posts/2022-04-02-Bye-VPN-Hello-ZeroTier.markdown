@@ -34,7 +34,9 @@ It checked all my requirements
 
 [x] hassle-free, no port forwarding
 
-[x] [Free plan](https://www.zerotier.com/pricing/), no purchase/creditcard registration required
+[x] [Free plan](https://www.zerotier.com/pricing/), limited to 25 nodes, no purchase/creditcard registration required
+
+[x] Possibility to run a free and unlimited [self-hosting ZeroTier Network Controller](https://docs.zerotier.com/self-hosting/introduction)
 
 [x] A large variety of platform support
 
@@ -44,13 +46,19 @@ It checked all my requirements
 
 # How does it work?
 
+## Get it to work
+
 Essentially it requires just a few steps;
 
 1. Create a [ZeroTier account](https://accounts.zerotier.com/auth/realms/zerotier/protocol/openid-connect/registrations?client_id=zt-central&redirect_uri=https%3A%2F%2Fmy.zerotier.com%2Fapi%2F_auth%2Foidc%2Fcallback&response_type=code&scope=openid+profile+email+offline_access&state=state) to access your admin console and get a 16-digit network ID. Create as many networks as you like and each will be assigned a 16-digit network ID.
 2. [Download ZeroTier](https://www.zerotier.com/download/) on any device to get a unique 10-digit node address and enter your 16-digit network ID into the join network field on the device to request access to your network.
 3. Check the Auth checkbox on your admin console when your 10-digit node address presents itself.
 
+## Network connections
 
+If a firewall between you and the Internet blocks ZeroTier's UDP traffic, you will fall back to last-resort TCP tunneling to rootservers over port 443 (https impersonation). This will work almost anywhere but is very slow compared to UDP or direct peer to peer connectivity.
+
+Additional help can be found in [the ZeroTier knowledge base](https://zerotier.atlassian.net/wiki/spaces/SD/overview).
 
 # What did I use?
 

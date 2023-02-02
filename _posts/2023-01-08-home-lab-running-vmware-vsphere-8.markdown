@@ -2,9 +2,9 @@
 layout: post
 title: Running a cheapskate home lab VMware vSphere 8
 date: 2023-01-08 13:37:00 +0100
-description: Running a cheapskate home lab VMware vSphere 8
+description: Running a cheapskate homelab
 img: header/vmware-vsphere-unsupported-hardware.gif
-tags: [VMware, vSphere, ESXi, vCenter]
+tags: [homelab, home lab, VMware, vSphere, ESXi, vCenter]
 published: false
 ---
 # The homelab

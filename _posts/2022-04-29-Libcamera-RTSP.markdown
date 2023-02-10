@@ -50,7 +50,7 @@ sudo apt update && sudo apt -y full-upgrade
 The libcamera-apps help you to make use of the hardware
 
 ```
-sudo apt install -i libcamera-apps
+sudo apt install -y libcamera-apps
 ```
 
 ## Installing VLC

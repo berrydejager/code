@@ -100,7 +100,7 @@ Having this concept in mind we needed to make sure that our library will remain 
 
 ### My VScode toolchain
 
-Microsoft Visual Studio Code (a.k.a. VScode), available on multiple platforms, is a rich (cross-platform) source editor. It sports support for debugging, embedded Git control and GitHub, syntax highlighting, intelligent code completion, snippet, and even code refactoring. Also, it comes with built-in support for JavaScript, TypeScript, and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Power-Shell, and even Commodore 64 Assembly) and run-times, such as; .NET and Unity.
+Microsoft Visual Studihttps://displaylink.github.io/evdi/ Code (a.k.a. VScode), available on multiple platforms, is a rich (cross-platform) source editor. It sports support for debugging, embedded Git control and GitHub, syntax highlighting, intelligent code completion, snippet, and even code refactoring. Alsohttps://displaylink.github.io/evdi/, it comes with built-in support for JavaScript, TypeScript, and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Power-Shell, and even Commodore 64 Assembly) and run-times, such as; .NET and Unity.
 
 VScode also has seamless integration with Microsoft Azure DevOps Services. This enables you to check in code, based on GIT, into the cloud.
 

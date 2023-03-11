@@ -4,14 +4,14 @@ title: Fixing DisplayLink (EVDI) drivers for Linux kernel 6.x
 date: 2022-10-28 13:37:00 +0100
 description: Fixing the broken EVDI support for the DisplayLink drivers
 img: header/Fix-DisplayLink_drivers-linux-kernel-6.gif
-tags: [Linux, Ubuntu, DisplayLink, Kernel]
+tags: [Linux, Ubuntu, DisplayLink, Kernel, OpenSource, FOSS]
 ---
 
 Kernel 6.x broke the support for the EVDI which is shipped with current release (5.6.1) of the [DisplayLink drivers for Ubuntu](https://www.synaptics.com/products/displaylink-graphics/downloads/ubuntu). This is really annoying as all of a 'sudden' my workstations which sport [Pop!_OS 22.04 LTS](https://pop.system76.com/) wouldn't work with external monitors, connected using a DisplayLink device, anymore. This happened by an upgrade package overnight (around 25th of October 2022). It took me a little while to realize what the actual problem is.
 
 # Culprit
 
-I noticed, during experimenting with the different 22.04 releases of Pop!_OS, that the culprit has to do with the kernel being updated from 5.19.0-x to 6.0.2-x.
+I noticed, during experimenting with the different 22.04 releases of Pop!_OS, the DisplayLink device wasn't displaying to the external monitors anymore althought the other functionality (USB, Ethernet and audio) was working as expected. That real culprit has to do with the kernel being updated from 5.19.0-x to 6.0.2-x and the display part of the drive. After diggin around I discovered that the [EVDI](https://displaylink.github.io/evdi/) version isn't working anymore after the kernel updates. 
 
 __Update__: 2023-MAR-10: Kernel 6.2 broke the EVDI again: awaiting for [a fix to be implemented](https://github.com/DisplayLink/evdi/pull/401).
 
@@ -31,7 +31,7 @@ So, I decided to look into that direction and stumbled upon [this question on Gi
 
 # Solution
 
-The solution is to replace the shipped evdi.tar.gz file, containing the EVDI driver sources, in the installed package with a newer version. This can be done by following a simple procedure.
+The solution is to replace the shipped evdi.tar.gz file, containing the [EVDI driver](https://displaylink.github.io/evdi/), in the installed package with a newer version. This can be done by following a simple procedure.
 
 As I am using the `displaylink-driver-5.6.1-59.184.run` file, I will use this as the base line version. In your case, you may need to adapt the version numbers accordingly.
 

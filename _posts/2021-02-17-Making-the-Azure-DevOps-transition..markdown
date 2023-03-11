@@ -16,17 +16,34 @@ Siebrand also introduced me to The Phoenix Project and The Unicorn Project novel
 
 Reading these novels brought to my attention that a lot of organizations, which I met over the past years, struggle with very similar challenges. I see that the main struggle is that the IT organization within a company is on the wrong side of the general ledger and needs to become a profit center instead of a cost center. IT development and operations will be the way forward to keep up or even ahead of the game of the business its competitors.
 
+#### Old school paper things
+
 *	[The Phoenix Project](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262592) - A novel about IT, DevOps, and helping your business win.
 *	[The Unicorn Project](https://www.amazon.com/Unicorn-Project-Developers-Disruption-Thriving/dp/1942788762) - A novel about developers, digital disruption and thriving in the age of data.
 *	[The DevOps Handbook](https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002) - How to create world-class agility, reliability, and security in technology organizations. 
 
+#### Audio excerpts
 
-For the lazy reading, with your eyes closed, some excerpts are available on SoundCloud;
+For the lazy reading, with your ears open and eyes closed, some excerpts are available on SoundCloud;
 
 *	[The Phoenix Project, Part 1](https://soundcloud.com/itrevolution/sets/the-phoenix-project-part-2) on SoundCloud.com
 *	[Beyond the Phoenix Project](https://soundcloud.com/itrevolution/sets/beyond-the-phoenix-project) on SoundCloud.com
 *	[The Unicorn Project](https://soundcloud.com/itrevolution/sets/the-unicorn-project) on SoundCloud.com
 *	[The Devops Handbook](https://soundcloud.com/itrevolution/sets/the-devops-handbook) on SoundCloud.com
+
+#### Full versions are availabe at:
+
+Apple Books
+
+*	[The Phoenix Project](https://books.apple.com/us/audiobook/the-phoenix-project-a-novel-about-it-devops/id981293333)
+*	[The Unicorn Project](https://books.apple.com/us/audiobook/the-unicorn-project-a-novel-about-developers/id1486612452)
+
+Audible
+
+*	[The Phoenix Project](https://www.audible.co.uk/pd/The-Phoenix-Project-Audiobook/B00VB034GK)
+*	[The Unicorn Project](https://www.audible.co.uk/pd/The-Unicorn-Project-Audiobook/B08129SJ41)
+
+#### Podcast
 
 You might also want to subscribe to [The Idealcast](https://itrevolution.com/the-idealcast-podcast/) for more in-depth insights.
 
@@ -102,7 +119,7 @@ Altogether this makes me look at work differently. It’s not about creating a f
 
 ### Getting my gear up
 
-#### Required software
+#### Software to install on your machine
 
 *	Git for Windows
 *	Github Desktop
@@ -116,3 +133,5 @@ Altogether this makes me look at work differently. It’s not about creating a f
     *	KickAss (C64) – Captain JiNX)
 
 #### Setting up the environment
+
+t.b.d.

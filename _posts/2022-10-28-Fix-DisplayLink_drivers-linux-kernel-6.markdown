@@ -13,13 +13,21 @@ Kernel 6.x broke the support for the EVDI which is shipped with current release 
 
 I noticed, during experimenting with the different 22.04 releases of Pop!_OS, the DisplayLink device wasn't displaying to the external monitors anymore althought the other functionality (USB, Ethernet and audio) was working as expected. That real culprit has to do with the kernel being updated from 5.19.0-x to 6.0.2-x and the display part of the drive. After diggin around I discovered that the [EVDI](https://displaylink.github.io/evdi/) version isn't working anymore after the kernel updates. 
 
-__Update__: 
-    2023-MAR-10: Kernel 6.2 broke the EVDI again: awaiting for [a fix to be implemented](https://github.com/DisplayLink/evdi/pull/401).
-    
-    Possible solution, suggested by Daniel C., is using [kernelstub](https://support.system76.com/articles/kernelstub/) to assign the 6.0.2 kernel to you system again.
-    `sudo kernelstub -v -k /boot/vmlinuz-6.0.6-76060006-generic -i /boot/initrd.img-6.0.6-76060006-generic`
+---
 
-__Update__: 2022-DEC-02: Pop!_OS updated the kernel again, this time to version `6.0.6-76060006-generic`. Again no dice... re-applying the procedure, as noted below, fixed the issue again.
+# Updates
+
+Updates, having the most recent on top, on the current status of the EVDI trouble.
+
+__Update 2023-MAR-10__: Kernel 6.2 broke the EVDI again: awaiting for [a fix to be implemented](https://github.com/DisplayLink/evdi/pull/401).
+
+Possible solution, suggested by Daniel C., is using [kernelstub](https://support.system76.com/articles/kernelstub/) to assign the 6.0.2 kernel to you system again;
+
+`sudo kernelstub -v -k /boot/vmlinuz-6.0.6-76060006-generic -i /boot/initrd.img-6.0.6-76060006-generic`
+
+__Update 2022-DEC-02__: Pop!_OS updated the kernel again, this time to version `6.0.6-76060006-generic`. Again no dice... re-applying the procedure, as noted below, fixed the issue again.
+
+---
 
 ## Linux kernel 5.x - DisplayLink working as expected.
 

@@ -15,6 +15,7 @@ I noticed, during experimenting with the different 22.04 releases of Pop!_OS, th
 
 __Update__: 
     2023-MAR-10: Kernel 6.2 broke the EVDI again: awaiting for [a fix to be implemented](https://github.com/DisplayLink/evdi/pull/401).
+    
     Possible solution, suggested by Daniel C., is using [kernelstub](https://support.system76.com/articles/kernelstub/) to assign the 6.0.2 kernel to you system again.
     `sudo kernelstub -v -k /boot/vmlinuz-6.0.6-76060006-generic -i /boot/initrd.img-6.0.6-76060006-generic`
 

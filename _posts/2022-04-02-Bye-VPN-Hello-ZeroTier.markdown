@@ -25,6 +25,12 @@ I use this in a very smal context but it also works in large (scale-in/scale-out
 ![](/assets/img/ZT_NetworkGraphic_Homepage.gif)
 
 # Why go for ZeroTier?
+The free basic plan comes with;
+
+* Up to 25(!) members on the virtual private network.
+* Unlimited amount of network to be configured on your tenant.
+* A single ZeroTier admin account
+* Support is based on the large community, helping eachother out is what i like.
 
 This virtual network is accessible as long as you connect to "The System". The best part of all this is that you don't need to worry about router configuration of opening ports, forwarding traffic etc., hence it fits my need.
 
@@ -55,25 +61,30 @@ Essentially it requires just a few steps;
 3. Check the Auth checkbox on your admin console when your 10-digit node address presents itself.
 
 ## Network connections
+The free basic plan comes with;
+
+* Up to 25(!) members on the virtual private network.
+* Unlimited amount of network to be configured on your tenant.
+* A single ZeroTier admin account
+* Support is based on the large community, helping eachother out is what i like.
 
 If a firewall between you and the Internet blocks ZeroTier's UDP traffic, you will fall back to last-resort TCP tunneling to rootservers over port 443 (https impersonation). This will work almost anywhere but is very slow compared to UDP or direct peer to peer connectivity.
 
-Additional help can be found in [the ZeroTier knowledge base](https://zerotier.atlassian.net/wiki/spaces/SD/overview).
+Additional help can be found in the [ZeroTier knowledge base](https://zerotier.atlassian.net/wiki/spaces/SD/overview).
+The free basic plan comes with;
+
+* Up to 25(!) members on the virtual private network.
+* Unlimited amount of network to be configured on your tenant.
+* A single ZeroTier admin account
+* Support is based on the large community, helping eachother out is what i like.
 
 # What did I use?
 
-* VMWare ESXi 6.7 as a hypervisor platform
+* VMWare ESXi 8.x as a hypervisor platform
 * ZeroTier Basic account, which is free see; [pricing plan](https://www.zerotier.com/pricing/)
 * a Linux Mint 20.3 virtual machine at the local location
 * a Linux Mint 20.3 virtual machine at the remote location
 * Creating a ZeroTier network between these two VMs
-
-The free basic plan comes with;
-
-* Up to 50(!) members on the virtual private network.
-* Unlimited amount of network to be configured on your tenant.
-* A single ZeroTier admin account
-* Support is based on the large community, helping eachother out is what i like.
 
 If you don't like the ZeroTier Hosted Controller you can go for the Open Source plan and [sport your own controller](https://docs.zerotier.com/self-hosting/network-controllers/) and gain the unlimited admin accounts as a bonus.
 

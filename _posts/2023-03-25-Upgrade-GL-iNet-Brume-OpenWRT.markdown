@@ -4,7 +4,7 @@ title: Upgrading GL.iNet Brume / GL-MV1000(W) to version 4.2.1
 date: 2023-03-25 13:37:00 +0100
 description: Upgrade your GL.iNet Brume to firmware v4.2.1 
 img: header/upgrade-gl-inet-brume-v4_2_1.gif
-tags: [GL.iNet, Brume, MV1000, MV1000W, Firmware, OpenWRT, MicrosoftTeams]
+tags: [GL-iNet, Brume, MV1000, MV1000W, Firmware, OpenWRT, Microsoft, Teams]
 ---
 
 # Why would you update?

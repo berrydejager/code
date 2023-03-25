@@ -7,7 +7,21 @@ img: header/upgrade-gl-inet-brume-v4_2_1.gif
 tags: [GL-iNet, Brume, MV1000, MV1000W, Firmware, OpenWRT, Microsoft, Teams]
 ---
 
-# Why would you update?
+# Microsoft Teams disconnects the tethered network. Why?
+
+The tethering connection on the GL.iNet Brume router is consistently dropped after a short period of time when using Microsoft Teams, often at inconvenient moments. I have determined that this behavior is not due to coincidence but rather a direct result of using Teams. Swapping out machines and operating systems didn't help. Also changing over to the web Teams client wasn't a workaround to the problem.
+
+Updating the router software was my go-to route.
+
+OpenWRT is a popular open-source operating system for routers and other networking devices. It provides a customizable and flexible platform for configuring and managing network settings, as well as advanced features such as VPN support, firewall rules, and bandwidth monitoring.
+
+Like any software, OpenWRT is constantly evolving and improving. Developers release new versions of the operating system regularly to fix bugs, improve performance, and add new features. When you encounter issues with your router, upgrading to a newer version of OpenWRT can often help to resolve the problem.
+
+Yes, updating the router software to a newer version of OpenWRT was the solution to the problem . In general, updating the software or firmware of your router is a common troubleshooting step to fix issues and improve overall performance. It's important to keep the router software up-to-date with the latest patches, bug fixes, and security updates to ensure optimal functionality and security of your network.
+
+In my case the router is end-of-life so we need to be a little more creative, read below the details.
+
+# Updating...
 
 It is always a good practice to stay up to date with firmware and software updates. In my situation, there was an additional motivation for me to look for a newer firmware.
 
@@ -16,10 +30,6 @@ The newer [Brume2 GL-MT2500 of GL.iNet](https://www.gl-inet.com/products/gl-mt25
 Let's try to update the firmware to a newer version, totally ignoring the router's end-of-life status and support level. If updating the firmware doesn't work, I'll [order the sleek Brume 2 / GL-MT2500](https://store.gl-inet.com/collections/brume-2-gl-mt2500-mt2500a-security-gateway).
 
 While utilizing Microsoft Teams at my 'tiny office', the internet connection would frequently drop out. As there was no direct internet connectivity available at the office, I opted to purchase a compact and versatile router, specifically the [GL.iNet GL-MV1000](https://www.gl-inet.com/products/gl-mv1000/), and tethered it to my smartphone. Initially, this solution appeared to work well, but over time the internet connection began to drop out intermittently, possibly due to having Teams active and its updates. Eventually, the situation worsened to the point where it became too frustrating for me to tolerate. Diving deeper into the symptoms a solutions was found.
-
-## The problem
-
-The tethering connection on the GL.iNet Brume router is consistently dropped after a short period of time when using Microsoft Teams, often at inconvenient moments. I have determined that this behavior is not due to coincidence but rather a direct result of using Teams. Swapping out machines and operating systems didn't help. Also changing over to the web Temas client wasn't a workaround to the problem.
 
 ## The culprit
 

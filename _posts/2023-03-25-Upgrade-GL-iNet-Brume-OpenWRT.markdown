@@ -11,6 +11,10 @@ tags: [GL-iNet, Brume, MV1000, MV1000W, Firmware, OpenWRT, Microsoft, Teams]
 
 It is always a good practice to stay up to date with firmware and software updates. In my situation, there was an additional motivation for me to look for a newer firmware.
 
+The newer [Brume2 GL-MT2500 of GL.iNet](https://www.gl-inet.com/products/gl-mt2500/) routers sports OpenWRT 21.02 software while my current router runs OpenWRT 19.07.x software.
+
+Let's try to update the firmware to a newer version, totally ignoring the router's end-of-life status and support level. If updating the firmware doesn't work, I'll [order the sleek Brume 2 / GL-MT2500](https://store.gl-inet.com/collections/brume-2-gl-mt2500-mt2500a-security-gateway).
+
 While utilizing Microsoft Teams at my 'tiny office', the internet connection would frequently drop out. As there was no direct internet connectivity available at the office, I opted to purchase a compact and versatile router, specifically the [GL.iNet GL-MV1000](https://www.gl-inet.com/products/gl-mv1000/), and tethered it to my smartphone. Initially, this solution appeared to work well, but over time the internet connection began to drop out intermittently, possibly due to having Teams active and its updates. Eventually, the situation worsened to the point where it became too frustrating for me to tolerate. Diving deeper into the symptoms a solutions was found.
 
 ## The problem
@@ -27,11 +31,11 @@ Microsoft Teams was causing my portable router to drop the tethering connection 
 
 # Finding the firmware
 
-When looking for alternative firmwares on the [OpenWRT site](https://openwrt.org/toh/gl.inet/gl-mv1000) and trying [the options there](https://openwrt.org/toh/gl.inet/gl-mv1000#installation) I found out that those didn't even update the router from [3.125](https://dl.gl-inet.com/?model=mv1000) to 4.2.1.
+While browsing for the [OpenWRT site](https://openwrt.org/toh/gl.inet/gl-mv1000) for alternative firmwares and attempting to install [the options provided](https://openwrt.org/toh/gl.inet/gl-mv1000#installation) I discovered that non of them could update the router from [3.125](https://dl.gl-inet.com/?model=mv1000) to newer 4.2.1.
 
-When switching to the [snapshot type of firmware](https://dl.gl-inet.com/?model=mv1000&type=snapshot), to my surprise, the newer version of the firmware appeared.
+However, when I switched to the [snapshot type of firmware](https://dl.gl-inet.com/?model=mv1000&type=snapshot), to my surprise, the updated firmware version (4.2.1) was available.
 
-Download that firmware from here:
+Download the 4.2.1 firmware for the Brume GL-MV1000 / GL-MV1000W from here:
 
 *   [GL.iNet](https://fw.gl-inet.com/firmware/snapshots/20230324/mv1000/openwrt-mv1000-4.2.1-0324-1679603991.img)
 *   [local mirror](/assets/bin/openwrt-mv1000-4.2.1-0324-1679603991.img)

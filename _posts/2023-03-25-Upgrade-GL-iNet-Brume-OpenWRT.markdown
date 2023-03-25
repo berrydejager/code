@@ -53,7 +53,8 @@ Download the 4.2.1 firmware for the Brume GL-MV1000 / GL-MV1000W from here:
 This file is for [local upgrade](https://docs.gl-inet.com/en/4/tutorials/firmware_upgrade/) in web Admin Panel and [Uboot](https://docs.gl-inet.com/en/4/tutorials/debrick/).
 
 Date Compiled: 2023-03-23 21:39:51 (UTC+01:00)
-SHA256: `de1a774a072793f9447d158a68de8bcf447daa8fe3c369db6d6fb994dcc87bbd`  
+
+SHA256: de1a774a072793f9447d158a68de8bcf447daa8fe3c369db6d6fb994dcc87bbd
 
 # Updating the firmware
 

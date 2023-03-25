@@ -7,7 +7,7 @@ img: header/upgrade-gl-inet-brume-v4_2_1.gif
 tags: [GL-iNet, Brume, MV1000, MV1000W, Firmware, OpenWRT, Microsoft, Teams]
 ---
 
-# Microsoft Teams disconnects the tethered network. Why?
+# Microsoft Teams disconnects the tethered network... Why?
 
 The tethering connection on the GL.iNet Brume router is consistently dropped after a short period of time when using Microsoft Teams, often at inconvenient moments. I have determined that this behavior is not due to coincidence but rather a direct result of using Teams. Swapping out machines and operating systems didn't help. Also changing over to the web Teams client wasn't a workaround to the problem.
 

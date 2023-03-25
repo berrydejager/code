@@ -11,7 +11,7 @@ tags: [GL-iNet, Brume, MV1000, MV1000W, Firmware, OpenWRT, Microsoft, Teams]
 
 The tethering connection on the GL.iNet Brume router is consistently dropped after a short period of time when using Microsoft Teams, often at inconvenient moments. I have determined that this behavior is not due to coincidence but rather a direct result of using Teams. Swapping out machines and operating systems didn't help. Also changing over to the web Teams client wasn't a workaround to the problem.
 
-Updating the router software was my go-to route.
+Proactively investigate the potential of upgrading the router software is the first course of action.
 
 OpenWRT is a popular open-source operating system for routers and other networking devices. It provides a customizable and flexible platform for configuring and managing network settings, as well as advanced features such as VPN support, firewall rules, and bandwidth monitoring.
 

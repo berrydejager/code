@@ -48,9 +48,28 @@ However, when I switched to the [snapshot type of firmware](https://dl.gl-inet.c
 Download the 4.2.1 firmware for the Brume GL-MV1000 / GL-MV1000W from here:
 
 *   [GL.iNet](https://fw.gl-inet.com/firmware/snapshots/20230324/mv1000/openwrt-mv1000-4.2.1-0324-1679603991.img)
-*   [local mirror](/assets/bin/openwrt-mv1000-4.2.1-0324-1679603991.img)
+*   [local mirror](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.2.1-0324-1679603991.img)
 
 This file is for [local upgrade](https://docs.gl-inet.com/en/4/tutorials/firmware_upgrade/) in web Admin Panel and [Uboot](https://docs.gl-inet.com/en/4/tutorials/debrick/).
+
+# Firmware compatibility
+
+Firmware details
+
+| Filename | Name | Version | Type | GoodCloud.xyz | Remarks |
+| --- | --- | --- | --- |
+| [openwrt-mv1000-emmc-3.105.img](/assets/bin/gl-inet/mv1000/3.x/openwrt-mv1000-emmc-3.105.img) | | 3.105 | Stable | Yes | Affected by the Teams-bug |
+| [openwrt-mv1000-emmc-3.216-0321-1679391509.img](/assets/bin/gl-inet/mv1000/3.x/openwrt-mv1000-emmc-3.216-0321-1679391509.img) | | 3.216-0321 | Stable | Yes |
+|  Affected by the Teams-bug |
+[openwrt-mv1000-4.2.1-0324-1679603991.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.2.1-0324-1679603991.img) | | 4.2.1-0324 | Snapshot | | |
+[openwrt-mv1000-4.2.2-0504-1683176079.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.2.2-0504-1683176079.img) | | 4.2.2-0504 | Snapshot | | |
+[openwrt-mv1000-4.2.2-0518-1684356632.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.2.2-0518-1684356632.img) | | 4.2.2-0518 | Snapshot | | |
+[openwrt-mv1000-4.3.6-0801-1690836333.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.3.6-0801-1690836333.img) | | 4.3.6-0801 | Snapshot | | |
+[openwrt-mv1000-4.3.7-1018-1697574734.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.3.7-1018-1697574734.img) | | 4.3.7-1018 | Snapshot | | |
+[openwrt-mv1000-4.3.7-1107-1699302665.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.3.7-1107-1699302665.img) | | 4.3.7-1107 | Snapshot | | |
+[openwrt-mv1000-4.3.8-0927-1695812269.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.3.8-0927-1695812269.img) | | 4.3.8-0927 | Beta | | |
+
+
 
 # Updating the firmware
 

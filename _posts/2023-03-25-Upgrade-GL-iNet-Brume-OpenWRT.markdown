@@ -21,6 +21,16 @@ Yes, updating the router software to a newer version of OpenWRT was the solution
 
 In my case the router is end-of-life so we need to be a little more creative, read below the details.
 
+# The hardware
+
+As far as the marketing concerns;
+
+    __Edge Computing Gateway__
+
+    Brume (GL-MV1000) and Brume-W (GL-MV1000W)* are powerful and stable networking products designed to do cutting-edge computing. With the Marvell high-performance chipset, the Brume and Brume-W* can run state-of-the-art cryptography at impressive speeds for an excellent VPN routing experience. Pre-installed OpenWrt and supported Ubuntu, Brume and Brume-W* allows in-depth developments for commercial IoT projects.
+
+    Brume-W (GL-MV1000W)* is the special edition of Brume (GL-MV1000) that comes with an embedded Wi-Fi module, which delivers high-speed WiFi performance on 2.4GHz Wi-Fi with up to 300Mbps Wi-Fi speed.
+
 # Updating...
 
 It is always a good practice to stay up to date with firmware and software updates. In my situation, there was an additional motivation for me to look for a newer firmware.
@@ -54,22 +64,20 @@ This file is for [local upgrade](https://docs.gl-inet.com/en/4/tutorials/firmwar
 
 # Firmware compatibility
 
-Firmware details
+[GL-iNet CL-MV1000(W) - Brume(-W)](https://www.gl-inet.com/products/gl-mv1000/)
 
-| Filename | Name | Version | Type | GoodCloud.xyz | Remarks |
-| --- | --- | --- | --- |
-| [openwrt-mv1000-emmc-3.105.img](/assets/bin/gl-inet/mv1000/3.x/openwrt-mv1000-emmc-3.105.img) | | 3.105 | Stable | Yes | Affected by the Teams-bug |
-| [openwrt-mv1000-emmc-3.216-0321-1679391509.img](/assets/bin/gl-inet/mv1000/3.x/openwrt-mv1000-emmc-3.216-0321-1679391509.img) | | 3.216-0321 | Stable | Yes |
-|  Affected by the Teams-bug |
-[openwrt-mv1000-4.2.1-0324-1679603991.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.2.1-0324-1679603991.img) | | 4.2.1-0324 | Snapshot | | |
-[openwrt-mv1000-4.2.2-0504-1683176079.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.2.2-0504-1683176079.img) | | 4.2.2-0504 | Snapshot | | |
-[openwrt-mv1000-4.2.2-0518-1684356632.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.2.2-0518-1684356632.img) | | 4.2.2-0518 | Snapshot | | |
-[openwrt-mv1000-4.3.6-0801-1690836333.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.3.6-0801-1690836333.img) | | 4.3.6-0801 | Snapshot | | |
-[openwrt-mv1000-4.3.7-1018-1697574734.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.3.7-1018-1697574734.img) | | 4.3.7-1018 | Snapshot | | |
-[openwrt-mv1000-4.3.7-1107-1699302665.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.3.7-1107-1699302665.img) | | 4.3.7-1107 | Snapshot | | |
-[openwrt-mv1000-4.3.8-0927-1695812269.img](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.3.8-0927-1695812269.img) | | 4.3.8-0927 | Beta | | |
-
-
+| Filename | Type | OpenWRT | 2.4G WiFi | GoodCloud.xyz | Remarks |
+| --- | --- | --- | --- | --- | --- |
+| [3.105](/assets/bin/gl-inet/mv1000/3.x/openwrt-mv1000-emmc-3.105.img) | Stable | 19.07.0-rc1 | Enabled | Online | Doesn't connect to tethered device |
+| [3.115-0921](/assets/bin/gl-inet/mv1000/3.x/openwrt-mv1000-emmc-3.215-0921-1663732383.img) | Stable | - | -  | - | - |
+| [3.216-0321](/assets/bin/gl-inet/mv1000/3.x/openwrt-mv1000-emmc-3.216-0321-1679391509.img) | Stable | 19.07.8 | Enabled | Online | Affected by the Teams-bug |
+| [4.2.1-0324](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.2.1-0324-1679603991.img) | Snapshot |22.03.2 | Disabled | Online, no details in client overview | Has ZeroTier integration |
+| [4.2.2-0504](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.2.2-0504-1683176079.img) | Snapshot | 22.03.x | Disabled | Online | - |
+| [4.2.2-0518](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.2.2-0518-1684356632.img) | Snapshot | 22.03.x | Disabled | Online | - |
+| [4.3.6-0801](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.3.6-0801-1690836333.img) | Snapshot | 22.03.x | Disabled | Online | - |
+| [4.3.7-1018](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.3.7-1018-1697574734.img) | Snapshot | 22.03.x | Disabled | Online | - |
+| [4.3.7-1107](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.3.7-1107-1699302665.img) | Snapshot | 22.03.x | Disabled | Online | - |
+| [4.3.8-0927](/assets/bin/gl-inet/mv1000/4.x/openwrt-mv1000-4.3.8-0927-1695812269.img) | Beta | 22.03.4 | Disabled | Online | - |
 
 # Updating the firmware
 

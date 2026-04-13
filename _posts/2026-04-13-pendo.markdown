@@ -8,31 +8,31 @@ tags: [citrix, pendo, analytics, social-engineering, privacy]
 
 ## The Hidden Layer
 
-In many Citrix environments, analytics tooling like Pendo is quietly embedded into the interface. Its purpose is harmless on paper:
+In many cloud and on-premises Citrix environments, analytics tooling like Pendo is quietly embedded (a.k.a. as 'opt-out feature') into the interface. Its purpose is harmless on paper:
 
-- track feature usage  
-- improve UX  
-- guide users  
+- track feature usage 
+- improve UX 
+- guide users 
 
 But in practice, it introduces a **second layer of visibility**—one that observes not just systems, but **people using them**.
 
 ---
 
-## The Token You Didn’t Notice
+## The token you didn’t notice
 
-Pendo uses a structured token (often referred to as a **JZB token**) to correlate activity.
+Pendo uses a structured token (often referred to as a **JZB token**) to correlate activity, see [pendo-io on Github](https://github.com/pendo-io/jzb)
 
 It typically contains Base64-encoded JSON such as:
 
 - `visitorId`
-- `accountId`
+- `accountId` (which is your Active Directory domain name and account name)
 - sometimes role or segmentation data
 
 This token is:
 
-- readable in the browser  
-- accessible to scripts  
-- transmitted with analytics events  
+- readable in the browser 
+- accessible to scripts 
+- transmitted with analytics events 
 
 It doesn’t grant direct access—but it answers an important question:
 
@@ -44,16 +44,16 @@ It doesn’t grant direct access—but it answers an important question:
 
 Now combine that identity context with what Pendo actually tracks:
 
-- clicks  
-- navigation paths  
-- feature usage  
-- workflow timing  
+- clicks 
+- navigation paths 
+- feature usage 
+- workflow timing 
 
 You no longer have telemetry.
 
-You have:
+You have: 
 
-> **A behavioral blueprint of your organization**
+> **a behavioral blueprint of your (administrative users in your) organization**
 
 ---
 
@@ -61,10 +61,10 @@ You have:
 
 Even without a breach of core systems, exposure of analytics data enables:
 
-- mapping of internal tools  
-- identification of high-privilege users  
-- reconstruction of workflows  
-- timing of user activity  
+- mapping of internal tools 
+- identification of high-privilege users 
+- reconstruction of workflows 
+- timing of user activity 
 
 An attacker doesn’t need credentials to learn:
 
@@ -76,9 +76,9 @@ An attacker doesn’t need credentials to learn:
 
 Instead of generic phishing:
 
-- emails reference real features  
-- fake pages mimic actual workflows  
-- timing matches user habits  
+- emails reference real features 
+- fake pages mimic actual workflows 
+- timing matches user habits 
 
 ---
 

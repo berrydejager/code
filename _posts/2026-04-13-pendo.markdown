@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "When Analytics Becomes Intelligence: Citrix, Pendo, and Hidden Risk"
-date: 2026-04-13
-categories: [security, privacy]
-tags: [citrix, pendo, analytics, social-engineering]
+title: When Analytics Becomes Intelligence - Citrix, Pendo, and its hidden risks
+date: 2026-04-13 13:37:00 +0100
+description: When Analytics Becomes Intelligence - Citrix, Pendo, and its hidden risks
+tags: [citrix, pendo, analytics, social-engineering, privacy]
 ---
 
 ## The Hidden Layer

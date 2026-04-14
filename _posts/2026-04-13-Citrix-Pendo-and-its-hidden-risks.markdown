@@ -3,6 +3,7 @@ layout: post
 title: When Analytics Becomes Intelligence
 date: 2026-04-13 13:37:00 +0100
 description: Citrix usage tracking by Pendo.io and its hidden risks
+img: header/citrix-pendo-risks.gif
 tags: [citrix, pendo, analytics, social-engineering, privacy]
 ---
 

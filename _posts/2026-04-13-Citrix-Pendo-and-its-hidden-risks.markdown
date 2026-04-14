@@ -19,7 +19,7 @@ In many, cloud-based and even on-premises, Citrix environments, the Pendo.io ana
 - improve UX 
 - guide users 
 
-Even when your Citrix environment is in a secluded (no proxy or internet connectec) your workstation, on which you do the administrative tasks, is most probably connected to the interwebs. The API calls, while using the Citrix administrative tools mentioned, are instigated from your workstation towards Pendo.io, over **your** internet connection. 
+Even when your Citrix environment is in a secluded (no proxy or internet connected) your workstation, on which you do the administrative tasks, is most probably connected to the interwebs. The API calls, while using the Citrix administrative tools mentioned, are instigated from your workstation towards Pendo.io, over **your** internet connection. 
 
 In practice, it introduces a **second layer of visibility**—one that observes not just systems, but **people using them**.
 

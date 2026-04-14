@@ -19,7 +19,7 @@ social-email: code@berrydejager.com
 # discus-identifier:
 
 # Tracker
-analytics: UA-190232947-1  # Google Analytics
+#analytics:  # Google Analytics
 
 # Build Settings
 markdown: kramdown

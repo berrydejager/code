@@ -48,10 +48,15 @@ This token is:
 It doesn’t grant direct access, however it answers important questions:
 
 > *In case of UPN naming: what is **your real name** for [OSINT](https://en.wikipedia.org/wiki/Open-source_intelligence)?*
+
 > *Who is doing what action?*
+
 > *What is your level of administrative rights?*
+
 > *Which hours and days are you working?*
+
 > *Which company are you working for?*
+
 > *What kind of environment is installed?*
 
 ---

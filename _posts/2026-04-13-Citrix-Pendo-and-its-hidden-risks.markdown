@@ -7,13 +7,13 @@ img: header/citrix-pendo-risks.gif
 tags: [citrix, pendo, analytics, social-engineering, privacy]
 ---
 
-## The Hidden Layer
+## The hidden layer
 
-Starting with version 2411, Citrix Web Studio integrates Pendo for usage tracking to understand how administrators interact with the management console, with the feature enabled by default.
+Starting with version 2411, Citrix Web Studio integrates [Pendo}(https://www.pendo.io/about/) for usage tracking to understand how administrators interact with the management console, with the feature **enabled by default**.
 
-Pendo captures data on feature clicks, page loads, and user interactions to provide insights into user behavior and improve the product experience. By default this information is stored on the US geolocated GPC platform.
+Pendo captures data on feature clicks, page loads, and user interactions to provide insights into user behavior and improve the product experience. As per default this information is stored on the US geo-located GCP (Google Cloud Platform).
 
-In many cloud and on-premises Citrix environments, analytics tooling like Pendo is quietly embedded (a.k.a. as 'opt-out feature') into the interface. Its purpose is harmless on paper:
+In many, cloud-based and even on-premises, Citrix environments, the Pendo.io analytics tooling is quietly embedded (a.k.a. as 'opt-out feature') into the interface. Its purpose is harmless on paper:
 
 - track feature usage 
 - improve UX 
@@ -29,9 +29,13 @@ Pendo uses a structured token (often referred to as a **JZB token**) to correlat
 
 It typically contains Base64-encoded JSON such as:
 
-- `visitorId`
-- `accountId` (which is your Active Directory domain name and account name)
-- sometimes role or segmentation data
+- `visitor_id` - Can contain your Active Directory **domain name** and **account name**
+- `account_id` - In case of on-premises Citrix, it can contain your **domain** in the URL
+- `browser_time` - Time stamp (epoch) of your activities
+- `loginMethod` - What method is used to logon
+- `adminType` - What level of administrative right you have
+- `version` - Which version of Citrix is installed
+- `numberofDDCs` - This can indicate the size of your Citrix environment
 
 This token is:
 
@@ -39,9 +43,13 @@ This token is:
 - accessible to scripts 
 - transmitted with analytics events 
 
-It doesn’t grant direct access—but it answers an important question:
+It doesn’t grant direct access—but it answers an important questions:
 
-> *Who is doing this action?*
+> *Who is doing what action?*
+> *What is your level of administrative rights?*
+> *Which hours and days are you working?*
+> *Which company are you working for?*
+> *What kind of environment is installed?*
 
 ---
 
@@ -100,14 +108,20 @@ Block:
 
 ### 3. Citrix Settings
 
-- Disable analytics / telemetry in admin consoles
+- Disable analytics / telemetry in admin consoles, see:
+
+    [Citrix Web Studio - disable Pendo](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/install-configure/install-core/install-web-studio.html#optional-enable-or-disable-pendo)
+
+    [Citrix Director - disable Pendo](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/director.html#usage-data-collection-by-pendo)
 
 ### 4. Verify
 
-- Check DevTools → no pendo.io calls
+- Check DevTools (F12) → check for **pendo.io** calls
 
 ---
 
 ## Final Thought
 
 > If data can be used to imitate behavior, it becomes intelligence.
+
+[Richard Stallman is right!](https://www.youtube.com/watch?v=Ag1AKIl_2GM)

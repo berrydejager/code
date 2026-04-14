@@ -27,11 +27,11 @@ In practice, it introduces a **second layer of visibility**—one that observes 
 
 ## The token you didn’t notice
 
-Pendo uses a structured token (often referred to as a **JZB token**) to correlate activity, see the [pendo-io JZB tool on Github](https://github.com/pendo-io/jzb)
+Pendo uses a structured token (often referred to as a **JZB token**) to correlate activity, see the [pendo-io JZB tool on Github](https://github.com/pendo-io/jzb).
 
 It typically contains Base64-encoded JSON such as:
 
-- `visitor_id` - Can contain your Active Directory **domain name** and **account name**
+- `visitor_id` - Can contain your Active Directory **domain name** and **account name**, possibly [UPN](https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/plan-connect-userprincipalname#upn-format) formatted.
 - `account_id` - In case of on-premises Citrix, it can contain your **domain** in the URL
 - `browser_time` - Time stamp (epoch) of **your activities**
 - `loginMethod` - Which **logon method you used**
@@ -47,6 +47,7 @@ This token is:
 
 It doesn’t grant direct access—but it answers an important questions:
 
+> *In case of UPN naming: what is **your real name** for [OSINT](https://en.wikipedia.org/wiki/Open-source_intelligence)?*
 > *Who is doing what action?*
 > *What is your level of administrative rights?*
 > *Which hours and days are you working?*
@@ -59,10 +60,13 @@ It doesn’t grant direct access—but it answers an important questions:
 
 Now combine that identity context with what Pendo actually tracks:
 
+- user profiling
+- customer profiling
+- environment profiling
 - clicks 
 - navigation paths 
 - feature usage 
-- workflow timing 
+- workflow/hours timing 
 
 You no longer have telemetry.
 
@@ -87,15 +91,51 @@ An attacker doesn’t need credentials to learn:
 
 ---
 
-## Social engineering, upgraded
+Instead of relying on generic phishing campaigns, access to detailed platform insights enables highly targeted and convincing attacks—often referred to as **spear phishing** or even **context-aware social engineering**.
 
-Instead of generic phishing:
+With this level of information, attackers can significantly increase their success rate by aligning their approach with the victim’s real environment and behavior:
 
-- emails reference real features 
-- fake pages mimic actual workflows 
-- timing matches user habits 
+* Highly specific target audience
+* Messages can be tailored specifically to administrative or privileged users of a platform, who typically have broader access and higher impact if compromised.
+* Contextual credibility through workflow references
+* By referencing actual processes, tools, or internal terminology, attackers can craft messages that feel legitimate and familiar, lowering suspicion.
+* Convincing replicas of real interfaces
+* Fake login pages or task flows can closely mimic the actual platform, making it difficult—even for experienced users—to distinguish between real and malicious interactions.
+* Behavior-based timing
+* Delivering phishing messages at moments when users are most active (e.g., start of workday, routine task windows) increases the likelihood of engagement and reduces critical scrutiny.
+
+**Why this is more dangerous?**
+
+Unlike traditional phishing, this approach reduces the typical **red flags** users rely on. The attack blends into normal operations, exploiting trust, routine, and familiarity rather than just curiosity or urgency.
+
+**Practical implication**
+
+This means that user awareness alone is no longer sufficient. There is a need for layered defenses, such as:
+
+* Strong authentication (e.g., MFA)
+* Behavioral anomaly detection
+* Strict access controls
+* Continuous monitoring of unusual workflows or login patterns
 
 ---
+
+## When the damage is already done, how to remove the data from Pendo.io?
+
+1. Plug the leak
+
+Disable the Pendo snippet or tracking, see section 'How to disable...' below.
+
+Automate where applicable.
+
+2. Request for deletion existing data
+
+Contact Citrix/Pendo support for:
+Visitor/account deletion
+Bulk data removal
+
+3. Require proof of deletion
+
+**Bottom line**: Stop collection first, then request backend deletion—prevention is key going forward.
 
 ## How to disable or limit Pendo
 

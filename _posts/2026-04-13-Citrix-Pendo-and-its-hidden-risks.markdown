@@ -128,4 +128,4 @@ Block DNS requests for:
 
 > Stay away from the *Citrix Customer Experience Improvement Program* a.k.a. *CEIP*, as far as possible.
 
-> Richard Stallman is right!](https://www.youtube.com/watch?v=Ag1AKIl_2GM)
+> [Richard Stallman is right!](https://www.youtube.com/watch?v=Ag1AKIl_2GM)

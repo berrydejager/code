@@ -31,11 +31,11 @@ It typically contains Base64-encoded JSON such as:
 
 - `visitor_id` - Can contain your Active Directory **domain name** and **account name**
 - `account_id` - In case of on-premises Citrix, it can contain your **domain** in the URL
-- `browser_time` - Time stamp (epoch) of your activities
-- `loginMethod` - What method is used to logon
-- `adminType` - What level of administrative right you have
-- `version` - Which version of Citrix is installed
-- `numberofDDCs` - This can indicate the size of your Citrix environment
+- `browser_time` - Time stamp (epoch) of **your activities**
+- `loginMethod` - Which **logon method you used**
+- `adminType` - What level of **administrative right you have**
+- `version` - Which **version** of Citrix is installed
+- `numberofDDCs` - This can indicate the **size** of the Citrix environment
 
 This token is:
 

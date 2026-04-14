@@ -45,7 +45,7 @@ This token is:
 - accessible to scripts 
 - transmitted with analytics events 
 
-It doesn’t grant direct access—but it answers an important questions:
+It doesn’t grant direct access, however it answers important questions:
 
 > *In case of UPN naming: what is **your real name** for [OSINT](https://en.wikipedia.org/wiki/Open-source_intelligence)?*
 > *Who is doing what action?*

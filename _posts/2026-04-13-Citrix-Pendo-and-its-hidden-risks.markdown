@@ -9,7 +9,7 @@ tags: [citrix, pendo, analytics, social-engineering, privacy]
 
 ## The hidden layer
 
-Starting with version 2411, Citrix Web Studio integrates [Pendo}(https://www.pendo.io/about/) for usage tracking to understand how administrators interact with the management console, with the feature **enabled by default**.
+Starting with version 2411, Citrix Web Studio integrates [Pendo](https://www.pendo.io/about/) for usage tracking to understand how administrators interact with the management console, with the feature **enabled by default**.
 
 Pendo captures data on feature clicks, page loads, and user interactions to provide insights into user behavior and improve the product experience. As per default this information is stored on the US geo-located GCP (Google Cloud Platform).
 

@@ -124,4 +124,6 @@ Block DNS requests for:
 
 > If data can be used to imitate behavior, it becomes intelligence.
 
-[Richard Stallman is right!](https://www.youtube.com/watch?v=Ag1AKIl_2GM)
+> Stay away from the *Citrix Customer Experience Improvement Program* a.k.a. *CEIP*, as far as possible.
+
+<p style="text-align: center;">[Richard Stallman is right!](https://www.youtube.com/watch?v=Ag1AKIl_2GM)</p>

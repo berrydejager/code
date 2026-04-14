@@ -137,6 +137,8 @@ Bulk data removal
 
 **Bottom line**: Stop collection first, then request backend deletion—prevention is key going forward.
 
+---
+
 ## How to disable or limit Pendo
 
 ### 1. Block at network level
@@ -169,3 +171,5 @@ Block DNS requests for:
 > Stay away from the *Citrix Customer Experience Improvement Program* a.k.a. *CEIP*, as far as possible.
 
 > [Richard Stallman is right!](https://www.youtube.com/watch?v=Ag1AKIl_2GM)
+
+---

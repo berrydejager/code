@@ -99,7 +99,7 @@ Instead of generic phishing:
 
 ### 1. Block at Network Level
 
-Block:
+Block DNS requests for:
 - *.pendo.io
 
 ### 2. Browser Blocking

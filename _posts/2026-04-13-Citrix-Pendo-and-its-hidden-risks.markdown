@@ -53,7 +53,7 @@ It doesn’t grant direct access—but it answers an important questions:
 
 ---
 
-## Behavior Is the Real Data
+## Behavior is the real data
 
 Now combine that identity context with what Pendo actually tracks:
 
@@ -70,7 +70,7 @@ You have:
 
 ---
 
-## If This Data Leaks
+## ~~If~~ When this data leaks
 
 Even without a breach of core systems, exposure of analytics data enables:
 
@@ -85,7 +85,7 @@ An attacker doesn’t need credentials to learn:
 
 ---
 
-## Social Engineering, Upgraded
+## Social engineering, upgraded
 
 Instead of generic phishing:
 
@@ -95,18 +95,18 @@ Instead of generic phishing:
 
 ---
 
-## How to Disable or Limit Pendo
+## How to disable or limit Pendo
 
-### 1. Block at Network Level
+### 1. Block at network level
 
 Block DNS requests for:
 - *.pendo.io
 
-### 2. Browser Blocking
+### 2. Browser blocking
 
 - Use content blockers or policies
 
-### 3. Citrix Settings
+### 3. Citrix settings
 
 - Disable analytics / telemetry in admin consoles, see:
 
@@ -120,7 +120,7 @@ Block DNS requests for:
 
 ---
 
-## Final Thought
+## Final thoughts
 
 > If data can be used to imitate behavior, it becomes intelligence.
 

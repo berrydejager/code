@@ -3,7 +3,7 @@ layout: post
 title: Code smarter, not harder - Clean-code practices enhanced by AI
 date: 2023-03-25 13:37:00 +0100
 description: Code smarter, not harder - Clean-code practices enhanced by AI 
-img: header/code-smarter-not-harder_header.png
+img: header/robert-martin-what-is-clean-code.gif
 tags: [clean code, AI, UncleBob, RobertMartin]
 ---
 

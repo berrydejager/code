@@ -32,7 +32,7 @@ In practice, it introduces a **second layer of visibility**—one that observes 
 
 ## The token you didn’t notice
 
-Pendo uses a structured token (often referred to as a **JZB token**) to correlate activity, see the [pendo-io JZB tool on GitHub](https://github.com/pendo-io/jzb).
+Pendo uses a structured token (often referred to as a **JZB token**) to correlate activity, see the [pendo-io JZB tool on GitHub](https://github.com/pendo-io/jzb) or [my fork](https://github.com/berrydejager/jzb).
 
 It typically contains Base64-encoded JSON such as:
 

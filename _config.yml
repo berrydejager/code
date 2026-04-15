@@ -9,9 +9,9 @@ timezone: Europe/Amsterdam
 # Author Settings
 author: Berry de Jager
 author-img: favicon/code_berrydejager_com.png
-about-author: Enthralled by code since the arrival of the 8-bit cpu.
-social-twitter: berrydejager
-social-facebook: berrydejagercom
+about-author: Enthralled by code since the arrival of the 8-bit CPU.
+#social-twitter: 
+#social-facebook:
 social-github: berrydejager
 social-linkedin: berrydejager
 social-email: code@berrydejager.com

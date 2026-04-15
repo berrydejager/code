@@ -4,7 +4,7 @@ title: Code smarter, not harder - Clean-code practices
 date: 2023-03-25 13:37:00 +0100
 description: Code smarter, not harder - Clean-code practices
 img: header/robert-martin-what-is-clean-code.gif
-tags: [clean code, AI, UncleBob, RobertMartin]
+tags: [clean code, Uncle Bob, Robert C. Martin]
 ---
 
 # Clean code - Why?

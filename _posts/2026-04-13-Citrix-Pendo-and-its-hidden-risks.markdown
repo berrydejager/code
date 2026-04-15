@@ -10,7 +10,9 @@ tags: [citrix, pendo, analytics, social-engineering, privacy]
 
 Enterprise platforms like Citrix increasingly rely on embedded analytics tools such as Pendo to monitor user behaviour within their applications. While this enables better product insights and user experience improvements, it also introduces a largely invisible layer of data collection inside sensitive environments.
 
-This article highlights how such tracking works in practice, what kind of information may be exposed, and why this matters from a security and privacy perspective. **The key takeaway**: organizations should not assume that enterprise software is free from telemetry risks — understanding what is being collected and where it is sent is essential.
+This article highlights how such tracking works in practice, what kind of information may be exposed, and why this matters from a security and privacy perspective. 
+
+**The key takeaway**: organizations should not assume that enterprise software is free from telemetry risks — understanding what is being collected and where it is sent is essential.
 
 ## The hidden layer
 
